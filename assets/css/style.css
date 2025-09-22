@@ -5,7 +5,7 @@
   --font-secondary: "Roboto", sans-serif;
   --color-primary: #8fc0df;
   --color-secondary: #1984c5;
-  --color-primary-rgb: 33, 205, 173;
+  --color-primary-rgb: #1984c5;
   --color-secondary-rgb: 0, 38, 120;
   --color-white: #ffffff;
   --color-accent: #00226c;
@@ -16,11 +16,11 @@
   --color-gray-100: #f9f9f9;
   --color-gray-200: #e9e9f0;
   --color-gray-300: #dee2e6;
-  --color-green-100: #d7f6f0;
+  --color-green-100: #e5f5ff;
   /* overide Bootstrap color theme */
   --bs-primary: #8fc0df;
   --bs-secondary: #1984c5;
-  --bs-success: #198754;
+  --bs-success: #1984c5;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
@@ -1553,8 +1553,8 @@ h6 {
   border-radius: 3px;
 }
 
-.btn-facebook {
-  background-color: #4267b2;
+.btn-linkedin {
+  background-color: #1984c5;
 }
 
 .btn-twitter {
@@ -1617,6 +1617,7 @@ h6 {
     min-width: 150px;
   }
 }
+
 /*---------------------------
         Forms
 ----------------------------*/
@@ -3905,7 +3906,7 @@ input[type=radio] {
 .footer .footer-primary {
   position: relative;
   padding: 123px 0 100px;
-  background-color: #011d59;
+  background-color: #17377d;
 }
 .footer .footer-primary:after {
   content: "";
@@ -4605,7 +4606,7 @@ body {
   content: "";
   width: 28px;
   height: 2px;
-  background: #f2b705;
+  background: #1984c5;
   position: absolute;
   left: 0;
   top: 50%;
@@ -4622,7 +4623,7 @@ body {
 }
 
 .highlight {
-  color: #0b7c6d;
+  color: #1984c5;
 }
 
 /* Logo Grid */
@@ -4999,6 +5000,16 @@ body {
   .feature-item .feature-desc {
     font-size: 13px;
     margin-bottom: 10px;
+  }
+}
+.navbar-brand img {
+  max-height: 70px;   /* keeps logo height under control */
+  width: auto;        /* keeps aspect ratio */
+}
+
+@media (max-width: 767px) {
+  .navbar-brand img {
+    max-height: 60px; /* smaller height on mobile */
   }
 }
 /*-----------------------
