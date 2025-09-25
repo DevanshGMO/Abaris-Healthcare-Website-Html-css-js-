@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="assets/css/libraries.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
-    
       * {
         box-sizing: border-box;
       }
@@ -47,12 +46,7 @@
         padding: clamp(16px, 2vw, 24px);
       }
       .hero {
-        background: linear-gradient(
-          120deg,
-          #e6f4ff 0%,
-          #f0fbff 40%,
-          #ffffff 100%
-        );
+        background: #1984c5;
         border-bottom: 1px solid var(--border);
       }
       .hero .wrap {
@@ -68,7 +62,7 @@
       }
       .kicker {
         font-weight: 700;
-        color: var(--brand);
+        color: white;
         letter-spacing: 0.04em;
         text-transform: uppercase;
         font-size: 13px;
@@ -80,7 +74,7 @@
       }
       .lead {
         font-size: clamp(16px, 1.8vw, 18px);
-        color: var(--sub);
+        color: white;
         margin: 6px 0 0;
       }
       .hero .card {
@@ -90,7 +84,9 @@
         box-shadow: var(--shadow);
         padding: 14px;
       }
-
+      .kicker-heading {
+        color: white;
+      }
       /* layout with sticky local nav */
       .page {
         display: grid;
@@ -243,58 +239,28 @@
         <div class="header-topbar">
           <div class="container-fluid">
             <div class="row align-items-center">
-              <div class="col-12">
-                <div class="d-flex align-items-center justify-content-between">
+              <div class="col-12 d-flex justify-content-center">
+                <div class="d-flex align-items-center justify-between">
                   <ul
                     class="contact-list d-flex flex-wrap align-items-center list-unstyled mb-0"
                   >
                     <li>
-                      <i class="icon-phone"></i
-                      ><a href="tel:+5565454117"
-                        >Emergency Line: + 91 79264 40704</a
+                      <i class="icon-phone"></i>
+                      <a href="tel:+917926440704"
+                        >Emergency Line: +91 79264 40704</a
                       >
                     </li>
                     <li>
-                      <i class="icon-location"></i
-                      ><a href="#">Location: Delhi , India</a>
+                      <i class="icon-location"></i>
+                      <span class="color-white">Location: Delhi, India</span>
                     </li>
                     <li>
-                      <i class="icon-email"></i
-                      ><a href="contact-us.html">info@abarishealthcare.com</a>
+                      <i class="icon-email"></i>
+                      <a href="mailto:info@abarishealthcare.com"
+                        >info@abarishealthcare.com</a
+                      >
                     </li>
                   </ul>
-                  <!-- /.contact-list -->
-                  <div class="d-flex align-items-center">
-                    <ul
-                      class="header-topbar-links d-flex list-unstyled mb-0 mr-10"
-                    >
-                      <li><a href="#">Insurance</a></li>
-                      <li><a href="#">Provider Services</a></li>
-                      <li><a href="#">Accreditation</a></li>
-                    </ul>
-                    <!-- /.social-icons -->
-                    <div class="miniPopup-language-area">
-                      <button class="miniPopup-language-trigger" type="button">
-                        <span>Choose language</span
-                        ><span class="btn-shape"></span>
-                      </button>
-                      <ul class="miniPopup miniPopup-language list-unstyled">
-                        <li>
-                          <button>
-                            <img src="assets/images/flags/en.png" alt="en" />
-                            <span>English</span>
-                          </button>
-                        </li>
-                        <li>
-                          <button>
-                            <img src="assets/images/flags/gr.png" alt="en" />
-                            <span>Germany</span>
-                          </button>
-                        </li>
-                      </ul>
-                      <!-- /.miniPopup-language -->
-                    </div>
-                  </div>
                 </div>
               </div>
               <!-- /.col-12 -->
@@ -303,7 +269,6 @@
           </div>
           <!-- /.container -->
         </div>
-        <!-- /.header-top -->
         <nav class="navbar navbar-expand-lg sticky-navbar">
           <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
@@ -322,11 +287,13 @@
             >
               <ul class="navbar-nav">
                 <li class="nav-item has-dropdown">
-                  <a href="index.html" class="nav-item-link active">Home</a>
+                  <a href="index.html" class="nav-item-link">Home</a>
                 </li>
                 <!-- /.nav-item -->
                 <li class="nav-item has-dropdown">
-                  <a href="about-us.html" class="nav-item-link">About Us</a>
+                  <a href="about-us.html" class="nav-item-link active"
+                    >About Us</a
+                  >
                   <ul class="dropdown-menu">
                     <li class="nav-item">
                       <a href="about-us.html" class="nav-item-link">About Us</a>
@@ -338,7 +305,7 @@
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="csr.html" class="nav-item-link">CSR</a>
+                      <a href="csr.html" class="nav-item-link active">CSR</a>
                     </li>
 
                     <!-- /.nav-item -->
@@ -466,10 +433,12 @@
         <div class="container wrap">
           <div>
             <div class="kicker">Company</div>
-            <h1>Corporate Social Responsibility (CSR)</h1>
+            <h1 class="kicker-heading">
+              Corporate Social Responsibility (CSR)
+            </h1>
             <p class="lead">
               We are committed to conducting business in a socially responsible
-              and ethical manner — minimizing environmental impact, supporting
+              and ethical manner minimizing environmental impact, supporting
               communities, and operating with transparency.
             </p>
             <div class="note" style="margin-top: 10px">
@@ -665,7 +634,7 @@
         </div>
       </main>
 
-       <footer class="footer">
+      <footer class="footer">
         <div class="footer-primary">
           <div class="container">
             <div class="row">
@@ -687,11 +656,9 @@
                       <li>
                         <a href="team.html">Business Overview</a>
                       </li>
-                     
+
                       <li>
-                        <a href="csr.html"
-                          >CSR</a
-                        >
+                        <a href="csr.html">CSR</a>
                       </li>
                       <li><a href="careers.html">Careers</a></li>
                     </ul>
@@ -771,7 +738,6 @@
                       Subscribe
                     </button>
                   </form>
-                 
                 </div>
               </div>
               <!-- /.col-lg-3 -->
