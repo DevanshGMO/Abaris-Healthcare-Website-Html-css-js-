@@ -3,7 +3,7 @@
   --font-size-base: 15px;
   --font-primary: "Lexend", sans-serif;
   --font-secondary: "Roboto", sans-serif;
-  --color-primary: #8fc0df;
+  --color-primary: #1984c5;
   --color-secondary: #1984c5;
   --color-primary-rgb: #1984c5;
   --color-secondary-rgb: 0, 38, 120;
@@ -18,7 +18,7 @@
   --color-gray-300: #dee2e6;
   --color-green-100: #e5f5ff;
   /* overide Bootstrap color theme */
-  --bs-primary: #8fc0df;
+  --bs-primary: #1984c5;
   --bs-secondary: #1984c5;
   --bs-success: #1984c5;
   --bs-warning: #ffc107;
@@ -40,7 +40,7 @@
   --bs-secondary-color-rgb: 33, 37, 41;
   --bs-secondary-bg: #e9ecef;
   --bs-secondary-bg-rgb: 233, 236, 239;
-  --bs-link-color: #8fc0df;
+  --bs-link-color: #1984c5;
   --bs-link-color-rgb: 13, 110, 253;
   --bs-link-decoration: none;
   --bs-link-hover-color: #1984c5;
@@ -890,7 +890,11 @@ a.color-white-hover:hover {
 .bg-overlay-3:before {
   background-color: rgba(27, 26, 26, 0.05);
 }
-
+.content-topbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .bg-overlay-gradient:before {
   background-color: transparent;
   opacity: 0.65;
@@ -1115,7 +1119,7 @@ h6 {
   line-height: 1.1;
   font-weight: 700;
   margin-bottom: 20px;
-}
+} 
 
 .pagetitle-desc {
   font-size: 17px;
@@ -2325,7 +2329,7 @@ input[type=radio] {
   position: absolute;
   width: 64px;
   height: 64px;
-  border: 5px solid #8fc0df;
+  border: 5px solid #1984c5;
   border-radius: 50%;
   animation: rotating 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   border-color: var(--color-primary) transparent transparent transparent;
@@ -2628,8 +2632,10 @@ input[type=radio] {
 .header-topbar {
   height: 60px;
   display: flex;
-  align-items: center;
+  align-content: center;
+  justify-content: center;
   background-color: var(--color-accent);
+  du
 }
 .header-topbar .header-topbar-links li {
   margin-right: 20px;
@@ -4351,6 +4357,7 @@ input[type=radio] {
 
 .slider {
   padding: 0;
+  position:relative;
 }
 .slider .slide-item {
   min-height: 550px;
@@ -7372,6 +7379,9 @@ body {
 .service-item .service-title {
   font-size: 19px;
   margin-bottom: 18px;
+}
+.service-title-heading{
+  color: black;
 }
 .service-item .service-title a {
   color: var(--color-secondary);
