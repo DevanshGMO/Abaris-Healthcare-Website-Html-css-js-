@@ -1,0 +1,402 @@
+[
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "Large Volume Parenterals (LVPs)",
+    "id": "large-volume-parenterals-lvps"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "S. No.",
+    "unnamed_1": " Products Detail",
+    "id": "s-no-products-detail"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "1",
+    "unnamed_1": "Ciprofloxacine Intravenous Infusion 0.2% w/v, ",
+    "pack_style": "100ml, FFS Bottles",
+    "id": "1-ciprofloxacine-intravenous-infusion-0-2-w-v"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "2",
+    "unnamed_1": "Fluconazole Injection 0.2% w/v, ",
+    "pack_style": "100ml, FFS Bottles",
+    "id": "2-fluconazole-injection-0-2-w-v"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "3",
+    "unnamed_1": "Glucose intravenous infusion 1.6% w/v ",
+    "pack_style": "100ml, 250ml, 500ml, 1000ml, FFS Bottles",
+    "id": "3-glucose-intravenous-infusion-1-6-w-v"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "4",
+    "unnamed_1": "Glucose intravenous infusion 2.5% w/v ",
+    "pack_style": "100ml, 250ml, 500ml, 1000ml, FFS Bottles",
+    "id": "4-glucose-intravenous-infusion-2-5-w-v"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "5",
+    "unnamed_1": "Glucose intravenous infusion 5% w/v ",
+    "pack_style": "100ml, 250ml, 500ml, 1000ml, FFS Bottles",
+    "id": "5-glucose-intravenous-infusion-5-w-v"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "6",
+    "unnamed_1": "Glucose intravenous infusion 10% w/v ",
+    "pack_style": "100ml, 250ml, 500ml, 1000ml, FFS Bottles",
+    "id": "6-glucose-intravenous-infusion-10-w-v"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "7",
+    "unnamed_1": "Glucose intravenous infusion 25% w/v ",
+    "pack_style": "100ml, 250ml, 500ml, 1000ml, FFS Bottles",
+    "id": "7-glucose-intravenous-infusion-25-w-v"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "8",
+    "unnamed_1": "Lactated Ringer's Infusion",
+    "pack_style": "100ml, 250ml, 500ml, 1000ml, FFS Bottles",
+    "id": "8-lactated-ringer-s-infusion"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "9",
+    "unnamed_1": "Levofloxacine Intravenous Infusion 0.5% w/v",
+    "pack_style": "100ml, FFS Bottles",
+    "id": "9-levofloxacine-intravenous-infusion-0-5-w-v"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "10",
+    "unnamed_1": "Mannitol Intravenous Infusion BP 20% w/v ",
+    "pack_style": "100ml, 200ml, FFS Bottles",
+    "id": "10-mannitol-intravenous-infusion-bp-20-w-v"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "11",
+    "unnamed_1": "Metronidazole Injection USP 0.5% w/v ",
+    "pack_style": "100ml, FFS Bottles",
+    "id": "11-metronidazole-injection-usp-0-5-w-v"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "12",
+    "unnamed_1": "Moxifloxacine Intravenous Infusion 0.4% w/v",
+    "pack_style": "100ml, FFS Bottles",
+    "id": "12-moxifloxacine-intravenous-infusion-0-4-w-v"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "13",
+    "unnamed_1": "Ofloxacine Intravenous Infusion 0.2%, ",
+    "pack_style": "100ml, FFS Bottles",
+    "id": "13-ofloxacine-intravenous-infusion-0-2"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "14",
+    "unnamed_1": "Ofloxacin 0.2%w/v + Ornidazole 0.5%w/v infusion",
+    "pack_style": " 100ml, FFS Bottles",
+    "id": "14-ofloxacin-0-2-w-v-ornidazole-0-5-w-v-infusion"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "15",
+    "unnamed_1": "Ornidazole 0.5%w/v Infusion ",
+    "pack_style": "100ml, FFS Bottles",
+    "id": "15-ornidazole-0-5-w-v-infusion"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "16",
+    "unnamed_1": "Paracetamol Infusion 1% w/v",
+    "pack_style": "100ml, FFS Bottles",
+    "id": "16-paracetamol-infusion-1-w-v"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "17",
+    "unnamed_1": "Tinidazole 400mg/100ml Infusion",
+    "pack_style": "100ml, FFS Bottles",
+    "id": "17-tinidazole-400mg-100ml-infusion"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "18",
+    "unnamed_1": "Sodium chloride & Glucose Intravenous Infusion BP 0.18% w/v & 4%w/v ",
+    "pack_style": "100ml, 250ml, 500ml, 1000ml, FFS Bottles",
+    "id": "18-sodium-chloride-glucose-intravenous-infusion-bp-0-18-w-v-4-w-v"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "19",
+    "unnamed_1": "Sodium chloride & Glucose Intravenous Infusion BP 0.9%w/v & 5%w/v ",
+    "pack_style": "100ml, 250ml, 500ml, 1000ml, FFS Bottles",
+    "id": "19-sodium-chloride-glucose-intravenous-infusion-bp-0-9-w-v-5-w-v"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "20",
+    "unnamed_1": "Sodium chloride intravenous infusion BP 0.9% w/v ",
+    "pack_style": "100ml, 250ml, 500ml, 1000ml, FFS Bottles",
+    "id": "20-sodium-chloride-intravenous-infusion-bp-0-9-w-v"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "21",
+    "unnamed_1": "Linezolide 600mg/300ml Intavenous Infusion ",
+    "pack_style": "300ml, FFS Bottles",
+    "id": "21-linezolide-600mg-300ml-intavenous-infusion"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "22",
+    "unnamed_1": "Multielectrolite with 20% w/v Dextrose Injection ",
+    "pack_style": "100ml, 250ml, 500ml, 1000ml, FFS Bottles",
+    "id": "22-multielectrolite-with-20-w-v-dextrose-injection"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "Small Volume Parenteral (SVPs)",
+    "id": "small-volume-parenteral-svps"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "S. No.",
+    "unnamed_1": " Products Detail",
+    "id": "s-no-products-detail"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "1",
+    "unnamed_1": "Ranitidine Hydrochloride 25mg/ml BP",
+    "pack_style": "2ml Glass Ampoule",
+    "id": "1-ranitidine-hydrochloride-25mg-ml-bp"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "2",
+    "unnamed_1": "Furosemide  10mg/ml Injection ",
+    "pack_style": "2ml Glass Ampoule",
+    "id": "2-furosemide-10mg-ml-injection"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "3",
+    "unnamed_1": "Amikacin Sulphate Injection USP 100mg/2ml",
+    "pack_style": "2ml Glass Vial",
+    "id": "3-amikacin-sulphate-injection-usp-100mg-2ml"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "4",
+    "unnamed_1": "Amikacin Sulphate Injection USP 250mg/2ml",
+    "pack_style": "2ml Glass Vial",
+    "id": "4-amikacin-sulphate-injection-usp-250mg-2ml"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "5",
+    "unnamed_1": "Amikacin Sulphate Injection USP 500mg/2ml",
+    "pack_style": "2ml Glass Vial",
+    "id": "5-amikacin-sulphate-injection-usp-500mg-2ml"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "6",
+    "unnamed_1": "Artemether Injection 40mg/ml",
+    "pack_style": "1ml Glass Amlpoule",
+    "id": "6-artemether-injection-40mg-ml"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "7",
+    "unnamed_1": "Artemether Injection 80mg/ml",
+    "pack_style": "1ml Glass Amlpoule",
+    "id": "7-artemether-injection-80mg-ml"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "8",
+    "unnamed_1": "Betamethasone Sodium Phosphate Inj. 4mg/ml",
+    "pack_style": "5ml Glass Ampoule",
+    "id": "8-betamethasone-sodium-phosphate-inj-4mg-ml"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "9",
+    "unnamed_1": "Chloroquine Phosphate Inj. 40mg/ml",
+    "pack_style": "2ml Glass Ampoule, 10ml Glass Vial",
+    "id": "9-chloroquine-phosphate-inj-40mg-ml"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "10",
+    "unnamed_1": "Citicoline Inj. 250mg/ml",
+    "pack_style": "2ml, 4ml, 10ml Glass Ampoule",
+    "id": "10-citicoline-inj-250mg-ml"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "11",
+    "unnamed_1": "Dexamethasone Sodium Phosphate Injection USP 4mg/ml",
+    "pack_style": "2ml Glass Vial/ Glass Ampoule",
+    "id": "11-dexamethasone-sodium-phosphate-injection-usp-4mg-ml"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "12",
+    "unnamed_1": "Diclofenac Sodium Injection 25mg/ml",
+    "pack_style": "3ml, Glass Ampoule",
+    "id": "12-diclofenac-sodium-injection-25mg-ml"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "13",
+    "unnamed_1": "Alpha-Beta Artemether Inj. 75mg/ml",
+    "pack_style": " 2ml Glass Ampoule",
+    "id": "13-alpha-beta-artemether-inj-75mg-ml"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "14",
+    "unnamed_1": "Alpha-Beta Arteether 75mg/ml Injection",
+    "pack_style": "2ml, 3ml Glass Ampoule",
+    "id": "14-alpha-beta-arteether-75mg-ml-injection"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "15",
+    "unnamed_1": "Diclofenac 75mg/ml Injection",
+    "pack_style": "1ml Glass Ampoule",
+    "id": "15-diclofenac-75mg-ml-injection"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "16",
+    "unnamed_1": "Gentamicin Sulfate Inj. 40mg/ml",
+    "pack_style": "2ml Glass Vial, Glass Ampoule",
+    "id": "16-gentamicin-sulfate-inj-40mg-ml"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "17",
+    "unnamed_1": "Heparin Sodium 1000IU/ml",
+    "pack_style": "5ml Glass Vial",
+    "id": "17-heparin-sodium-1000iu-ml"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "18",
+    "unnamed_1": "Heparin Sodium 5000IU/ml",
+    "pack_style": "5ml Glass Vial",
+    "id": "18-heparin-sodium-5000iu-ml"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "19",
+    "unnamed_1": "Iron sucrose Injection USP 20mg/ml",
+    "pack_style": "5ml Glass Ampoule",
+    "id": "19-iron-sucrose-injection-usp-20mg-ml"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "20",
+    "unnamed_1": "Lidocaine HCl Inj. 1% and 2%",
+    "pack_style": "5ml, 10ml Glass Vial",
+    "id": "20-lidocaine-hcl-inj-1-and-2"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "21",
+    "unnamed_1": "Methylcobalamin 500mcg/ml, 1000mcg/ml, 1500mcg/2ml, 2500mcg/2ml Inj.",
+    "pack_style": "2ml, 10ml Glass Vial",
+    "id": "21-methylcobalamin-500mcg-ml-1000mcg-ml-1500mcg-2ml-2500mcg-2ml-inj"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "22",
+    "unnamed_1": "Ondansetron Injection 2mg/ml",
+    "pack_style": "2ml, 4ml Glass Ampoule, 20ml Glass Vial",
+    "id": "22-ondansetron-injection-2mg-ml"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "23",
+    "unnamed_1": "Paracetamol Injection 150mg/ml",
+    "pack_style": "2ml Glass Ampoule",
+    "id": "23-paracetamol-injection-150mg-ml"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "24",
+    "unnamed_1": "Vitamin B-complex Injection",
+    "pack_style": "3ml Glass Ampoule",
+    "id": "24-vitamin-b-complex-injection"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "25",
+    "unnamed_1": "Tranexamic Acid 500mg/5ml Injection",
+    "pack_style": "5ml Glass Ampoule",
+    "id": "25-tranexamic-acid-500mg-5ml-injection"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "26",
+    "unnamed_1": "Clindamycin (As Phosphate) 600mg/4ml Injection",
+    "pack_style": "4ml Glass Ampoule",
+    "id": "26-clindamycin-as-phosphate-600mg-4ml-injection"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "27",
+    "unnamed_1": "Ketorolac 30mg/ml Injection",
+    "pack_style": "1ml Glass Ampoule",
+    "id": "27-ketorolac-30mg-ml-injection"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "28",
+    "unnamed_1": "Palonosetron Hydrochloride Injection 0.25mg/5ml",
+    "pack_style": "5ml Glass Vial",
+    "id": "28-palonosetron-hydrochloride-injection-0-25mg-5ml"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "29",
+    "unnamed_1": "Betamethasone Injection USP 4mg/ml ",
+    "pack_style": "1ml, 2 ml Glass Ampoule",
+    "id": "29-betamethasone-injection-usp-4mg-ml"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "30",
+    "unnamed_1": "Levetiracetam Injection USP 100mg/ml ",
+    "pack_style": "5ml Glass Vial",
+    "id": "30-levetiracetam-injection-usp-100mg-ml"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "31",
+    "unnamed_1": "Triamcinolone Acetonide Injectable Suspension USP 40mg/ml ",
+    "pack_style": "1ml Glass Vial",
+    "id": "31-triamcinolone-acetonide-injectable-suspension-usp-40mg-ml"
+  },
+  {
+    "__sheet": "Sheet1",
+    "products_list_abaris_healthcare_pvt_ltd": "32",
+    "unnamed_1": "Phenytoin Sodium Injection ",
+    "pack_style": "2ml & 5ml Ampoule",
+    "id": "32-phenytoin-sodium-injection"
+  }
+]

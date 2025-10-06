@@ -3651,7 +3651,80 @@ input[type=radio] {
   .header .action-btn-login span {
     display: none;
   }
+}/* assets/css/products.css */
+:root { --pri:#0d6efd; --muted:#6c757d; }
+.container { max-width: 1180px; margin: 0 auto; padding: 40px 16px; }
+h1,h2,h3 { line-height: 1.25; }
+a.link { color: var(--pri); text-decoration: none; }
+
+.filters { display: grid; grid-template-columns: 1fr 280px 280px; gap: 10px; margin: 16px 0 24px; }
+.filters input, .filters select {
+  width: 100%; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 8px; font: inherit;
 }
+
+.table-wrap { width: 100%; overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.table th, .table td { padding: 10px 12px; border-bottom: 1px solid #eee; text-align: left; }
+.table tr { transition: background .2s; }
+.table tr:hover { background:#fafafa; cursor: pointer; }
+
+.pager { margin-top: 14px; }
+.pager button {
+  background:#fff; color: var(--pri); border:1px solid var(--pri); border-radius:6px; padding:6px 10px; margin-right:6px; cursor:pointer;
+}
+.pager button.active { background:var(--pri); color:#fff; }
+
+.badge { display:inline-block; padding:2px 8px; background:#eef2ff; color:#3730a3; border-radius:999px; font-size:12px; }
+
+/* Detail page */
+.kv { display:grid; grid-template-columns: 240px 1fr; gap:8px 12px; }
+.kv dt { font-weight:600; color:#374151; }
+.kv dd { margin:0; color:#111827; }
+/* === Products table page === */
+:root { --pri:#0d6efd; --muted:#6b7280; }
+#list-root { max-width:1280px; margin: 40px auto; padding: 0 16px; }
+
+#list-root .filters {
+  display:grid; grid-template-columns: 1fr 260px 260px; gap:10px;
+  margin: 12px 0 18px;
+}
+#list-root .filters input,#list-root .filters select{
+  width:100%; padding:10px 12px; border:1px solid #d1d5db; border-radius:8px; font:inherit;
+}
+
+/* table */
+#list-root .table-wrap { overflow:auto; border:1px solid #e5e7eb; border-radius:10px; background:#fff; }
+#list-root table.table { width:100%; border-collapse:separate; border-spacing:0; min-width:760px; }
+#list-root thead th { position:sticky; top:0; background:#f8fafc; color:#111827; font-weight:600; border-bottom:1px solid #e5e7eb; padding:10px 12px; text-align:left; white-space:nowrap; }
+#list-root tbody td { border-top:1px solid #f1f5f9; padding:10px 12px; vertical-align:top; }
+
+/* pager */
+#pager { margin-top:14px; display:flex; gap:6px; flex-wrap:wrap; }
+#pager button { background:#fff; color:var(--pri); border:1px solid var(--pri); border-radius:6px; padding:6px 10px; cursor:pointer; }
+#pager button.active { background:var(--pri); color:#fff; }
+
+/* mobile */
+@media (max-width: 768px) {
+  #list-root .filters { grid-template-columns: 1fr; }
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  .filters { grid-template-columns: 1fr; }
+  .kv { grid-template-columns: 1fr; }
+}
+
+/* Mobile "card table" */
+@media (max-width: 640px) {
+  .table thead { display: none; }
+  .table tr { display:block; border:1px solid #eee; border-radius:10px; margin-bottom:10px; padding:8px; }
+  .table td { display:flex; gap:8px; border-bottom:none; padding:6px 0; }
+  .table td::before {
+    content: attr(data-label);
+    flex:0 0 140px; min-width:140px; color:#6b7280; font-weight:600;
+  }
+}
+
 /*----------------------
     Accordions
 ------------------------*/

@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="" />
-  <link href="assets/images/logo/logo-main.png" rel="icon" />
-    <title>Abaris | Our Clients</title>
+    <meta name="description" content="Abaris Healthcare" />
+    <link href="assets/images/logo/logo-main.png" rel="icon" />
+    <title>Abaris | Products</title>
+
+    <!-- Fonts / Icons / Site CSS -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&amp;family=Roboto:wght@400;700&amp;display=swap"
@@ -17,6 +19,74 @@
     />
     <link rel="stylesheet" href="assets/css/libraries.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Table polish (minimal, scoped) -->
+    <style>
+      .section-row td.section-title {
+        font-weight: 600;
+        background: #f1f7ff;
+        padding: 10px;
+        border-top: 2px solid #007bff;
+      }
+
+      .section-row:target td.section-title {
+        outline: 2px solid #007bff;
+        box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.2) inset;
+      }
+
+      #list-root {
+        max-width: 1280px;
+        margin: 40px auto;
+        padding: 0 16px;
+      }
+      #list-root .table-wrap {
+        overflow: auto;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        background: #fff;
+      }
+      #list-root table.table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        min-width: 760px;
+      }
+      #list-root thead th {
+        position: sticky;
+        top: 0;
+        background: #f8fafc;
+        color: #111827;
+        font-weight: 600;
+        border-bottom: 1px solid #e5e7eb;
+        padding: 10px 12px;
+        text-align: left;
+        white-space: nowrap;
+      }
+      #list-root tbody td {
+        border-top: 1px solid #f1f5f9;
+        padding: 10px 12px;
+        vertical-align: top;
+      }
+      #list-root tbody tr.section-row td {
+        background: #f1f5f9;
+        font-weight: 700;
+        text-transform: none;
+        border-top: 1px solid #e5e7eb;
+      }
+      #list-root tbody tr.section-row td small {
+        color: #6b7280;
+        font-weight: 400;
+      }
+      a.link {
+        color: #0d6efd;
+        text-decoration: none;
+      }
+      @media (max-width: 640px) {
+        #list-root h1 {
+          font-size: 20px;
+        }
+      }
+    </style>
   </head>
 
   <body>
@@ -26,10 +96,10 @@
           <span></span><span></span><span></span><span></span>
         </div>
       </div>
-      <!-- /.preloader -->
 
- <header class="header header-layout1">
-      <div class="header-topbar">
+      <!-- ========= Header (unchanged) ========= -->
+      <header class="header header-layout1">
+        <div class="header-topbar">
           <div class="container-fluid">
             <div class="row align-items-center">
               <div class="col-12 d-flex justify-content-center">
@@ -38,30 +108,28 @@
                     class="contact-list d-flex flex-wrap align-items-center list-unstyled mb-0"
                   >
                     <li>
-                      <i class="icon-phone"></i>
-                      <a href="tel:+917926440704"
+                      <i class="icon-phone"></i
+                      ><a href="tel:+917926440704"
                         >Emergency Line: +91 79264 40704</a
                       >
                     </li>
                     <li>
-                      <i class="icon-location"></i>
-                      <span class="color-white">Location: Delhi, India</span>
+                      <i class="icon-location"></i
+                      ><span class="color-white">Location: Delhi, India</span>
                     </li>
                     <li>
-                      <i class="icon-email"></i>
-                      <a href="mailto:info@abarishealthcare.com"
+                      <i class="icon-email"></i
+                      ><a href="mailto:info@abarishealthcare.com"
                         >info@abarishealthcare.com</a
                       >
                     </li>
                   </ul>
                 </div>
               </div>
-              <!-- /.col-12 -->
             </div>
-            <!-- /.row -->
           </div>
-          <!-- /.container -->
         </div>
+
         <nav class="navbar navbar-expand-lg sticky-navbar">
           <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
@@ -82,81 +150,62 @@
                 <li class="nav-item has-dropdown">
                   <a href="index.html" class="nav-item-link">Home</a>
                 </li>
-                <!-- /.nav-item -->
                 <li class="nav-item has-dropdown">
                   <a href="about-us.html" class="nav-item-link">About Us</a>
                   <ul class="dropdown-menu">
                     <li class="nav-item">
                       <a href="about-us.html" class="nav-item-link">About Us</a>
                     </li>
-                    <!-- /.nav-item -->
                     <li class="nav-item">
                       <a href="team.html" class="nav-item-link"
                         >Business Overview</a
                       >
                     </li>
-
-                     <li class="nav-item">
-                      <a href="csr.html" class="nav-item-link"
-                        >CSR</a
-                      >
+                    <li class="nav-item">
+                      <a href="csr.html" class="nav-item-link">CSR</a>
                     </li>
-
-                    <!-- /.nav-item -->
                   </ul>
-                  <!-- /.dropdown-menu -->
                 </li>
                 <li class="nav-item has-dropdown">
-                  <a href="products.html" class="nav-item-link">Products</a>
+                  <a href="products.html" class="nav-item-link active"
+                    >Products</a
+                  >
                   <ul class="dropdown-menu">
                     <li class="nav-item">
-                      <a href="products.html" class="nav-item-link"
+                      <a href="products.html#lvp" class="nav-item-link"
                         >IV Fluids</a
                       >
                     </li>
-                    <!-- /.nav-item -->
                     <li class="nav-item">
-                      <a href="team.html" class="nav-item-link"
+                      <a href="products.html#svp" class="nav-item-link"
                         >Sterile Injections</a
                       >
                     </li>
-
                     <li class="nav-item">
-                      <a href="careers.html" class="nav-item-link"
+                      <a href="products.html#oral" class="nav-item-link"
                         >Oral Liquids</a
                       >
                     </li>
                     <li class="nav-item">
-                      <a href="careers.html" class="nav-item-link"
+                      <a href="products.html#tablets" class="nav-item-link"
                         >Tablets</a
                       >
                     </li>
-                    <!-- /.nav-item -->
                   </ul>
-                  <!-- /.dropdown-menu -->
                 </li>
-                <!-- /.nav-item -->
-
-                <!-- /.nav-item -->
-<li class="nav-item has-dropdown dropdown">
+                <li class="nav-item has-dropdown dropdown">
                   <a href="blog.html" class="nav-item-link">Blog</a>
-                  
-                </li>
- <li class="nav-item">
-                  <a href="careers.html" class="nav-item-link"
-                    >Careers</a
-                  >
                 </li>
                 <li class="nav-item">
-                  <a href="our-clients.html" class="nav-item-link active"
+                  <a href="careers.html" class="nav-item-link">Careers</a>
+                </li>
+                <li class="nav-item">
+                  <a href="our-clients.html" class="nav-item-link"
                     >Our Clients</a
                   >
                 </li>
-                <!-- /.nav-item -->
-               
-                <!-- /.nav-item -->
               </ul>
-              <!-- /.navbar-nav -->
+
               <ul
                 class="header-actions d-flex align-items-center position-relative list-unstyled mb-0"
               >
@@ -175,275 +224,96 @@
                         <div class="cart-content">
                           <a class="cart-title" href="shop-single.html"
                             >Green Tea</a
-                          >
-                          <span class="cart-price">$ 4.00</span>
-                          <button class="cart-delete">&times;</button>
+                          ><span class="cart-price">$ 4.00</span
+                          ><button class="cart-delete">&times;</button>
                         </div>
-                        <!-- /.cart-item-content -->
                       </li>
-                      <!-- /.cart-item -->
                       <li class="cart-item">
                         <div class="cart-img">
                           <img src="assets/images/products/2.jpg" alt="thumb" />
                         </div>
                         <div class="cart-content">
                           <a class="cart-title" href="shop-single.html"
-                            >Biotin Complex
-                          </a>
-                          <span class="cart-price">$ 26.00</span>
-                          <button class="cart-delete">&times;</button>
+                            >Biotin Complex</a
+                          ><span class="cart-price">$ 26.00</span
+                          ><button class="cart-delete">&times;</button>
                         </div>
-                        <!-- /.cart-item-content -->
                       </li>
-                      <!-- /.cart-item -->
                     </ul>
                     <div class="cart-total">
-                      <span>Total:</span>
-                      <span>$30.00</span>
+                      <span>Total:</span><span>$30.00</span>
                     </div>
-                    <!-- /.cart-subtotal -->
                     <a
                       href="shopping-cart.html"
                       class="btn btn-primary btn-block"
                       >View Cart</a
                     >
                   </div>
-                  <!-- /.cart-minipopup -->
                 </li>
               </ul>
               <button class="close-mobile-menu d-block d-lg-none">
                 <i class="fas fa-times"></i>
               </button>
             </div>
-            <!-- /.navbar-collapse -->
+
             <div
               class="d-none d-xl-flex align-items-center position-relative ml-30"
             >
-              <a
-                href="contact-us.html"
-                class="btn btn-primary btn-contact"
+              <a href="contact-us.html" class="btn btn-primary btn-contact"
+                >Contact Us</a
               >
-                Contact Us
-              </a>
             </div>
           </div>
-          <!-- /.container -->
         </nav>
-        <!-- /.navabr -->
       </header>
+      <!-- ========= /Header ========= -->
 
-      <section class="logo-section">
-        <div class="container">
-          <p class="eyebrow">Benchmark of Quality</p>
-          <h1 class="title">
-            Our products are <span class="highlight">certified</span> and
-            <span class="highlight">proven</span> to comply with global
-            standards.
-          </h1>
+      <!-- ========= Products (Table Only) ========= -->
+      <section class="container" id="list-root">
+        <h1>Abaris Products</h1>
 
-          <!-- Logo grid -->
-          <ul class="logo-grid" role="list">
-            <!-- Replace alt text as needed -->
-            <li class="logo-card">
-              <img
-                src="assets/images/clients/1.png"
-                alt="Certification logo 1"
-                loading="lazy"
-                decoding="async"
-              />
-            </li>
-            <li class="logo-card">
-              <img
-                src="assets/images/clients/2.png"
-                alt="Certification logo 2"
-                loading="lazy"
-                decoding="async"
-              />
-            </li>
-            <li class="logo-card">
-              <img
-                src="assets/images/clients/3.png"
-                alt="Certification logo 3"
-                loading="lazy"
-                decoding="async"
-              />
-            </li>
-            <li class="logo-card">
-              <img
-                src="assets/images/clients/4.png"
-                alt="Certification logo 4"
-                loading="lazy"
-                decoding="async"
-              />
-            </li>
-            <li class="logo-card">
-              <img
-                src="assets/images/clients/5.png"
-                alt="Certification logo 5"
-                loading="lazy"
-                decoding="async"
-              />
-            </li>
-            <li class="logo-card">
-              <img
-                src="assets/images/clients/6.png"
-                alt="Certification logo 6"
-                loading="lazy"
-                decoding="async"
-              />
-            </li>
-            <li class="logo-card">
-              <img
-                src="assets/images/clients/7.png"
-                alt="Certification logo 7"
-                loading="lazy"
-                decoding="async"
-              />
-            </li>
-            <li class="logo-card">
-              <img
-                src="assets/images/clients/8.png"
-                alt="Certification logo 8"
-                loading="lazy"
-                decoding="async"
-              />
-            </li>
-            <li class="logo-card">
-              <img
-                src="assets/images/clients/9.png"
-                alt="Certification logo 9"
-                loading="lazy"
-                decoding="async"
-              />
-            </li>
-            <li class="logo-card">
-              <img
-                src="assets/images/clients/10.png"
-                alt="Certification logo 10"
-                loading="lazy"
-                decoding="async"
-              />
-            </li>
-            <li class="logo-card">
-              <img
-                src="assets/images/clients/11.png"
-                alt="Certification logo 11"
-                loading="lazy"
-                decoding="async"
-              />
-            </li>
-            <li class="logo-card">
-              <img
-                src="assets/images/clients/12.png"
-                alt="Certification logo 12"
-                loading="lazy"
-                decoding="async"
-              />
-            </li>
-            <li class="logo-card">
-              <img
-                src="assets/images/clients/13.png"
-                alt="Certification logo 13"
-                loading="lazy"
-                decoding="async"
-              />
-            </li>
-            <li class="logo-card">
-              <img
-                src="assets/images/clients/14.png"
-                alt="Certification logo 14"
-                loading="lazy"
-                decoding="async"
-              />
-            </li>
-            <li class="logo-card">
-              <img
-                src="assets/images/clients/15.png"
-                alt="Certification logo 15"
-                loading="lazy"
-                decoding="async"
-              />
-            </li>
-            <li class="logo-card">
-              <img
-                src="assets/images/clients/16.png"
-                alt="Certification logo 16"
-                loading="lazy"
-                decoding="async"
-              />
-            </li>
-            <li class="logo-card">
-              <img
-                src="assets/images/clients/17.png"
-                alt="Certification logo 17"
-                loading="lazy"
-                decoding="async"
-              />
-            </li>
-            <li class="logo-card">
-              <img
-                src="assets/images/clients/18.png"
-                alt="Certification logo 18"
-                loading="lazy"
-                decoding="async"
-              />
-            </li>
-            <li class="logo-card">
-              <img
-                src="assets/images/clients/19.png"
-                alt="Certification logo 19"
-                loading="lazy"
-                decoding="async"
-              />
-            </li>
-            <li class="logo-card">
-              <img
-                src="assets/images/clients/20.png"
-                alt="Certification logo 20"
-                loading="lazy"
-                decoding="async"
-              />
-            </li>
-          </ul>
+        <div class="table-wrap">
+          <table class="table" id="productsTable">
+            <thead>
+              <tr>
+                <th>Sr. No.</th>
+                <th>Product</th>
+                <th>Pack Type (in FFS)</th>
+              </tr>
+            </thead>
+            <tbody id="tbodyRows"></tbody>
+          </table>
         </div>
-      </section>
 
+        <p style="margin-top: 16px">
+          <a class="link" href="products-brochure.html">View Brochure (PDF)</a>
+        </p>
+      </section>
+      <!-- ========= /Products ========= -->
+
+      <!-- ========= Footer (unchanged) ========= -->
       <footer class="footer">
         <div class="footer-primary">
           <div class="container">
             <div class="row">
-              <!-- Logo -->
               <div class="col-12 col-lg-2">
                 <div class="footer-widget-about">
                   <img src="assets/images/logo/logo-main.png" alt="logo" />
                 </div>
               </div>
-              <!-- /.col-lg-2 -->
-
-              <!-- About column -->
               <div class="col-6 col-lg-2">
                 <div class="footer-widget-nav">
                   <h6 class="footer-widget-title">About Us</h6>
                   <nav>
                     <ul class="list-unstyled">
                       <li><a href="about-us.html">About Us</a></li>
-                      <li>
-                        <a href="team.html">Business Overview</a>
-                      </li>
-                     
-                      <li>
-                        <a href="csr.html"
-                          >CSR</a
-                        >
-                      </li>
+                      <li><a href="team.html">Business Overview</a></li>
+                      <li><a href="csr.html">CSR</a></li>
                       <li><a href="careers.html">Careers</a></li>
                     </ul>
                   </nav>
                 </div>
               </div>
-              <!-- /.col-lg-2 -->
-
-              <!-- Quick Links column -->
               <div class="col-6 col-lg-2">
                 <div class="footer-widget-nav">
                   <h6 class="footer-widget-title">Links</h6>
@@ -457,9 +327,6 @@
                   </nav>
                 </div>
               </div>
-              <!-- /.col-lg-2 -->
-
-              <!-- Quick Contacts -->
               <div class="col-6 col-lg-3">
                 <div class="footer-widget-contact">
                   <h6 class="footer-widget-title">Quick Contacts</h6>
@@ -470,24 +337,21 @@
                   <ul class="contact-list list-unstyled">
                     <li>
                       <p>Send Us Email:</p>
-                      <a href="mailto:[email protected]">
-                        <i class="contact-icon icon-email"></i>
-                        <span>[email protected]</span>
-                      </a>
+                      <a href="mailto:[email protected]"
+                        ><i class="contact-icon icon-email"></i
+                        ><span>[email protected]</span></a
+                      >
                     </li>
                     <li>
                       <p>Call Us Today:</p>
-                      <a href="tel:+917926440704">
-                        <i class="contact-icon icon-phone"></i>
-                        <span>+ 91 79264 40704</span>
-                      </a>
+                      <a href="tel:+917926440704"
+                        ><i class="contact-icon icon-phone"></i
+                        ><span>+ 91 79264 40704</span></a
+                      >
                     </li>
                   </ul>
                 </div>
               </div>
-              <!-- /.col-lg-3 -->
-
-              <!-- Newsletter (new column on right) -->
               <div class="col-12 col-lg-3">
                 <div class="footer-widget-newsletter">
                   <h6 class="footer-widget-title">Newsletter</h6>
@@ -514,16 +378,11 @@
                       Subscribe
                     </button>
                   </form>
-                 
                 </div>
               </div>
-              <!-- /.col-lg-3 -->
             </div>
-            <!-- /.row -->
           </div>
-          <!-- /.container -->
         </div>
-        <!-- /.footer-primary -->
 
         <div class="footer-secondary">
           <div class="container">
@@ -536,7 +395,6 @@
                   >
                 </div>
               </div>
-              <!-- /.col-lg-7 -->
               <div
                 class="col-sm-12 col-md-12 col-lg-5 d-flex flex-wrap justify-content-between"
               >
@@ -550,14 +408,12 @@
                 </ul>
               </div>
             </div>
-            <!-- /.row -->
           </div>
-          <!-- /.container -->
         </div>
-        <!-- /.footer-secondary -->
       </footer>
+      <!-- ========= /Footer ========= -->
 
-
+      <!-- SVG + search popup (unchanged) -->
       <svg
         class="svg-pathes"
         width="0"
@@ -613,6 +469,12 @@
             d="M1,0.998 v0.002 H0 V0 H0.059 C0.168,0.008,0.404,0.068,0.519,0.414 A1,1,0,0,1,0.555,0.551 C0.624,0.899,0.834,0.986,1,0.998"
           ></path>
         </clipPath>
+        <clipPath id="curve-shape" clipPathUnits="objectBoundingBox">
+          <path
+            d="M1600,3277.99c-152.02-27.95-453.41-46.99-800.382-46.99-346.4,0-647.36,19.12-799.618,47Z"
+            transform="translate(0 -3231)"
+          ></path>
+        </clipPath>
       </svg>
 
       <div class="search-popup">
@@ -628,10 +490,9 @@
           <button class="search-popup-btn"><i class="icon-search"></i></button>
         </form>
       </div>
-      <!-- /.search-popup -->
     </div>
-    <!-- /.wrapper -->
 
+    <!-- Scripts -->
     <script
       data-cfasync="false"
       src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
@@ -639,6 +500,93 @@
     <script src="assets/js/jquery-3.5.1.min.js"></script>
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
-  </body>
 
+   <script>
+  (function () {
+    const DATA_URL = "assets/data/products.json";
+    const tbody = document.getElementById("tbodyRows");
+
+    const escapeHtml = (s) =>
+      String(s).replace(/[&<>"']/g, (m) => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+      }[m]));
+    const clean = (s) => String(s ?? "").replace(/\s+,/g, ",").replace(/,\s*$/,"").trim();
+    const isNumber = (s) => /^[0-9]+$/.test(String(s).trim());
+    const isExcelHeaderRow = (v1,v2) => {
+      const a = String(v1||"").trim().toLowerCase();
+      const b = String(v2||"").trim().toLowerCase();
+      return a === "s. no." || b.startsWith("products detail");
+    };
+
+    const sectionIdFor = (title) => {
+      const t = String(title).toLowerCase();
+      if (t.includes("large volume")) return "lvp";     // IV Fluids
+      if (t.includes("small volume")) return "svp";     // Sterile Injections
+      if (t.includes("oral"))         return "oral";    // Oral Liquids
+      if (t.includes("tablet"))       return "tablets"; // Tablets
+      if (t.includes("products under development")) return "dev";
+      return t.replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"");
+    };
+
+    async function load() {
+      const res = await fetch(DATA_URL, { cache: "no-store" });
+      const rows = await res.json();
+
+      const out = [];
+      const sectionsSeen = new Set();
+
+      for (const r of rows) {
+        const sr      = r["products_list_abaris_healthcare_pvt_ltd"];
+        const product = r["unnamed_1"];
+        const pack    = r["pack_style"];
+
+        if (!sr && !product && !pack) continue;
+        if (isExcelHeaderRow(sr, product)) continue;
+
+        // Section rows (LVP/SVP etc.)
+        if (!isNumber(sr)) {
+          const title = clean(sr);
+          if (title) {
+            const sid = sectionIdFor(title);
+            sectionsSeen.add(sid);
+            out.push(
+              `<tr class="section-row" id="${sid}">
+                 <td colspan="3" class="section-title">${escapeHtml(title)}</td>
+               </tr>`
+            );
+          }
+          continue;
+        }
+
+        // Data rows
+        out.push(
+          `<tr>
+             <td>${escapeHtml(sr)}</td>
+             <td>${escapeHtml(clean(product))}</td>
+             <td>${escapeHtml(clean(pack))}</td>
+           </tr>`
+        );
+      }
+
+      // Ensure anchors exist even if the data doesn’t have those sections yet
+      function addPlaceholder(id, label){
+        if (!sectionsSeen.has(id)) {
+          out.push(
+            `<tr class="section-row" id="${id}">
+               <td colspan="3" class="section-title">${escapeHtml(label)} <small>(no items listed yet)</small></td>
+             </tr>`
+          );
+        }
+      }
+      addPlaceholder("oral", "Oral Liquids");
+      addPlaceholder("tablets", "Tablets");
+
+      tbody.innerHTML = out.join("") || `<tr><td colspan="3">No products available.</td></tr>`;
+    }
+
+    document.addEventListener("DOMContentLoaded", load);
+  })();
+</script>
+
+  </body>
 </html>
