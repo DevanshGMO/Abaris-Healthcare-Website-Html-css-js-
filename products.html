@@ -13,10 +13,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&amp;family=Roboto:wght@400;700&amp;display=swap"
     />
-    <link
-      rel="stylesheet"
-      href="../../../use.fontawesome.com/releases/v5.15.1/css/all.css"
-    />
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
     <link rel="stylesheet" href="assets/css/libraries.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
 
@@ -215,9 +212,7 @@
                 class="header-actions d-flex align-items-center position-relative list-unstyled mb-0"
               >
                 <li>
-                  <button class="action-btn-search">
-                    <i class="fa fa-search"></i>
-                  </button>
+                  
                 </li>
                 <li>
                   <div class="cart-minipopup">
@@ -296,29 +291,42 @@
       </section>
       <!-- ========= /Products ========= -->
 
-      <!-- ========= Footer (unchanged) ========= -->
-      <footer class="footer">
+         <footer class="footer">
         <div class="footer-primary">
           <div class="container">
             <div class="row">
+              <!-- Logo -->
               <div class="col-12 col-lg-2">
                 <div class="footer-widget-about">
-                  <img src="assets/images/logo/logo-main.png" alt="logo" />
+                  <a href="index.html">
+                    <img src="assets/images/logo/logo-main.png" alt="logo" />
+                  </a>
                 </div>
               </div>
+              <!-- /.col-lg-2 -->
+
+              <!-- About column -->
               <div class="col-6 col-lg-2">
                 <div class="footer-widget-nav">
                   <h6 class="footer-widget-title">About Us</h6>
                   <nav>
                     <ul class="list-unstyled">
                       <li><a href="about-us.html">About Us</a></li>
-                      <li><a href="team.html">Business Overview</a></li>
-                      <li><a href="csr.html">CSR</a></li>
+                      <li>
+                        <a href="team.html">Business Overview</a>
+                      </li>
+
+                      <li>
+                        <a href="csr.html">CSR</a>
+                      </li>
                       <li><a href="careers.html">Careers</a></li>
                     </ul>
                   </nav>
                 </div>
               </div>
+              <!-- /.col-lg-2 -->
+
+              <!-- Quick Links column -->
               <div class="col-6 col-lg-2">
                 <div class="footer-widget-nav">
                   <h6 class="footer-widget-title">Links</h6>
@@ -332,6 +340,9 @@
                   </nav>
                 </div>
               </div>
+              <!-- /.col-lg-2 -->
+
+              <!-- Quick Contacts -->
               <div class="col-6 col-lg-3">
                 <div class="footer-widget-contact">
                   <h6 class="footer-widget-title">Quick Contacts</h6>
@@ -342,21 +353,24 @@
                   <ul class="contact-list list-unstyled">
                     <li>
                       <p>Send Us Email:</p>
-                      <a href="mailto:[email protected]"
-                        ><i class="contact-icon icon-email"></i
-                        ><span>[email protected]</span></a
-                      >
+                      <a href="mailto:info@abarishealthcare.com">
+                        <i class="contact-icon icon-email color-white"></i>
+                        <span class="color-white">info@abarishealthcare.com</span>
+                      </a>
                     </li>
                     <li>
                       <p>Call Us Today:</p>
-                      <a href="tel:+917926440704"
-                        ><i class="contact-icon icon-phone"></i
-                        ><span>+ 91 79264 40704</span></a
-                      >
+                      <a href="tel:+917926440704">
+                        <i class="contact-icon icon-phone color-white"></i>
+                        <span class="color-white">+ 91 79264 40704</span>
+                      </a>
                     </li>
                   </ul>
                 </div>
               </div>
+              <!-- /.col-lg-3 -->
+
+              <!-- Newsletter (new column on right) -->
               <div class="col-12 col-lg-3">
                 <div class="footer-widget-newsletter">
                   <h6 class="footer-widget-title">Newsletter</h6>
@@ -385,9 +399,13 @@
                   </form>
                 </div>
               </div>
+              <!-- /.col-lg-3 -->
             </div>
+            <!-- /.row -->
           </div>
+          <!-- /.container -->
         </div>
+        <!-- /.footer-primary -->
 
         <div class="footer-secondary">
           <div class="container">
@@ -400,25 +418,88 @@
                   >
                 </div>
               </div>
+              <!-- /.col-lg-7 -->
               <div
                 class="col-sm-12 col-md-12 col-lg-5 d-flex flex-wrap justify-content-between"
               >
-                <ul class="social-icons list-unstyled mb-0 mr-50">
+                <ul
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 24px;
+                    flex-wrap: nowrap;
+                    margin: 0;
+                    padding: 0;
+                    color: black;
+                    list-style: none;
+                  "
+                >
                   <li>
-                    <a href="#"
-                      ><i class="social-icon icon-linkedin"></i
-                      ><span class="social-title">Linkedin</span></a
+                    <a
+                      href="terms.html"
+                      style="
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 8px;
+                        text-decoration: none;
+                        color: black;
+                        font-weight: 600;
+                      "
                     >
+                      <span>Terms and Conditions</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="privacy.html"
+                      style="
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 8px;
+                        text-decoration: none;
+                        color: black;
+                        font-weight: 600;
+                      "
+                    >
+                      <span>Privacy Policy</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/company/your-company"
+                      target="_blank"
+                      rel="noopener"
+                      style="
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 8px;
+                        text-decoration: none;
+                        color: black;
+                      "
+                    >
+                      <i
+                        class="fab fa-linkedin-in"
+                        aria-hidden="true"
+                        style="
+                          width: 20px;
+                          text-align: center;
+                          color: black;
+                          font-weight: 600;
+                        "
+                      ></i>
+                      <span>LinkedIn</span>
+                    </a>
                   </li>
                 </ul>
               </div>
             </div>
+            <!-- /.row -->
           </div>
+          <!-- /.container -->
         </div>
+        <!-- /.footer-secondary -->
       </footer>
-      <!-- ========= /Footer ========= -->
 
-      <!-- SVG + search popup (unchanged) -->
       <svg
         class="svg-pathes"
         width="0"

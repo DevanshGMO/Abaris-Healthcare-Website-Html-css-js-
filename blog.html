@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
- 
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,16 +7,71 @@
     <meta name="description" content="" />
     <link href="assets/images/logo/logo-main.png" rel="icon" />
     <title>Abaris | Blogs</title>
+
+    <!-- Fonts / Icons / Site CSS -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&amp;family=Roboto:wght@400;700&amp;display=swap"
     />
     <link
       rel="stylesheet"
-      href="../../../use.fontawesome.com/releases/v5.15.1/css/all.css"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
     />
     <link rel="stylesheet" href="assets/css/libraries.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Page-specific fixes (load AFTER style.css) -->
+    <style>
+      /* --- Fix the "+ Read More" icon --- */
+      .btn.btn-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 0;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .btn.btn-link .plus-icon {
+        /* stop <i> from being italic */
+        font-style: normal;
+
+        /* make it a centered circle */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+
+        /* colors (tune to brand) */
+        background: #1e88e5;
+        color: #fff;
+        line-height: 1;
+        font-size: 16px;
+
+        /* subtle inner ring */
+        box-shadow: 0 0 0 2px rgba(30, 136, 229, 0.15) inset;
+
+        /* crisp rendering */
+        transform: translateZ(0);
+      }
+      .btn.btn-link:hover .plus-icon {
+        transform: scale(1.06);
+      }
+
+      /* Keep buttons aligned across cards */
+      .post-body {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+      .post-body .post-desc {
+        margin-bottom: 16px;
+      }
+      .post-body .btn.btn-link {
+        margin-top: auto;
+      }
+    </style>
   </head>
 
   <body>
@@ -83,14 +137,12 @@
                 <li class="nav-item has-dropdown">
                   <a href="index.html" class="nav-item-link">Home</a>
                 </li>
-                <!-- /.nav-item -->
                 <li class="nav-item has-dropdown">
                   <a href="about-us.html" class="nav-item-link">About Us</a>
                   <ul class="dropdown-menu">
                     <li class="nav-item">
                       <a href="about-us.html" class="nav-item-link">About Us</a>
                     </li>
-                    <!-- /.nav-item -->
                     <li class="nav-item">
                       <a href="team.html" class="nav-item-link"
                         >Business Overview</a
@@ -99,16 +151,13 @@
                     <li class="nav-item">
                       <a href="csr.html" class="nav-item-link">CSR</a>
                     </li>
-
-                    <!-- /.nav-item -->
                   </ul>
-                  <!-- /.dropdown-menu -->
                 </li>
+
                 <li class="nav-item has-dropdown">
                   <a href="products.html" class="nav-item-link">Products</a>
                   <ul class="dropdown-menu">
                     <li class="nav-item">
-                      <li class="nav-item">
                       <a href="products.html#lvp" class="nav-item-link"
                         >IV Fluids</a
                       >
@@ -128,13 +177,9 @@
                         >Tablets</a
                       >
                     </li>
-                    <!-- /.nav-item -->
                   </ul>
-                  <!-- /.dropdown-menu -->
                 </li>
-                <!-- /.nav-item -->
 
-                <!-- /.nav-item -->
                 <li class="nav-item has-dropdown dropdown">
                   <a href="blog.html" class="nav-item-link active">Blog</a>
                 </li>
@@ -146,24 +191,15 @@
                     >Our Clients</a
                   >
                 </li>
-                 <li class="nav-item">
-                  <a href="contact-us.html" class="nav-item-link"
-                    >Contact</a
-                  >
+                <li class="nav-item">
+                  <a href="contact-us.html" class="nav-item-link">Contact</a>
                 </li>
-                <!-- /.nav-item -->
-
-                <!-- /.nav-item -->
               </ul>
-              <!-- /.navbar-nav -->
+
               <ul
                 class="header-actions d-flex align-items-center position-relative list-unstyled mb-0"
               >
-                <li>
-                  <button class="action-btn-search">
-                    <i class="fa fa-search"></i>
-                  </button>
-                </li>
+                <li></li>
                 <li>
                   <div class="cart-minipopup">
                     <ul class="list-unstyled">
@@ -178,60 +214,50 @@
                           <span class="cart-price">$ 4.00</span>
                           <button class="cart-delete">&times;</button>
                         </div>
-                        <!-- /.cart-item-content -->
                       </li>
-                      <!-- /.cart-item -->
                       <li class="cart-item">
                         <div class="cart-img">
                           <img src="assets/images/products/2.jpg" alt="thumb" />
                         </div>
                         <div class="cart-content">
                           <a class="cart-title" href="shop-single.html"
-                            >Biotin Complex
-                          </a>
+                            >Biotin Complex</a
+                          >
                           <span class="cart-price">$ 26.00</span>
                           <button class="cart-delete">&times;</button>
                         </div>
-                        <!-- /.cart-item-content -->
                       </li>
-                      <!-- /.cart-item -->
                     </ul>
                     <div class="cart-total">
                       <span>Total:</span>
                       <span>$30.00</span>
                     </div>
-                    <!-- /.cart-subtotal -->
-                    <a
-                      href="shopping-cart.html"
-                      class="btn btn-primary btn-block"
+                    <a href="shopping-cart.html" class="btn btn-primary btn-block"
                       >View Cart</a
                     >
                   </div>
-                  <!-- /.cart-minipopup -->
                 </li>
               </ul>
+
               <button class="close-mobile-menu d-block d-lg-none">
                 <i class="fas fa-times"></i>
               </button>
             </div>
-            <!-- /.navbar-collapse -->
+
             <div
               class="d-none d-xl-flex align-items-center position-relative ml-30"
             >
-              <a href="contact-us.html" class="btn btn-primary btn-contact">
-                Contact Us
+              <a
+                href="products-brochure.html"
+                class="btn btn-primary btn-contact"
+              >
+                Download Catalogue
               </a>
             </div>
           </div>
-          <!-- /.container -->
         </nav>
-        <!-- /.navabr -->
       </header>
-
-      <!-- ========================
-       page title 
-    =========================== -->
-      <section
+  <section
         class="page-title-layout1 page-title-light text-center bg-overlay bg-parallax"
       >
         <div class="bg-img">
@@ -239,18 +265,24 @@
         </div>
         <div class="container">
           <div class="row">
-            <div class="col-12">
-              <h1 class="pagetitle-heading">Our Blog</h1>
-              <nav>
-                <ol class="breadcrumb d-flex justify-content-center mt-80 mb-0">
-                  <li class="breadcrumb-item">
-                    <a href="index.html">Home</a>
-                  </li>
-                  <li class="breadcrumb-item" aria-current="page">
-                    Blog
-                  </li>
-                </ol>
-              </nav>
+            <div class="col-12 col-xl-6 offset-xl-3">
+              <h1 class="pagetitle-heading">Blogs</h1>
+             
+              <div
+                class="d-flex flex-wrap align-items-center justify-content-center"
+              >
+                <a href="contact-us.html" class="btn btn-white mb-10 mx-3">
+                  <i class="icon-arrow-right"></i>
+                  <span>Contact Us</span>
+                </a>
+                <a
+                  href="about-us.html"
+                  class="btn btn-white btn-outlined mb-10 mx-3"
+                >
+                  <span>About Our Journey</span>
+                </a>
+              </div>
+              <nav></nav>
             </div>
             <!-- /.col-xl-6 -->
           </div>
@@ -275,11 +307,6 @@
         </div>
         <!-- /.curve -->
       </section>
-      <!-- /.page-title -->
-
-      <!-- ======================
-      Blog Grid
-    ========================= -->
       <section class="blog-layout1">
         <div class="container">
           <div class="row">
@@ -291,7 +318,6 @@
                     <a href="#">COVID-19</a>
                     <a href="#">Pandemic</a>
                   </div>
-                  <!-- /.blog-meta-cat -->
                   <a href="blog-single-post.html">
                     <img
                       src="assets/images/blog/grid/1.jpg"
@@ -300,7 +326,6 @@
                     />
                   </a>
                 </div>
-                <!-- /.post-img -->
                 <div class="post-body">
                   <h4 class="post-title">
                     <a href="#"
@@ -322,11 +347,9 @@
                     <span>Read More</span>
                   </a>
                 </div>
-                <!-- /.post-body -->
               </div>
-              <!-- /.post-item -->
             </div>
-            <!-- /.col-lg-4 -->
+
             <!-- Post Item #2 -->
             <div class="col-sm-12 col-md-6 col-lg-4">
               <div class="post-item">
@@ -335,7 +358,6 @@
                     <a href="#">COVID-19</a>
                     <a href="#">Testing</a>
                   </div>
-                  <!-- /.blog-meta-cat -->
                   <a href="blog-single-post.html">
                     <img
                       src="assets/images/blog/grid/2.jpg"
@@ -344,13 +366,12 @@
                     />
                   </a>
                 </div>
-                <!-- /.post-img -->
                 <div class="post-body">
                   <h4 class="post-title">
                     <a href="#"
                       >Preventing Pathogen Passage by Taking Precautions Against
-                      the Century Pandemic
-                    </a>
+                      the Century Pandemic</a
+                    >
                   </h4>
                   <div class="post-meta d-flex align-items-center">
                     <span class="post-meta-date">25 Jan 2023</span>
@@ -366,11 +387,9 @@
                     <span>Read More</span>
                   </a>
                 </div>
-                <!-- /.post-body -->
               </div>
-              <!-- /.post-item -->
             </div>
-            <!-- /.col-lg-4 -->
+
             <!-- Post Item #3 -->
             <div class="col-sm-12 col-md-6 col-lg-4">
               <div class="post-item">
@@ -379,7 +398,6 @@
                     <a href="#">COVID-19</a>
                     <a href="#">Pandemic</a>
                   </div>
-                  <!-- /.blog-meta-cat -->
                   <a href="blog-single-post.html">
                     <img
                       src="assets/images/blog/grid/3.jpg"
@@ -388,7 +406,6 @@
                     />
                   </a>
                 </div>
-                <!-- /.post-img -->
                 <div class="post-body">
                   <h4 class="post-title">
                     <a href="#"
@@ -410,11 +427,9 @@
                     <span>Read More</span>
                   </a>
                 </div>
-                <!-- /.post-body -->
               </div>
-              <!-- /.post-item -->
             </div>
-            <!-- /.col-lg-4 -->
+
             <!-- Post Item #4 -->
             <div class="col-sm-12 col-md-6 col-lg-4">
               <div class="post-item">
@@ -423,7 +438,6 @@
                     <a href="#">Symptoms</a>
                     <a href="#">Pandemic</a>
                   </div>
-                  <!-- /.blog-meta-cat -->
                   <a href="blog-single-post.html">
                     <img
                       src="assets/images/blog/grid/4.jpg"
@@ -432,7 +446,6 @@
                     />
                   </a>
                 </div>
-                <!-- /.post-img -->
                 <div class="post-body">
                   <h4 class="post-title">
                     <a href="#"
@@ -454,11 +467,9 @@
                     <span>Read More</span>
                   </a>
                 </div>
-                <!-- /.post-body -->
               </div>
-              <!-- /.post-item -->
             </div>
-            <!-- /.col-lg-4 -->
+
             <!-- Post Item #5 -->
             <div class="col-sm-12 col-md-6 col-lg-4">
               <div class="post-item">
@@ -467,7 +478,6 @@
                     <a href="#">COVID-19</a>
                     <a href="#">Pandemic</a>
                   </div>
-                  <!-- /.blog-meta-cat -->
                   <a href="blog-single-post.html">
                     <img
                       src="assets/images/blog/grid/5.jpg"
@@ -476,7 +486,6 @@
                     />
                   </a>
                 </div>
-                <!-- /.post-img -->
                 <div class="post-body">
                   <h4 class="post-title">
                     <a href="#"
@@ -498,11 +507,9 @@
                     <span>Read More</span>
                   </a>
                 </div>
-                <!-- /.post-body -->
               </div>
-              <!-- /.post-item -->
             </div>
-            <!-- /.col-lg-4 -->
+
             <!-- Post Item #6 -->
             <div class="col-sm-12 col-md-6 col-lg-4">
               <div class="post-item">
@@ -511,7 +518,6 @@
                     <a href="#">COVID-19</a>
                     <a href="#">Pandemic</a>
                   </div>
-                  <!-- /.blog-meta-cat -->
                   <a href="blog-single-post.html">
                     <img
                       src="assets/images/blog/grid/6.jpg"
@@ -520,11 +526,10 @@
                     />
                   </a>
                 </div>
-                <!-- /.post-img -->
                 <div class="post-body">
                   <h4 class="post-title">
                     <a href="#"
-                      >Keep Calm and Research On How to separate hype from fact
+                      >Keep Calm and Research On: How to separate hype from fact
                       in biomedical research</a
                     >
                   </h4>
@@ -542,13 +547,11 @@
                     <span>Read More</span>
                   </a>
                 </div>
-                <!-- /.post-body -->
               </div>
-              <!-- /.post-item -->
             </div>
-            <!-- /.col-lg-4 -->
           </div>
-          <!-- /.row -->
+
+          <!-- Pagination -->
           <div class="row">
             <div class="col-12 text-center">
               <nav class="pagination-area">
@@ -560,26 +563,23 @@
                   </li>
                 </ul>
               </nav>
-              <!-- .pagination-area -->
             </div>
-            <!-- /.col-12 -->
           </div>
-          <!-- /.row -->
         </div>
-        <!-- /.container -->
       </section>
-      <!-- /.blog Grid -->
-  <footer class="footer">
+
+      <footer class="footer">
         <div class="footer-primary">
           <div class="container">
             <div class="row">
               <!-- Logo -->
               <div class="col-12 col-lg-2">
                 <div class="footer-widget-about">
-                  <img src="assets/images/logo/logo-main.png" alt="logo" />
+                  <a href="index.html">
+                    <img src="assets/images/logo/logo-main.png" alt="logo" />
+                  </a>
                 </div>
               </div>
-              <!-- /.col-lg-2 -->
 
               <!-- About column -->
               <div class="col-6 col-lg-2">
@@ -588,23 +588,15 @@
                   <nav>
                     <ul class="list-unstyled">
                       <li><a href="about-us.html">About Us</a></li>
-                      <li>
-                        <a href="team.html">Business Overview</a>
-                      </li>
-                     
-                      <li>
-                        <a href="csr.html"
-                          >CSR</a
-                        >
-                      </li>
+                      <li><a href="team.html">Business Overview</a></li>
+                      <li><a href="csr.html">CSR</a></li>
                       <li><a href="careers.html">Careers</a></li>
                     </ul>
                   </nav>
                 </div>
               </div>
-              <!-- /.col-lg-2 -->
 
-              <!-- Quick Links column -->
+              <!-- Links column -->
               <div class="col-6 col-lg-2">
                 <div class="footer-widget-nav">
                   <h6 class="footer-widget-title">Links</h6>
@@ -618,7 +610,6 @@
                   </nav>
                 </div>
               </div>
-              <!-- /.col-lg-2 -->
 
               <!-- Quick Contacts -->
               <div class="col-6 col-lg-3">
@@ -631,24 +622,23 @@
                   <ul class="contact-list list-unstyled">
                     <li>
                       <p>Send Us Email:</p>
-                      <a href="mailto:[email protected]">
-                        <i class="contact-icon icon-email"></i>
-                        <span>[email protected]</span>
+                      <a href="mailto:info@abarishealthcare.com">
+                        <i class="contact-icon icon-email color-white"></i>
+                        <span class="color-white">info@abarishealthcare.com</span>
                       </a>
                     </li>
                     <li>
                       <p>Call Us Today:</p>
                       <a href="tel:+917926440704">
-                        <i class="contact-icon icon-phone"></i>
-                        <span>+ 91 79264 40704</span>
+                        <i class="contact-icon icon-phone color-white"></i>
+                        <span class="color-white">+ 91 79264 40704</span>
                       </a>
                     </li>
                   </ul>
                 </div>
               </div>
-              <!-- /.col-lg-3 -->
 
-              <!-- Newsletter (new column on right) -->
+              <!-- Newsletter -->
               <div class="col-12 col-lg-3">
                 <div class="footer-widget-newsletter">
                   <h6 class="footer-widget-title">Newsletter</h6>
@@ -675,16 +665,12 @@
                       Subscribe
                     </button>
                   </form>
-                 
                 </div>
               </div>
-              <!-- /.col-lg-3 -->
             </div>
             <!-- /.row -->
           </div>
-          <!-- /.container -->
         </div>
-        <!-- /.footer-primary -->
 
         <div class="footer-secondary">
           <div class="container">
@@ -692,33 +678,90 @@
               <div class="col-sm-12 col-md-12 col-lg-7">
                 <nav></nav>
                 <div class="mt-1">
-                  <span
-                    >&copy; 2023 Abaris Healthcare, All Rights Reserved.</span
-                  >
+                  <span>&copy; 2023 Abaris Healthcare, All Rights Reserved.</span>
                 </div>
               </div>
-              <!-- /.col-lg-7 -->
+
               <div
                 class="col-sm-12 col-md-12 col-lg-5 d-flex flex-wrap justify-content-between"
               >
-                <ul class="social-icons list-unstyled mb-0 mr-50">
+                <ul
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 24px;
+                    flex-wrap: nowrap;
+                    margin: 0;
+                    padding: 0;
+                    color: black;
+                    list-style: none;
+                  "
+                >
                   <li>
-                    <a href="#"
-                      ><i class="social-icon icon-linkedin"></i
-                      ><span class="social-title">Linkedin</span></a
+                    <a
+                      href="terms.html"
+                      style="
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 8px;
+                        text-decoration: none;
+                        color: black;
+                        font-weight: 600;
+                      "
                     >
+                      <span>Terms and Conditions</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="privacy.html"
+                      style="
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 8px;
+                        text-decoration: none;
+                        color: black;
+                        font-weight: 600;
+                      "
+                    >
+                      <span>Privacy Policy</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/company/your-company"
+                      target="_blank"
+                      rel="noopener"
+                      style="
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 8px;
+                        text-decoration: none;
+                        color: black;
+                      "
+                    >
+                      <i
+                        class="fab fa-linkedin-in"
+                        aria-hidden="true"
+                        style="
+                          width: 20px;
+                          text-align: center;
+                          color: black;
+                          font-weight: 600;
+                        "
+                      ></i>
+                      <span>LinkedIn</span>
+                    </a>
                   </li>
                 </ul>
               </div>
             </div>
             <!-- /.row -->
           </div>
-          <!-- /.container -->
         </div>
-        <!-- /.footer-secondary -->
       </footer>
 
-
+      <!-- SVG filters used by theme -->
       <svg
         class="svg-pathes"
         width="0"
@@ -801,5 +844,5 @@
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
-
 </html>
+  
