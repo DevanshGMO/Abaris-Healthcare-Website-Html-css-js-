@@ -1145,8 +1145,10 @@ h6 {
 .accordion-item.opened .acc-icon::after{ opacity:0; }
 
 /* Optional: change color when opened */
-.accordion-item.opened .acc-icon{ background:#198754; }
-
+.accordion-item.opened .acc-icon{ background:#00226c; }
+.accordion-header {
+  font-weight: 600;
+}
 /* Defensive resets so global CSS doesn't distort the icon */
 .acc-icon, .acc-icon::before, .acc-icon::after{
   box-sizing:border-box;
@@ -1393,6 +1395,10 @@ h6 {
 .btn-primary {
   color: var(--color-white);
   background-color: var(--color-primary);
+}
+.btn-primarys {
+  color: #1984c5;
+  background-color: white;
 }
 .btn-primary .icon-outlined {
   color: var(--color-secondary);
@@ -3743,8 +3749,8 @@ a.link { color: var(--pri); text-decoration: none; }
 .accordion-item:first-child {
   border-top: 8px solid var(--color-primary);
 }
-.accordion-item .accordion-title {
-  font-weight: 700;
+.accordion-item .accordion-title .accordion-header{
+  font-weight: bold;
   font-size: 19px;
   cursor: pointer;
   display: block;
