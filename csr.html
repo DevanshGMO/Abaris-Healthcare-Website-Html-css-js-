@@ -12,7 +12,10 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&amp;family=Roboto:wght@400;700&amp;display=swap"
     />
-   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
     <link rel="stylesheet" href="assets/css/libraries.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <style>
@@ -234,39 +237,6 @@
       <!-- /.preloader -->
 
       <header class="header header-layout1">
-        <div class="header-topbar">
-          <div class="container-fluid">
-            <div class="row align-items-center">
-              <div class="col-12 d-flex justify-content-center">
-                <div class="d-flex align-items-center justify-between">
-                  <ul
-                    class="contact-list d-flex flex-wrap align-items-center list-unstyled mb-0"
-                  >
-                    <li>
-                      <i class="icon-phone"></i>
-                      <a href="tel:+917926440704"
-                        >Emergency Line: +91 79264 40704</a
-                      >
-                    </li>
-                    <li>
-                      <i class="icon-location"></i>
-                      <span class="color-white">Location: Delhi, India</span>
-                    </li>
-                    <li>
-                      <i class="icon-email"></i>
-                      <a href="mailto:info@abarishealthcare.com"
-                        >info@abarishealthcare.com</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- /.col-12 -->
-            </div>
-            <!-- /.row -->
-          </div>
-          <!-- /.container -->
-        </div>
         <nav class="navbar navbar-expand-lg sticky-navbar">
           <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
@@ -313,8 +283,8 @@
                 <li class="nav-item has-dropdown">
                   <a href="products.html" class="nav-item-link">Products</a>
                   <ul class="dropdown-menu">
+                    <li class="nav-item"></li>
                     <li class="nav-item">
-                      <li class="nav-item">
                       <a href="products.html#lvp" class="nav-item-link"
                         >IV Fluids</a
                       >
@@ -352,10 +322,8 @@
                     >Our Clients</a
                   >
                 </li>
-                 <li class="nav-item">
-                  <a href="contact-us.html" class="nav-item-link"
-                    >Contact</a
-                  >
+                <li class="nav-item">
+                  <a href="contact-us.html" class="nav-item-link">Contact</a>
                 </li>
                 <!-- /.nav-item -->
 
@@ -365,9 +333,7 @@
               <ul
                 class="header-actions d-flex align-items-center position-relative list-unstyled mb-0"
               >
-                <li>
-                  
-                </li>
+                <li></li>
                 <li>
                   <div class="cart-minipopup">
                     <ul class="list-unstyled">
@@ -422,8 +388,12 @@
             <div
               class="d-none d-xl-flex align-items-center position-relative ml-30"
             >
-              <a href="products-brochure.html" class="btn btn-primary btn-contact">
-               Download Catalogue
+              <a
+                class="btn btn-primary btn-contact"
+                href="assets/docs/abaris-product-list.pdf"
+                download="Abaris-Product-List.pdf"
+              >
+                Download Catalogue
               </a>
             </div>
           </div>
@@ -431,36 +401,64 @@
         </nav>
         <!-- /.navabr -->
       </header>
-      <header class="hero">
-        <div class="container wrap">
-          <div>
-            <div class="kicker">Company</div>
-            <h1 class="kicker-heading">
-              Corporate Social Responsibility (CSR)
-            </h1>
-            <p class="lead">
-              We are committed to conducting business in a socially responsible
-              and ethical manner minimizing environmental impact, supporting
-              communities, and operating with transparency.
-            </p>
-            <div class="note" style="margin-top: 10px">
-              <strong>Scope.</strong> This policy applies to all Abaris
-              Healthcare employees and contractors.
-            </div>
-          </div>
-          <div class="card">
-            <h3 style="margin: 0 0 6px">At a glance</h3>
-            <div class="grid cols-2">
-              <span class="pill">Ethical Conduct</span>
-              <span class="pill">Environmental Sustainability</span>
-              <span class="pill">Community Engagement</span>
-              <span class="pill">Employee Volunteering</span>
-              <span class="pill">Philanthropy</span>
-              <span class="pill">Transparent Reporting</span>
-            </div>
-          </div>
+      <section
+        class="page-title-layout1 page-title-light text-center bg-overlay bg-parallax"
+      >
+        <div class="bg-img">
+          <img src="assets/images/page-titles/2.jpg" alt="background" />
         </div>
-      </header>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-xl-6 offset-xl-3">
+              <h1 class="pagetitle-heading color-white">
+                Corporate Social Responsibility (CSR)
+              </h1>
+              <p class="pagetitle-desc">
+                We are committed to conducting business in a socially
+                responsible and ethical manner minimizing environmental impact,
+                supporting communities, and operating with transparency.
+              </p>
+              <div
+                class="d-flex flex-wrap align-items-center justify-content-center"
+              >
+                <a href="contact-us.html" class="btn btn-white mb-10 mx-3">
+                  <span>Connect Us</span>
+                  <i class="icon-arrow-right"></i>
+                </a>
+                <a
+                  href="contact-us.html"
+                  class="btn btn-white btn-outlined mb-10 mx-3"
+                  href="assets/docs/abaris-product-list.pdf"
+                  download="Abaris-Product-List.pdf"
+                >
+                  <span>Download Catelog</span>
+                </a>
+              </div>
+              <nav></nav>
+            </div>
+            <!-- /.col-xl-6 -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->
+        <a class="home-nav" href="index.html">
+          <i class="icon-home"></i>
+        </a>
+        <div class="curve-top-shape">
+          <svg
+            class="curve-svg"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1000 100"
+            preserveAspectRatio="none"
+          >
+            <path
+              class="curve-path"
+              d="M1000,4.3V0H0v4.3C0.9,23.1,126.7,99.2,500,100S1000,22.7,1000,4.3z"
+            ></path>
+          </svg>
+        </div>
+        <!-- /.curve -->
+      </section>
 
       <!-- BODY -->
       <main class="container page">
@@ -636,7 +634,7 @@
         </div>
       </main>
 
-       <footer class="footer">
+      <footer class="footer">
         <div class="footer-primary">
           <div class="container">
             <div class="row">
@@ -656,15 +654,23 @@
                   <h6 class="footer-widget-title">About Us</h6>
                   <nav>
                     <ul class="list-unstyled">
-                      <li><a href="about-us.html">About Us</a></li>
                       <li>
-                        <a href="team.html">Business Overview</a>
+                        <a href="about-us.html" style="color: white"
+                          >About Us</a
+                        >
+                      </li>
+                      <li>
+                        <a href="team.html" style="color: white"
+                          >Business Overview</a
+                        >
                       </li>
 
                       <li>
-                        <a href="csr.html">CSR</a>
+                        <a href="csr.html" style="color: white">CSR</a>
                       </li>
-                      <li><a href="careers.html">Careers</a></li>
+                      <li>
+                        <a href="careers.html" style="color: white">Careers</a>
+                      </li>
                     </ul>
                   </nav>
                 </div>
@@ -677,10 +683,26 @@
                   <h6 class="footer-widget-title">Links</h6>
                   <nav>
                     <ul class="list-unstyled">
-                      <li><a href="products.html">Products</a></li>
-                      <li><a href="blog.html">Blog &amp; Insights</a></li>
-                      <li><a href="our-clients.html">Our Clients</a></li>
-                      <li><a href="contact-us.html">Contact Us</a></li>
+                      <li>
+                        <a href="products.html" style="color: white"
+                          >Products</a
+                        >
+                      </li>
+                      <li>
+                        <a href="blog.html" style="color: white"
+                          >Blog &amp; Insights</a
+                        >
+                      </li>
+                      <li>
+                        <a href="our-clients.html" style="color: white"
+                          >Our Clients</a
+                        >
+                      </li>
+                      <li>
+                        <a href="contact-us.html" style="color: white"
+                          >Contact Us</a
+                        >
+                      </li>
                     </ul>
                   </nav>
                 </div>
@@ -700,7 +722,9 @@
                       <p>Send Us Email:</p>
                       <a href="mailto:info@abarishealthcare.com">
                         <i class="contact-icon icon-email color-white"></i>
-                        <span class="color-white">info@abarishealthcare.com</span>
+                        <span class="color-white"
+                          >info@abarishealthcare.com</span
+                        >
                       </a>
                     </li>
                     <li>
@@ -770,67 +794,69 @@
                 <ul
                   style="
                     display: flex;
+                    margin-top: 5px;
                     align-items: center;
                     gap: 24px;
                     flex-wrap: nowrap;
                     margin: 0;
                     padding: 0;
-                    color: black;
                     list-style: none;
+                    color: #000;
                   "
                 >
-                  <li>
+                  <li style="min-width: 0">
                     <a
                       href="terms.html"
                       style="
+                        margin-top: 5px;
                         display: inline-flex;
                         align-items: center;
                         gap: 8px;
                         text-decoration: none;
-                        color: black;
+                        color: #000;
                         font-weight: 600;
+                        white-space: nowrap; /* keep on one line */
                       "
                     >
                       <span>Terms and Conditions</span>
                     </a>
                   </li>
-                  <li>
+                  <li style="min-width: 0">
                     <a
                       href="privacy.html"
                       style="
+                        margin-top: 5px;
                         display: inline-flex;
                         align-items: center;
                         gap: 8px;
                         text-decoration: none;
-                        color: black;
+                        color: #000;
                         font-weight: 600;
+                        white-space: nowrap; /* keep on one line */
                       "
                     >
                       <span>Privacy Policy</span>
                     </a>
                   </li>
-                  <li>
+                  <li style="min-width: 0">
                     <a
                       href="https://www.linkedin.com/company/your-company"
                       target="_blank"
                       rel="noopener"
                       style="
+                        margin-top: 5px;
                         display: inline-flex;
                         align-items: center;
                         gap: 8px;
                         text-decoration: none;
-                        color: black;
+                        color: #000;
+                        white-space: nowrap;
                       "
                     >
                       <i
                         class="fab fa-linkedin-in"
                         aria-hidden="true"
-                        style="
-                          width: 20px;
-                          text-align: center;
-                          color: black;
-                          font-weight: 600;
-                        "
+                        style="width: 20px; text-align: center"
                       ></i>
                       <span>LinkedIn</span>
                     </a>
@@ -844,9 +870,6 @@
         </div>
         <!-- /.footer-secondary -->
       </footer>
-
-
-
       <svg
         class="svg-pathes"
         width="0"
@@ -958,5 +981,4 @@
       sections.forEach((s) => spy.observe(s));
     </script>
   </body>
-
 </html>
