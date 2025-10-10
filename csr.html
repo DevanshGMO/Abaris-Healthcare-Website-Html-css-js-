@@ -1,639 +1,864 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="Abaris Healthcare" />
-    <link href="assets/images/logo/logo-main.png" rel="icon" />
-    <title>Abaris | About Us</title>
 
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&amp;family=Roboto:wght@400;700&amp;display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-    />
-    <link rel="stylesheet" href="assets/css/libraries.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-      html,
-      body {
-        margin: 0;
-        background: var(--bgpage);
-        color: var(--text);
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial,
-          sans-serif;
-        line-height: 1.6;
-      }
-      a {
-        color: var(--brand);
-        text-decoration: none;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Abaris Healthcare" />
+  <link href="assets/images/logo/logo-main.png" rel="icon" />
+  <title>Abaris | About Us</title>
 
-      img {
-        max-width: 100%;
-        display: block;
-      }
-      .container {
-        max-width: var(--max);
-        margin-inline: auto;
-        padding: clamp(16px, 2vw, 24px);
-      }
-      .hero {
-        background: #1984c5;
-        border-bottom: 1px solid var(--border);
-      }
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&amp;family=Roboto:wght@400;700&amp;display=swap" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" />
+  <link rel="stylesheet" href="assets/css/libraries.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    .tt {
+      color: #1984c5;
+    }
+  </style>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      background: var(--bgpage);
+      color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial,
+        sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--brand);
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: var(--max);
+      margin-inline: auto;
+      padding: clamp(16px, 2vw, 24px);
+    }
+
+    .hero {
+      background: #1984c5;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero .wrap {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 980px) {
       .hero .wrap {
-        display: grid;
-        gap: 18px;
-        grid-template-columns: 1fr;
-      }
-      @media (min-width: 980px) {
-        .hero .wrap {
-          grid-template-columns: 1.2fr 0.8fr;
-          align-items: center;
-        }
-      }
-      .kicker {
-        font-weight: 700;
-        color: white;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        font-size: 13px;
-      }
-      h1 {
-        font-size: clamp(28px, 3.4vw, 44px);
-        line-height: 1.15;
-        margin: 6px 0;
-      }
-      .lead {
-        font-size: clamp(16px, 1.8vw, 18px);
-        color: white;
-        margin: 6px 0 0;
-      }
-      .hero .card {
-        background: #fff;
-        border: 1px solid var(--border);
-        border-radius: var(--radius);
-        box-shadow: var(--shadow);
-        padding: 14px;
-      }
-      .kicker-heading {
-        color: white;
-      }
-      /* layout with sticky local nav */
-      .page {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 22px;
-      }
-      @media (min-width: 1100px) {
-        .page {
-          grid-template-columns: 260px 1fr;
-        }
-      }
-      .toc {
-        position: sticky;
-        top: 18px;
-        align-self: start;
-        background: #ffffff;
-        border: 1px solid var(--border);
-        border-radius: 14px;
-        box-shadow: var(--shadow);
-        padding: 12px;
-      }
-      .toc h3 {
-        margin: 0 0 8px;
-        font-size: 14px;
-        color: var(--muted);
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-      }
-      .toc a {
-        display: block;
-        padding: 8px 10px;
-        border-radius: 10px;
-        color: var(--text);
-      }
-      .toc a.active {
-        background: #1984c5;
-        color: white;
-        border: 1px solid var(--ring);
-      }
-
-      /* section + cards */
-      section {
-        scroll-margin-top: 90px;
-      }
-      .section {
-        background: #fff;
-        border: 1px solid var(--border);
-        border-radius: 16px;
-        padding: clamp(16px, 2vw, 22px);
-        box-shadow: var(--shadow);
-      }
-      h2 {
-        font-size: clamp(22px, 2.6vw, 30px);
-        margin: 0 0 8px;
-      }
-      h3 {
-        font-size: clamp(18px, 2.2vw, 22px);
-        margin: 0 0 6px;
-      }
-      p {
-        margin: 8px 0;
-      }
-      .muted {
-        color: var(--muted);
-      }
-      .grid {
-        display: grid;
-        gap: 14px;
-      }
-      .cols-2 {
-        grid-template-columns: 1fr;
-      }
-      @media (min-width: 720px) {
-        .cols-2 {
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-      .pill {
-        display: inline-block;
-        border: 1px solid var(--border);
-        border-radius: 999px;
-        padding: 6px 10px;
-        margin: 6px 6px 0 0;
-        background: #fff;
-      }
-
-      /* principles cards */
-      .cards {
-        display: grid;
-        gap: 12px;
-      }
-      @media (min-width: 820px) {
-        .cards {
-          grid-template-columns: repeat(3, 1fr);
-        }
-      }
-      .card {
-        background: #fff;
-        border: 1px solid var(--border);
-        border-radius: 14px;
-        padding: 14px;
-      }
-      .card h4 {
-        margin: 0 0 6px;
-        font-size: 18px;
-      }
-
-      /* accordion for implementation/comms/etc. */
-      details {
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        background: #fff;
-      }
-      summary {
-        cursor: pointer;
-        padding: 12px 14px;
-        font-weight: 700;
-        list-style: none;
-        display: flex;
+        grid-template-columns: 1.2fr 0.8fr;
         align-items: center;
-        gap: 8px;
       }
-      summary::-webkit-details-marker {
-        display: none;
-      }
-      details .panel {
-        padding: 0 14px 14px;
-        color: var(--sub);
-      }
+    }
 
-      /* CTA note */
-      .note {
-        border: 1px dashed var(--border);
-        border-radius: 12px;
-        padding: 12px;
-        background: #f8fdff;
-      }
-    </style>
-  </head>
+    .kicker {
+      font-weight: 700;
+      color: white;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
 
-  <body>
-    <div class="wrapper">
-      <div class="preloader">
-        <div class="loading">
-          <span></span><span></span><span></span><span></span>
-        </div>
+    h1 {
+      font-size: clamp(28px, 3.4vw, 44px);
+      line-height: 1.15;
+      margin: 6px 0;
+    }
+
+    .lead {
+      font-size: clamp(16px, 1.8vw, 18px);
+      color: white;
+      margin: 6px 0 0;
+    }
+
+    .hero .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 14px;
+    }
+
+    .kicker-heading {
+      color: white;
+    }
+
+    /* layout with sticky local nav */
+    .page {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 22px;
+    }
+
+    @media (min-width: 1100px) {
+      .page {
+        grid-template-columns: 260px 1fr;
+      }
+    }
+
+    .toc {
+      position: sticky;
+      top: 18px;
+      align-self: start;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: var(--shadow);
+      padding: 12px;
+    }
+
+    .toc h3 {
+      margin: 0 0 8px;
+      font-size: 14px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .toc a {
+      display: block;
+      padding: 8px 10px;
+      border-radius: 10px;
+      color: var(--text);
+    }
+
+    .toc a.active {
+      background: #1984c5;
+      color: white;
+      border: 1px solid var(--ring);
+    }
+
+    /* section + cards */
+    section {
+      scroll-margin-top: 90px;
+    }
+
+    .section {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: clamp(16px, 2vw, 22px);
+      box-shadow: var(--shadow);
+    }
+
+    h2 {
+      font-size: clamp(22px, 2.6vw, 30px);
+      margin: 0 0 8px;
+    }
+
+    h3 {
+      font-size: clamp(18px, 2.2vw, 22px);
+      margin: 0 0 6px;
+    }
+
+    p {
+      margin: 8px 0;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 14px;
+    }
+
+    .cols-2 {
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 720px) {
+      .cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .pill {
+      display: inline-block;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 6px 10px;
+      margin: 6px 6px 0 0;
+      background: #fff;
+    }
+
+    /* principles cards */
+    .cards {
+      display: grid;
+      gap: 12px;
+    }
+
+    @media (min-width: 820px) {
+      .cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+    .card h4 {
+      margin: 0 0 6px;
+      font-size: 18px;
+    }
+
+    /* accordion for implementation/comms/etc. */
+    details {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    summary {
+      cursor: pointer;
+      padding: 12px 14px;
+      font-weight: 700;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details .panel {
+      padding: 0 14px 14px;
+      color: var(--sub);
+    }
+
+    /* CTA note */
+    .note {
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      padding: 12px;
+      background: #f8fdff;
+    }
+     .back-to-top {
+      position: fixed;
+      right: 16px;
+      bottom: calc(16px + env(safe-area-inset-bottom));
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border: none;
+      border-radius: 999px;
+      background: #1984c5;
+      color: #fff;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+      z-index: 1040;
+    }
+    .back-to-top:hover {
+      filter: brightness(0.95);
+    }
+    .back-to-top:focus {
+      outline: 2px solid #bfe0f3;
+      outline-offset: 2px;
+    }
+    .back-to-top.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    @media (max-width: 480px) {
+      .back-to-top {
+        right: 12px;
+        width: 48px;
+        height: 48px;
+      }
+    }
+  </style>
+
+</head>
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+  <i class="fas fa-arrow-up" aria-hidden="true"></i>
+</button>
+<body>
+  <div class="wrapper">
+    <div class="preloader">
+      <div class="loading">
+        <span></span><span></span><span></span><span></span>
       </div>
-      <!-- /.preloader -->
+    </div>
+    <!-- /.preloader -->
 
-      <header class="header header-layout1">
-        <nav class="navbar navbar-expand-lg sticky-navbar">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-              <img
-                src="assets/images/logo/logo-main.png"
-                class="logo-dark"
-                alt="logo"
-              />
-            </a>
-            <button class="navbar-toggler" type="button">
-              <span class="menu-lines"><span></span></span>
-            </button>
-            <div
-              class="collapse navbar-collapse justify-content-center"
-              id="mainNavigation"
-            >
-              <ul class="navbar-nav">
-                <li class="nav-item has-dropdown">
-                  <a href="index.html" class="nav-item-link">Home</a>
-                </li>
-                <!-- /.nav-item -->
-                <li class="nav-item has-dropdown">
-                  <a href="about-us.html" class="nav-item-link active"
-                    >About Us</a
-                  >
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a href="about-us.html" class="nav-item-link">About Us</a>
-                    </li>
-                    <!-- /.nav-item -->
-                    <li class="nav-item">
-                      <a href="team.html" class="nav-item-link"
-                        >Business Overview</a
+    <header class="header header-layout1">
+      <nav class="navbar navbar-expand-lg sticky-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/images/logo/logo-main.png" class="logo-dark" alt="logo" />
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="menu-lines"><span></span></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="mainNavigation">
+            <ul class="navbar-nav">
+              <li class="nav-item has-dropdown">
+                <a href="index.html" class="nav-item-link">Home</a>
+              </li>
+              <!-- /.nav-item -->
+              <li class="nav-item has-dropdown">
+                <a href="about-us.html" class="nav-item-link active">About Us</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a href="about-us.html" class="nav-item-link">About Us</a>
+                  </li>
+                  <!-- /.nav-item -->
+                  <li class="nav-item">
+                    <a href="team.html" class="nav-item-link">Business Overview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="csr.html" class="nav-item-link active">CSR</a>
+                  </li>
+                     <li class="nav-item">
+                      <a href="compliance.html" class="nav-item-link"
+                        >Compliance</a
                       >
                     </li>
-                    <li class="nav-item">
-                      <a href="csr.html" class="nav-item-link active">CSR</a>
-                    </li>
+                  <!-- /.nav-item -->
+                </ul>
+                <!-- /.dropdown-menu -->
+              </li>
+              <li class="nav-item has-dropdown">
+                <a href="products.html" class="nav-item-link">Products</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"></li>
+                  <li class="nav-item">
+                    <a href="products.html#lvp" class="nav-item-link">IV Fluids</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="products.html#svp" class="nav-item-link">Sterile Injections</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="products.html#oral" class="nav-item-link">Oral Liquids</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="products.html#tablets" class="nav-item-link">Tablets</a>
+                  </li>
+                  <!-- /.nav-item -->
+                </ul>
+                <!-- /.dropdown-menu -->
+              </li>
+              <!-- /.nav-item -->
 
-                    <!-- /.nav-item -->
+              <!-- /.nav-item -->
+              <li class="nav-item has-dropdown dropdown">
+                <a href="blog.html" class="nav-item-link">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a href="careers.html" class="nav-item-link">Careers</a>
+              </li>
+              <li class="nav-item">
+                <a href="our-clients.html" class="nav-item-link">Our Clients</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact-us.html" class="nav-item-link">Contact</a>
+              </li>
+              <!-- /.nav-item -->
+
+              <!-- /.nav-item -->
+            </ul>
+            <!-- /.navbar-nav -->
+            <ul class="header-actions d-flex align-items-center position-relative list-unstyled mb-0">
+              <li></li>
+              <li>
+                <div class="cart-minipopup">
+                  <ul class="list-unstyled">
+                    <li class="cart-item">
+                      <div class="cart-img">
+                        <img src="assets/images/products/1.jpg" alt="thumb" />
+                      </div>
+                      <div class="cart-content">
+                        <a class="cart-title" href="shop-single.html">Green Tea</a>
+                        <span class="cart-price">$ 4.00</span>
+                        <button class="cart-delete">&times;</button>
+                      </div>
+                      <!-- /.cart-item-content -->
+                    </li>
+                    <!-- /.cart-item -->
+                    <li class="cart-item">
+                      <div class="cart-img">
+                        <img src="assets/images/products/2.jpg" alt="thumb" />
+                      </div>
+                      <div class="cart-content">
+                        <a class="cart-title" href="shop-single.html">Biotin Complex
+                        </a>
+                        <span class="cart-price">$ 26.00</span>
+                        <button class="cart-delete">&times;</button>
+                      </div>
+                      <!-- /.cart-item-content -->
+                    </li>
+                    <!-- /.cart-item -->
                   </ul>
-                  <!-- /.dropdown-menu -->
-                </li>
-                <li class="nav-item has-dropdown">
-                  <a href="products.html" class="nav-item-link">Products</a>
-                  <ul class="dropdown-menu">
-                    <li class="nav-item"></li>
-                    <li class="nav-item">
-                      <a href="products.html#lvp" class="nav-item-link"
-                        >IV Fluids</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="products.html#svp" class="nav-item-link"
-                        >Sterile Injections</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="products.html#oral" class="nav-item-link"
-                        >Oral Liquids</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="products.html#tablets" class="nav-item-link"
-                        >Tablets</a
-                      >
-                    </li>
-                    <!-- /.nav-item -->
-                  </ul>
-                  <!-- /.dropdown-menu -->
-                </li>
-                <!-- /.nav-item -->
-
-                <!-- /.nav-item -->
-                <li class="nav-item has-dropdown dropdown">
-                  <a href="blog.html" class="nav-item-link">Blog</a>
-                </li>
-                <li class="nav-item">
-                  <a href="careers.html" class="nav-item-link">Careers</a>
-                </li>
-                <li class="nav-item">
-                  <a href="our-clients.html" class="nav-item-link"
-                    >Our Clients</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a href="contact-us.html" class="nav-item-link">Contact</a>
-                </li>
-                <!-- /.nav-item -->
-
-                <!-- /.nav-item -->
-              </ul>
-              <!-- /.navbar-nav -->
-              <ul
-                class="header-actions d-flex align-items-center position-relative list-unstyled mb-0"
-              >
-                <li></li>
-                <li>
-                  <div class="cart-minipopup">
-                    <ul class="list-unstyled">
-                      <li class="cart-item">
-                        <div class="cart-img">
-                          <img src="assets/images/products/1.jpg" alt="thumb" />
-                        </div>
-                        <div class="cart-content">
-                          <a class="cart-title" href="shop-single.html"
-                            >Green Tea</a
-                          >
-                          <span class="cart-price">$ 4.00</span>
-                          <button class="cart-delete">&times;</button>
-                        </div>
-                        <!-- /.cart-item-content -->
-                      </li>
-                      <!-- /.cart-item -->
-                      <li class="cart-item">
-                        <div class="cart-img">
-                          <img src="assets/images/products/2.jpg" alt="thumb" />
-                        </div>
-                        <div class="cart-content">
-                          <a class="cart-title" href="shop-single.html"
-                            >Biotin Complex
-                          </a>
-                          <span class="cart-price">$ 26.00</span>
-                          <button class="cart-delete">&times;</button>
-                        </div>
-                        <!-- /.cart-item-content -->
-                      </li>
-                      <!-- /.cart-item -->
-                    </ul>
-                    <div class="cart-total">
-                      <span>Total:</span>
-                      <span>$30.00</span>
-                    </div>
-                    <!-- /.cart-subtotal -->
-                    <a
-                      href="shopping-cart.html"
-                      class="btn btn-primary btn-block"
-                      >View Cart</a
-                    >
+                  <div class="cart-total">
+                    <span>Total:</span>
+                    <span>$30.00</span>
                   </div>
-                  <!-- /.cart-minipopup -->
-                </li>
-              </ul>
-              <button class="close-mobile-menu d-block d-lg-none">
-                <i class="fas fa-times"></i>
-              </button>
-            </div>
-            <!-- /.navbar-collapse -->
-            <div
-              class="d-none d-xl-flex align-items-center position-relative ml-30"
-            >
-              <a
-                class="btn btn-primary btn-contact"
-                href="assets/docs/abaris-product-list.pdf"
-                download="Abaris-Product-List.pdf"
-              >
-                Download Catalogue
-              </a>
-            </div>
+                  <!-- /.cart-subtotal -->
+                  <a href="shopping-cart.html" class="btn btn-primary btn-block">View Cart</a>
+                </div>
+                <!-- /.cart-minipopup -->
+              </li>
+            </ul>
+            <button class="close-mobile-menu d-block d-lg-none">
+              <i class="fas fa-times"></i>
+            </button>
           </div>
-          <!-- /.container -->
-        </nav>
-        <!-- /.navabr -->
-      </header>
-      <section
-        class="page-title-layout1 page-title-light text-center bg-overlay bg-parallax"
-      >
-        <div class="bg-img">
-          <img src="assets/images/page-titles/2.jpg" alt="background" />
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-xl-6 offset-xl-3">
-              <h1 class="pagetitle-heading color-white">
-                Corporate Social Responsibility (CSR)
-              </h1>
-              <p class="pagetitle-desc">
-                We are committed to conducting business in a socially
-                responsible and ethical manner minimizing environmental impact,
-                supporting communities, and operating with transparency.
-              </p>
-              <div
-                class="d-flex flex-wrap align-items-center justify-content-center"
-              >
-                <a href="contact-us.html" class="btn btn-white mb-10 mx-3">
-                  <span>Connect Us</span>
-                  <i class="icon-arrow-right"></i>
-                </a>
-                <a
-                  href="contact-us.html"
-                  class="btn btn-white btn-outlined mb-10 mx-3"
-                  href="assets/docs/abaris-product-list.pdf"
-                  download="Abaris-Product-List.pdf"
-                >
-                  <span>Download Catelog</span>
-                </a>
-              </div>
-              <nav></nav>
-            </div>
-            <!-- /.col-xl-6 -->
+          <!-- /.navbar-collapse -->
+          <div class="d-none d-xl-flex align-items-center position-relative ml-30">
+            <a class="btn btn-primary btn-contact" href="assets/docs/abaris-product-list.pdf"
+              download="Abaris-Product-List.pdf">
+              Download Catalogue
+            </a>
           </div>
-          <!-- /.row -->
         </div>
         <!-- /.container -->
-        <a class="home-nav" href="index.html">
-          <i class="icon-home"></i>
-        </a>
-        <div class="curve-top-shape">
-          <svg
-            class="curve-svg"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1000 100"
-            preserveAspectRatio="none"
-          >
-            <path
-              class="curve-path"
-              d="M1000,4.3V0H0v4.3C0.9,23.1,126.7,99.2,500,100S1000,22.7,1000,4.3z"
-            ></path>
-          </svg>
+      </nav>
+      <!-- /.navabr -->
+    </header>
+    <section class="page-title-layout1 page-title-light text-center bg-overlay bg-parallax" style="padding-top: 60px !important;
+    padding-bottom: 50px;">
+      <div class="bg-img">
+        <img src="assets/images/page-titles/2.jpg" alt="background" />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-xl-6 offset-xl-3">
+            <h1 class="pagetitle-heading color-white">
+              Corporate Social Responsibility (CSR)
+            </h1>
+            <p class="pagetitle-desc">
+              We are committed to conducting business in a socially
+              responsible and ethical manner minimizing environmental impact,
+              supporting communities, and operating with transparency.
+            </p>
+            <div class="d-flex flex-wrap align-items-center justify-content-center">
+              <a href="contact-us.html" class="btn btn-white mb-10 mx-3">
+                <span>Connect Us</span>
+                <i class="icon-arrow-right"></i>
+              </a>
+              <a href="contact-us.html" class="btn btn-white btn-outlined mb-10 mx-3"
+                href="assets/docs/abaris-product-list.pdf" download="Abaris-Product-List.pdf">
+                <span>Download Catelog</span>
+              </a>
+            </div>
+            <nav></nav>
+          </div>
+          <!-- /.col-xl-6 -->
         </div>
-        <!-- /.curve -->
-      </section>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+      <a class="home-nav" href="index.html">
+        <i class="icon-home"></i>
+      </a>
+      <div class="curve-top-shape">
+        <svg class="curve-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+          <path class="curve-path" d="M1000,4.3V0H0v4.3C0.9,23.1,126.7,99.2,500,100S1000,22.7,1000,4.3z"></path>
+        </svg>
+      </div>
+      <!-- /.curve -->
+    </section>
 
-      <!-- BODY -->
-      <main class="container page">
-        <!-- local toc -->
-        <nav class="toc" aria-label="On this page">
-          <h3>CSR Policy</h3>
-          <a class="toc-link active" href="#purpose">Purpose</a>
-          <a class="toc-link" href="#scope">Scope</a>
-          <a class="toc-link" href="#principles">Principles</a>
-          <a class="toc-link" href="#implementation">Implementation</a>
-          <a class="toc-link" href="#compliance">Compliance</a>
-          <a class="toc-link" href="#communication">Communication</a>
-          <a class="toc-link" href="#resources">Resources</a>
-          <a class="toc-link" href="#review">Review & Adoption</a>
-        </nav>
+    <!-- BODY -->
+    <main class="container page">
+      <!-- local toc -->
+      <nav class="toc" aria-label="On this page">
+        <h3>CSR Policy</h3>
+        <a class="toc-link active" href="#purpose">Purpose</a>
+        <a class="toc-link" href="#scope">Scope</a>
+        <a class="toc-link" href="#principles">Principles</a>
+        <a class="toc-link" href="#implementation">Implementation</a>
+        <a class="toc-link" href="#compliance">Compliance</a>
+        <a class="toc-link" href="#communication">Communication</a>
+        <a class="toc-link" href="#resources">Resources</a>
+        <a class="toc-link" href="#review">Review & Update</a>
+        <a class="toc-link" href="#adoption">Adoption</a>
+      </nav>
 
-        <div>
-          <!-- Purpose -->
-          <section id="purpose" class="section">
-            <h2>Purpose</h2>
-            <p>
-              The purpose of this Corporate Social Responsibility (CSR) Policy
-              is to outline Abaris Healthcare’s commitment to operate ethically,
-              contribute positively to the communities and environments in which
-              we work, and support sustainable development.
-            </p>
-            <p class="muted">
-              This summarizes the “Purpose” section of the official CSR policy.
-            </p>
-          </section>
+      <div>
+        <!-- Purpose -->
+        <section class="faq pt-90 pb-0" id="purpose">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="heading-layout2">
+                  <h2 class="tt heading-title mb-40">1. Purposeon</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="accordion" id="accordion1">
+                  <div class="accordion-item">
 
-          <!-- Scope -->
-          <section id="scope" class="section">
-            <h2>Scope</h2>
-            <p>
-              This policy applies to all employees and contractors associated
-              with Abaris Healthcare.
-            </p>
-          </section>
+                    <p>
+                      The purpose of this Corporate Social Responsibility (CSR) Policy is to outline <span
+                        class="tt color-secondary underlined-text-primary">ABARIS HEALTHCARE PVT. LTD.'s</span>
+                      commitment to conducting business in a socially responsible and ethical manner. This policy aims
+                      to define our approach towards contributing positively to the communities and environments in
+                      which we operate, thereby enhancing sustainable development.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="faq pt-0 pb-0" id="purpose">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="heading-layout2">
+                  <h2 class="tt heading-title mb-40">2. Scope</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="accordion" id="accordion1">
+                  <div class="accordion-item">
 
-          <!-- Principles -->
-          <section id="principles" class="section">
-            <h2>Our CSR Principles</h2>
-            <div class="cards">
-              <div class="card">
-                <h4>Ethical Conduct</h4>
-                <p>
-                  We uphold integrity, transparency, and ethical behaviour in
-                  all operations and interactions.
-                </p>
+                    <p>
+                      This policy applies to all employees and contractors associated with <span
+                        class="tt color-secondary underlined-text-primary">ABARIS HEALTHCARE PVT. LTD.</span> It
+                      encompasses our commitment to ethical business practices, community engagement, environmental
+                      sustainability, and corporate philanthropy.
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div class="card">
-                <h4>Environmental Sustainability</h4>
-                <p>
-                  We work to minimize our environmental impact by conserving
-                  resources and adopting eco-friendly practices and
-                  technologies.
-                </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="faq pt-0 pb-0" id="scope">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="heading-layout2">
+                  <h2 class="heading-title mb-40 tt">3. Principles</h2>
+                </div>
               </div>
-              <div class="card">
-                <h4>Community Engagement</h4>
-                <p>
-                  We actively engage with communities, supporting local
-                  initiatives, partnerships, and social welfare programs.
-                </p>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="accordion" id="csrAccordion1">
+                  <div class="accordion-item">
+                    <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#csr1">
+                      <a class="accordion-title tt" href="#">Ethical Conduct</a>
+                    </div>
+                    <div id="csr1" class="collapse show" data-bs-parent="#csrAccordion1">
+                      <div class="accordion-body">
+                        <p>We uphold the highest standards of integrity, transparency, and ethical behaviour in all our
+                          operations and interactions.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#csr2">
+                      <a class="accordion-title tt" href="#">Environmental Sustainability</a>
+                    </div>
+                    <div id="csr2" class="collapse" data-bs-parent="#csrAccordion1">
+                      <div class="accordion-body">
+                        <p>We are committed to minimizing our environmental impact by promoting sustainable practices,
+                          reducing carbon footprint, conserving resources, and adopting eco-friendly technologies.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#csr3">
+                      <a class="accordion-title tt" href="#">Community Engagement</a>
+                    </div>
+                    <div id="csr3" class="collapse" data-bs-parent="#csrAccordion1">
+                      <div class="accordion-body">
+                        <p>We actively engage with communities where we operate, supporting local initiatives, fostering
+                          partnerships, and contributing to social welfare programs.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#csr4">
+                      <a class="accordion-title tt" href="#">Employee Volunteering</a>
+                    </div>
+                    <div id="csr4" class="collapse" data-bs-parent="#csrAccordion1">
+                      <div class="accordion-body">
+                        <p>We encourage and support our employees' participation in volunteer activities and community
+                          service initiatives.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#csr5">
+                      <a class="accordion-title tt" href="#">Philanthropy</a>
+                    </div>
+                    <div id="csr5" class="collapse" data-bs-parent="#csrAccordion1">
+                      <div class="accordion-body">
+                        <p>We allocate resources towards charitable causes and organizations that align with our values
+                          and contribute positively to society.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div><!-- /.accordion -->
+              </div><!-- /.col-lg-6 -->
+            </div>
+          </div>
+        </section>
+        <section class="faq pt-0 pb-0" id="implementation">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="heading-layout2">
+                  <h2 class="heading-title tt mb-40">4. Implementation</h2>
+                </div>
               </div>
-              <div class="card">
-                <h4>Employee Volunteering</h4>
-                <p>
-                  We encourage and support employees to participate in volunteer
-                  activities and community service.
-                </p>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="accordion" id="accordion1">
+                  <div class="accordion-item">
+                    <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#csr6">
+                      <a class="accordion-title tt" href="#">Responsibility</a>
+                    </div>
+                    <div id="csr6" class="collapse" data-bs-parent="#csrAccordion2">
+                      <div class="accordion-body">
+                        <p>The CSR Committee, comprised of representatives from various departments, is responsible for
+                          overseeing the implementation and periodic review of this policy.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#csr7">
+                      <a class="accordion-title tt" href="#">Integration</a>
+                    </div>
+                    <div id="csr7" class="collapse" data-bs-parent="#csrAccordion2">
+                      <div class="accordion-body">
+                        <p>CSR considerations are integrated into our business strategy, decision-making processes, and
+                          day-to-day operations.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#csr8">
+                      <a class="accordion-title tt" href="#">Reporting</a>
+                    </div>
+                    <div id="csr8" class="collapse" data-bs-parent="#csrAccordion2">
+                      <div class="accordion-body">
+                        <p>We provide regular updates and reports on our CSR activities and performance to stakeholders,
+                          ensuring transparency and accountability.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
               </div>
-              <div class="card">
-                <h4>Philanthropy</h4>
-                <p>
-                  We allocate resources toward reputable charitable causes
-                  aligned with our values.
-                </p>
+            </div>
+          </div>
+        </section>
+        <section class="faq pt-0 pb-0" id="compliance">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="heading-layout2">
+                  <h2 class="heading-title tt mb-40">5. Compliance</h2>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="accordion" id="accordion1">
+                  <div class="accordion-item">
+                    <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#csr9">
+                      <a class="accordion-title tt" href="#">Legal Compliance</a>
+                    </div>
+                    <div id="csr9" class="collapse" data-bs-parent="#csrAccordion2">
+                      <div class="accordion-body">
+                        <p>We comply with all applicable laws, regulations, and international standards related to CSR
+                          in every jurisdiction where we operate.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#csr10">
+                      <a class="accordion-title tt" href="#">Continuous Improvement</a>
+                    </div>
+                    <div id="csr10" class="collapse" data-bs-parent="#csrAccordion2">
+                      <div class="accordion-body">
+                        <p>We continuously evaluate and improve our CSR initiatives, policies, and performance based on
+                          feedback and evolving best practices.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="faq pt-0 pb-0" id="communication">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="heading-layout2">
+                  <h2 class="heading-title tt mb-40">6. Communication</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="accordion" id="csrAccordion1">
+                  <div class="accordion-item">
+                    <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#csr1">
+                      <a class="accordion-title tt" href="#">Internal Communication</a>
+                    </div>
+                    <div id="csr1" class="collapse" data-bs-parent="#csrAccordion1">
+                      <div class="accordion-body">
+                        <p> We communicate our CSR objectives, initiatives, and achievements internally to raise
+                          awareness and foster a culture of social responsibility among employees.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#csr2">
+                      <a class="accordion-title tt" href="#">External Communication</a>
+                    </div>
+                    <div id="csr2" class="collapse" data-bs-parent="#csrAccordion1">
+                      <div class="accordion-body">
+                        <p>We engage with external stakeholders, including customers, suppliers, partners, and the wider
+                          community, to share information about our CSR activities and encourage collaboration.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="faq pt-0 pb-0" id="resources">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="heading-layout2">
+                  <h2 class="heading-title tt mb-40">7. Resources</h2>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-12">
+                  <div class="accordion" id="accordion1">
+                    <div class="accordion-item">
+                      <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#csr1">
+                        <a class="accordion-title tt" href="#">Allocation</a>
+                      </div>
+                      <div id="csr1" class="collapse" data-bs-parent="#csrAccordion1">
+                        <div class="accordion-body">
+                          <p> Adequate resources, including financial, human, and technological, are allocated to
+                            support the effective implementation of CSR initiatives.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
 
-          <!-- Implementation -->
-          <section id="implementation" class="section">
-            <h2>How We Implement CSR</h2>
 
-            <details open>
-              <summary>CSR Committee Oversight</summary>
-              <div class="panel">
-                A cross-functional CSR Committee oversees implementation and
-                periodic review of this policy.
+
+        <section class="faq pt-0 pb-0" id="review">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="heading-layout2">
+                  <h2 class="heading-title tt mb-40">8. Review and Update</h2>
+                </div>
+
               </div>
-            </details>
 
-            <details>
-              <summary>Integrated into Business Strategy</summary>
-              <div class="panel">
-                CSR considerations are embedded into decision-making and
-                day-to-day operations across the company.
-              </div>
-            </details>
-
-            <details>
-              <summary>Reporting & Transparency</summary>
-              <div class="panel">
-                We provide regular updates on CSR activities and performance to
-                stakeholders to ensure accountability.
-              </div>
-            </details>
-          </section>
-
-          <!-- Compliance -->
-          <section id="compliance" class="section">
-            <h2>Compliance & Continuous Improvement</h2>
-            <p>
-              We comply with all applicable laws, regulations, and international
-              standards related to CSR in every jurisdiction where we operate.
-              We continually evaluate and improve our initiatives, policies, and
-              performance based on feedback and best practices.
-            </p>
-          </section>
-
-          <!-- Communication -->
-          <section id="communication" class="section">
-            <h2>Communication</h2>
-            <div class="grid cols-2">
-              <div class="card">
-                <h4>Internal Communication</h4>
-                <p>
-                  We share CSR objectives, initiatives, and achievements to
-                  build awareness and a culture of responsibility among
-                  employees.
-                </p>
-              </div>
-              <div class="card">
-                <h4>External Communication</h4>
-                <p>
-                  We engage with customers, suppliers, partners, and communities
-                  to share CSR information and invite collaboration.
-                </p>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="accordion" id="accordion1">
+                  <div class="accordion-item">
+                    <div class="accordion-header" data-bs-toggle="collapse" data-bs-target="#csr1">
+                      <a class="accordion-title tt" href="#">Review</a>
+                    </div>
+                    <div id="csr1" class="collapse" data-bs-parent="#csrAccordion1">
+                      <div class="accordion-body">
+                        <p>This CSR Policy is periodically reviewed and updated to reflect changing societal
+                          expectations, business priorities, and emerging sustainability challenges.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </section>
+          </div>
+        </section>
 
-          <!-- Resources -->
-          <section id="resources" class="section">
-            <h2>Resources</h2>
-            <p>
-              Adequate financial, human, and technological resources are
-              allocated to support effective CSR initiatives.
-            </p>
-          </section>
+        <section class="faq pt-0 pb-0" id="adoption">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <div class="heading-layout2">
+                  <h2 class="heading-title tt mb-40">9. Adoption</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="accordion" id="accordion1">
+                  <div class="accordion-item">
+                    <p class="muted">
+                      This CSR Policy is adopted and endorsed by ABARIS HEALTHCARE PVT. LTD.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-          <!-- Review & Adoption -->
-          <section id="review" class="section">
-            <h2>Review & Adoption</h2>
-            <p>
-              This CSR Policy is reviewed periodically and updated to reflect
-              evolving expectations and business priorities. The policy is
-              formally adopted and endorsed by Abaris Healthcare leadership.
-            </p>
-          </section>
 
-          <!-- Optional: Downloads / Initiatives placeholder -->
-          <section class="section">
-            <h2>Reports & Initiatives (Coming Soon)</h2>
-            <p class="muted">
-              As projects and reports become available, they’ll be listed here
-              for download and transparency.
-            </p>
-          </section>
-        </div>
-      </main>
 
+      </div>
+    </main>
+
+ <!-- /.Banner Layout 3 -->
       <footer class="footer">
         <div class="footer-primary">
           <div class="container">
@@ -777,13 +1002,16 @@
         <!-- /.footer-primary -->
 
         <div class="footer-secondary">
-          <div class="container">
+          <div
+            class="container"
+            style="padding-top: 10px; padding-bottom: 10px"
+          >
             <div class="row align-items-center">
               <div class="col-sm-12 col-md-12 col-lg-7">
                 <nav></nav>
                 <div class="mt-1">
                   <span
-                    >&copy; 2023 Abaris Healthcare, All Rights Reserved.</span
+                    >&copy; 2025 Abaris Healthcare, All Rights Reserved.</span
                   >
                 </div>
               </div>
@@ -870,6 +1098,7 @@
         </div>
         <!-- /.footer-secondary -->
       </footer>
+
       <svg
         class="svg-pathes"
         width="0"
@@ -958,27 +1187,25 @@
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-      // in-page nav active state
-      const links = Array.from(document.querySelectorAll(".toc-link"));
-      const sections = links.map((a) =>
-        document.querySelector(a.getAttribute("href"))
-      );
-      const spy = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              links.forEach((l) =>
-                l.classList.toggle(
-                  "active",
-                  l.getAttribute("href") === "#" + entry.target.id
-                )
-              );
-            }
-          });
-        },
-        { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
-      );
-      sections.forEach((s) => spy.observe(s));
-    </script>
+  (function(){
+    const btn = document.getElementById('backToTop');
+    if(!btn) return;
+
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function toggleBtn(){
+      if(window.scrollY > 300){ btn.classList.add('show'); }
+      else{ btn.classList.remove('show'); }
+    }
+    window.addEventListener('scroll', toggleBtn, { passive:true });
+    toggleBtn();
+
+    btn.addEventListener('click', function(){
+      if(prefersReduced){ window.scrollTo(0,0); }
+      else{ window.scrollTo({ top:0, behavior:'smooth' }); }
+    });
+  })();
+</script>
+
   </body>
 </html>

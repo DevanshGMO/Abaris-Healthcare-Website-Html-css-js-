@@ -1,278 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="description" content="" />
+    <link href="assets/images/logo/logo-main.png" rel="icon" />
+    <title>Abaris | Our Clients</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&amp;family=Roboto:wght@400;700&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+    />
+    <link rel="stylesheet" href="assets/css/libraries.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      .stories-card {
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        padding: 18px;
+        background: #fff;
+      }
+      .ratio-16x9 {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%;
+      }
+      .ratio-16x9 > iframe,
+      .ratio-16x9 > video {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta name="description" content="" />
-  <link href="assets/images/logo/logo-main.png" rel="icon" />
-  <title>Abaris | Our Clients</title>
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&amp;family=Roboto:wght@400;700&amp;display=swap" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
-  <link rel="stylesheet" href="assets/css/libraries.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-</head>
-
-<body>
-  <div class="wrapper">
-    <div class="preloader">
-      <div class="loading">
-        <span></span><span></span><span></span><span></span>
+  <body>
+    <div class="wrapper">
+      <div class="preloader">
+        <div class="loading">
+          <span></span><span></span><span></span><span></span>
+        </div>
       </div>
-    </div>
-    <header class="header header-layout1">
-     
-      <!-- /.header-top -->
-      <nav class="navbar navbar-expand-lg sticky-navbar">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
-            <img src="assets/images/logo/logo-main.png" class="logo-dark" alt="logo" />
-          </a>
-          <button class="navbar-toggler" type="button">
-            <span class="menu-lines"><span></span></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-center" id="mainNavigation">
-            <ul class="navbar-nav">
-              <li class="nav-item has-dropdown">
-                <a href="index.html" class="nav-item-link">Home</a>
-              </li>
-              <!-- /.nav-item -->
-              <li class="nav-item has-dropdown">
-                <a href="about-us.html" class="nav-item-link">About Us</a>
-                <ul class="dropdown-menu">
-                  <li class="nav-item">
-                    <a href="about-us.html" class="nav-item-link">About Us</a>
-                  </li>
-                  <!-- /.nav-item -->
-                  <li class="nav-item">
-                    <a href="team.html" class="nav-item-link">Business Overview</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="csr.html" class="nav-item-link">CSR</a>
-                  </li>
-
-                  <!-- /.nav-item -->
-                </ul>
-                <!-- /.dropdown-menu -->
-              </li>
-              <li class="nav-item has-dropdown">
-                <a href="products.html" class="nav-item-link">Products</a>
-                <ul class="dropdown-menu">
-                  <li class="nav-item">
-                    <a href="products.html?q=IV%20Fluids" class="nav-item-link">IV Fluids</a>
-                  </li>
-                  <!-- /.nav-item -->
-                  <li class="nav-item">
-                    <a href="team.html" class="nav-item-link">Sterile Injections</a>
-                  </li>
-
-                  <li class="nav-item">
-                    <a href="careers.html" class="nav-item-link">Oral Liquids</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="careers.html" class="nav-item-link">Tablets</a>
-                  </li>
-
-                  <!-- /.nav-item -->
-                </ul>
-                <!-- /.dropdown-menu -->
-              </li>
-              <!-- /.nav-item -->
-
-              <!-- /.nav-item -->
-              <li class="nav-item has-dropdown dropdown">
-                <a href="blog.html" class="nav-item-link">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a href="careers.html" class="nav-item-link">Careers</a>
-              </li>
-              <li class="nav-item">
-                <a href="our-clients.html" class="nav-item-link active">Our Clients</a>
-              </li>
-              <li class="nav-item">
-                <a href="contact-us.html" class="nav-item-link">Contact</a>
-              </li>
-              <!-- /.nav-item -->
-
-              <!-- /.nav-item -->
-            </ul>
-            <!-- /.navbar-nav -->
-            <ul class="header-actions d-flex align-items-center position-relative list-unstyled mb-0">
-              <li>
-
-              </li>
-              <li>
-                <div class="cart-minipopup">
-                  <ul class="list-unstyled">
-                    <li class="cart-item">
-                      <div class="cart-img">
-                        <img src="assets/images/products/1.jpg" alt="thumb" />
-                      </div>
-                      <div class="cart-content">
-                        <a class="cart-title" href="shop-single.html">Green Tea</a>
-                        <span class="cart-price">$ 4.00</span>
-                        <button class="cart-delete">&times;</button>
-                      </div>
-                      <!-- /.cart-item-content -->
-                    </li>
-                    <!-- /.cart-item -->
-                    <li class="cart-item">
-                      <div class="cart-img">
-                        <img src="assets/images/products/2.jpg" alt="thumb" />
-                      </div>
-                      <div class="cart-content">
-                        <a class="cart-title" href="shop-single.html">Biotin Complex
-                        </a>
-                        <span class="cart-price">$ 26.00</span>
-                        <button class="cart-delete">&times;</button>
-                      </div>
-                      <!-- /.cart-item-content -->
-                    </li>
-                    <!-- /.cart-item -->
-                  </ul>
-                  <div class="cart-total">
-                    <span>Total:</span>
-                    <span>$30.00</span>
-                  </div>
-                  <!-- /.cart-subtotal -->
-                  <a href="shopping-cart.html" class="btn btn-primary btn-block">View Cart</a>
-                </div>
-                <!-- /.cart-minipopup -->
-              </li>
-            </ul>
-            <button class="close-mobile-menu d-block d-lg-none">
-              <i class="fas fa-times"></i>
+      <header class="header header-layout1">
+        <!-- /.header-top -->
+        <nav class="navbar navbar-expand-lg sticky-navbar">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+              <img
+                src="assets/images/logo/logo-main.png"
+                class="logo-dark"
+                alt="logo"
+              />
+            </a>
+            <button class="navbar-toggler" type="button">
+              <span class="menu-lines"><span></span></span>
             </button>
-          </div>
-          <!-- /.navbar-collapse -->
-          <div class="d-none d-xl-flex align-items-center position-relative ml-30">
-           <a
+            <div
+              class="collapse navbar-collapse justify-content-center"
+              id="mainNavigation"
+            >
+              <ul class="navbar-nav">
+                <li class="nav-item has-dropdown">
+                  <a href="index.html" class="nav-item-link">Home</a>
+                </li>
+                <!-- /.nav-item -->
+                <li class="nav-item has-dropdown">
+                  <a href="about-us.html" class="nav-item-link">About Us</a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a href="about-us.html" class="nav-item-link">About Us</a>
+                    </li>
+                    <!-- /.nav-item -->
+                    <li class="nav-item">
+                      <a href="team.html" class="nav-item-link"
+                        >Business Overview</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="csr.html" class="nav-item-link">CSR</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="compliance.html" class="nav-item-link"
+                        >Compliance</a
+                      >
+                    </li>
+                    <!-- /.nav-item -->
+                  </ul>
+                  <!-- /.dropdown-menu -->
+                </li>
+                <li class="nav-item has-dropdown">
+                  <a href="products.html" class="nav-item-link">Products</a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-item">
+                      <a
+                        href="products.html?q=IV%20Fluids"
+                        class="nav-item-link"
+                        >IV Fluids</a
+                      >
+                    </li>
+                    <!-- /.nav-item -->
+                    <li class="nav-item">
+                      <a href="team.html" class="nav-item-link"
+                        >Sterile Injections</a
+                      >
+                    </li>
+
+                    <li class="nav-item">
+                      <a href="careers.html" class="nav-item-link"
+                        >Oral Liquids</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a href="careers.html" class="nav-item-link">Tablets</a>
+                    </li>
+
+                    <!-- /.nav-item -->
+                  </ul>
+                  <!-- /.dropdown-menu -->
+                </li>
+                <!-- /.nav-item -->
+
+                <!-- /.nav-item -->
+                <li class="nav-item has-dropdown dropdown">
+                  <a href="blog.html" class="nav-item-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a href="careers.html" class="nav-item-link">Careers</a>
+                </li>
+                <li class="nav-item">
+                  <a href="our-clients.html" class="nav-item-link active"
+                    >Our Clients</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="contact-us.html" class="nav-item-link">Contact</a>
+                </li>
+                <!-- /.nav-item -->
+
+                <!-- /.nav-item -->
+              </ul>
+              <!-- /.navbar-nav -->
+              <ul
+                class="header-actions d-flex align-items-center position-relative list-unstyled mb-0"
+              >
+                <li></li>
+              </ul>
+              <button class="close-mobile-menu d-block d-lg-none">
+                <i class="fas fa-times"></i>
+              </button>
+            </div>
+            <!-- /.navbar-collapse -->
+            <div
+              class="d-none d-xl-flex align-items-center position-relative ml-30"
+            >
+              <a
                 class="btn btn-primary btn-contact"
                 href="assets/docs/abaris-product-list.pdf"
                 download="Abaris-Product-List.pdf"
               >
                 Download Catalogue
               </a>
-          </div>
-        </div>
-        <!-- /.container -->
-      </nav>
-      <!-- /.navabr -->
-    </header>
-    <section class="page-title-layout1 page-title-light text-center bg-overlay bg-parallax">
-      <div class="bg-img">
-        <img src="assets/images/page-titles/1.jpg" alt="background" />
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-xl-6 offset-xl-3">
-            <h1 class="pagetitle-heading">Our Clients</h1>
-          
-            <div class="d-flex flex-wrap align-items-center justify-content-center">
-              <a href="contact-us.html" class="btn btn-white mb-10 mx-3">
-                <i class="icon-arrow-right"></i>
-                <span>Contact Us</span>
-              </a>
-              <a href="team.html" class="btn btn-white btn-outlined mb-10 mx-3">
-                <span>About Our Journey</span>
-              </a>
             </div>
-            <nav></nav>
           </div>
-          <!-- /.col-xl-6 -->
+          <!-- /.container -->
+        </nav>
+        <!-- /.navabr -->
+      </header>
+      <section
+        class="page-title-layout1 page-title-light text-center bg-overlay bg-parallax"
+        style="padding-top: 60px !important; padding-bottom: 50px"
+      >
+        <div class="bg-img">
+          <img src="assets/images/page-titles/1.jpg" alt="background" />
         </div>
-        <!-- /.row -->
-      </div>
-      <!-- /.container -->
-      <a class="home-nav" href="index.html">
-        <i class="icon-home"></i>
-      </a>
-      <div class="curve-top-shape">
-        <svg class="curve-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-          <path class="curve-path" d="M1000,4.3V0H0v4.3C0.9,23.1,126.7,99.2,500,100S1000,22.7,1000,4.3z"></path>
-        </svg>
-      </div>
-      <!-- /.curve -->
-    </section>
-    <section class="logo-section">
-      <div class="container">
-        <p class="eyebrow">Benchmark of Quality</p>
-        <h1 class="title">
-          Our products are <span class="highlight">certified</span> and
-          <span class="highlight">proven</span> to comply with global
-          standards.
-        </h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-xl-6 offset-xl-3">
+              <h1 class="pagetitle-heading">Our Clients</h1>
+              <p class="pagetitle-desc">
+                At Abaris Healthcare, we offer a wide range of trusted and
+                effective pharmaceutical products designed to improve patient
+                outcomes and enhance overall well-being.
+              </p>
+              <div
+                class="d-flex flex-wrap align-items-center justify-content-center"
+              >
+                <a href="contact-us.html" class="btn btn-white mb-10 mx-3"
+                  ><i class="icon-arrow-right"></i><span>Contact Us</span></a
+                >
+                <a
+                  href="team.html"
+                  class="btn btn-white btn-outlined mb-10 mx-3"
+                  ><span>About Our Journey</span></a
+                >
+              </div>
+              <nav></nav>
+            </div>
+          </div>
+        </div>
+        <a class="home-nav" href="index.html"><i class="icon-home"></i></a>
+        <div class="curve-top-shape">
+          <svg
+            class="curve-svg"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1000 100"
+            preserveAspectRatio="none"
+          >
+            <path
+              class="curve-path"
+              d="M1000,4.3V0H0v4.3C0.9,23.1,126.7,99.2,500,100S1000,22.7,1000,4.3z"
+            ></path>
+          </svg>
+        </div>
+      </section>
+      <section class="pt-60">
+        <div class="container">
+          <!-- Title -->
+          <div class="row">
+            <div class="col-12 text-center">
+              <div class="heading-layout2">
+                <h2 class="heading-title mb-20" style="color: #1984c5">
+                  Clients &amp; <span style="color: #000">Success Stories</span>
+                </h2>
+                <p class="mb-40">
+                  <strong>Trusted by the Best:</strong> We proudly partner with
+                  leading pharmaceutical companies, hospitals, and distributors.
+                </p>
+              </div>
+            </div>
+          </div>
 
-        <!-- Logo grid -->
-        <ul class="logo-grid" role="list">
-          <!-- Replace alt text as needed -->
-          <li class="logo-card">
-            <img src="assets/images/clients/1.png" alt="Certification logo 1" loading="lazy" decoding="async" />
-          </li>
-          <li class="logo-card">
-            <img src="assets/images/clients/2.png" alt="Certification logo 2" loading="lazy" decoding="async" />
-          </li>
-          <li class="logo-card">
-            <img src="assets/images/clients/3.png" alt="Certification logo 3" loading="lazy" decoding="async" />
-          </li>
-          <li class="logo-card">
-            <img src="assets/images/clients/4.png" alt="Certification logo 4" loading="lazy" decoding="async" />
-          </li>
-          <li class="logo-card">
-            <img src="assets/images/clients/5.png" alt="Certification logo 5" loading="lazy" decoding="async" />
-          </li>
-          <li class="logo-card">
-            <img src="assets/images/clients/6.png" alt="Certification logo 6" loading="lazy" decoding="async" />
-          </li>
-          <li class="logo-card">
-            <img src="assets/images/clients/7.png" alt="Certification logo 7" loading="lazy" decoding="async" />
-          </li>
-          <li class="logo-card">
-            <img src="assets/images/clients/8.png" alt="Certification logo 8" loading="lazy" decoding="async" />
-          </li>
-          <li class="logo-card">
-            <img src="assets/images/clients/9.png" alt="Certification logo 9" loading="lazy" decoding="async" />
-          </li>
-          <li class="logo-card">
-            <img src="assets/images/clients/10.png" alt="Certification logo 10" loading="lazy" decoding="async" />
-          </li>
-          <li class="logo-card">
-            <img src="assets/images/clients/11.png" alt="Certification logo 11" loading="lazy" decoding="async" />
-          </li>
-          <li class="logo-card">
-            <img src="assets/images/clients/12.png" alt="Certification logo 12" loading="lazy" decoding="async" />
-          </li>
-          <li class="logo-card">
-            <img src="assets/images/clients/13.png" alt="Certification logo 13" loading="lazy" decoding="async" />
-          </li>
-          <li class="logo-card">
-            <img src="assets/images/clients/14.png" alt="Certification logo 14" loading="lazy" decoding="async" />
-          </li>
-          <li class="logo-card">
-            <img src="assets/images/clients/15.png" alt="Certification logo 15" loading="lazy" decoding="async" />
-          </li>
-          <li class="logo-card">
-            <img src="assets/images/clients/16.png" alt="Certification logo 16" loading="lazy" decoding="async" />
-          </li>
-          <li class="logo-card">
-            <img src="assets/images/clients/17.png" alt="Certification logo 17" loading="lazy" decoding="async" />
-          </li>
-          <li class="logo-card">
-            <img src="assets/images/clients/18.png" alt="Certification logo 18" loading="lazy" decoding="async" />
-          </li>
-          <li class="logo-card">
-            <img src="assets/images/clients/19.png" alt="Certification logo 19" loading="lazy" decoding="async" />
-          </li>
-          <li class="logo-card">
-            <img src="assets/images/clients/20.png" alt="Certification logo 20" loading="lazy" decoding="async" />
-          </li>
-        </ul>
-      </div>
-    </section>
+          <!-- Two clean, responsive columns -->
+          <div class="row gy-4">
+            <!-- Left: Featured Testimonials -->
+            <div class="col-12 col-lg-6">
+              <h5 class="mb-2">Featured Testimonials</h5>
+              <p class="mb-0">
+                Video and text testimonials from satisfied business clients and
+                healthcare professionals.
+              </p>
+            </div>
 
-     <footer class="footer">
+            <!-- Right: Case Study Highlights -->
+            <div class="col-12 col-lg-6">
+              <h5 class="mb-2">Case Study Highlights</h5>
+              <ul class="mb-0">
+                <li>Rapid scale-up of production for emergency supplies</li>
+                <li>Customized formulations for partner brands</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="logo-section">
+        <div class="container">
+          <p class="eyebrow">Benchmark of Quality</p>
+          <h1 class="title">
+            Our products are <span class="highlight">certified</span> and
+            <span class="highlight">proven</span> to comply with global
+            standards.
+          </h1>
+
+          <!-- Logo grid -->
+          <ul class="logo-grid" role="list">
+            <!-- Replace alt text as needed -->
+            <li class="logo-card">
+              <img
+                src="assets/images/clients/1.png"
+                alt="Certification logo 1"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li class="logo-card">
+              <img
+                src="assets/images/clients/2.png"
+                alt="Certification logo 2"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li class="logo-card">
+              <img
+                src="assets/images/clients/3.png"
+                alt="Certification logo 3"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li class="logo-card">
+              <img
+                src="assets/images/clients/4.png"
+                alt="Certification logo 4"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li class="logo-card">
+              <img
+                src="assets/images/clients/5.png"
+                alt="Certification logo 5"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li class="logo-card">
+              <img
+                src="assets/images/clients/6.png"
+                alt="Certification logo 6"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li class="logo-card">
+              <img
+                src="assets/images/clients/7.png"
+                alt="Certification logo 7"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li class="logo-card">
+              <img
+                src="assets/images/clients/8.png"
+                alt="Certification logo 8"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li class="logo-card">
+              <img
+                src="assets/images/clients/9.png"
+                alt="Certification logo 9"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li class="logo-card">
+              <img
+                src="assets/images/clients/10.png"
+                alt="Certification logo 10"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li class="logo-card">
+              <img
+                src="assets/images/clients/11.png"
+                alt="Certification logo 11"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li class="logo-card">
+              <img
+                src="assets/images/clients/12.png"
+                alt="Certification logo 12"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li class="logo-card">
+              <img
+                src="assets/images/clients/13.png"
+                alt="Certification logo 13"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li class="logo-card">
+              <img
+                src="assets/images/clients/14.png"
+                alt="Certification logo 14"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li class="logo-card">
+              <img
+                src="assets/images/clients/15.png"
+                alt="Certification logo 15"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li class="logo-card">
+              <img
+                src="assets/images/clients/16.png"
+                alt="Certification logo 16"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li class="logo-card">
+              <img
+                src="assets/images/clients/17.png"
+                alt="Certification logo 17"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li class="logo-card">
+              <img
+                src="assets/images/clients/18.png"
+                alt="Certification logo 18"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li class="logo-card">
+              <img
+                src="assets/images/clients/19.png"
+                alt="Certification logo 19"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+            <li class="logo-card">
+              <img
+                src="assets/images/clients/20.png"
+                alt="Certification logo 20"
+                loading="lazy"
+                decoding="async"
+              />
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <footer class="footer">
         <div class="footer-primary">
           <div class="container">
             <div class="row">
@@ -415,13 +579,16 @@
         <!-- /.footer-primary -->
 
         <div class="footer-secondary">
-          <div class="container">
+          <div
+            class="container"
+            style="padding-top: 10px; padding-bottom: 10px"
+          >
             <div class="row align-items-center">
               <div class="col-sm-12 col-md-12 col-lg-7">
                 <nav></nav>
                 <div class="mt-1">
                   <span
-                    >&copy; 2023 Abaris Healthcare, All Rights Reserved.</span
+                    >&copy; 2025 Abaris Healthcare, All Rights Reserved.</span
                   >
                 </div>
               </div>
@@ -509,54 +676,86 @@
         <!-- /.footer-secondary -->
       </footer>
 
+      <svg
+        class="svg-pathes"
+        width="0"
+        height="0"
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+      >
+        <defs>
+          <filter id="rounded-clippath-filter">
+            <feGaussianBlur
+              in="SourceGraphic"
+              stdDeviation="8"
+              result="blur"
+            ></feGaussianBlur>
+            <feColorMatrix
+              in="blur"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+              result="rounded-clippath-filter"
+            ></feColorMatrix>
+            <feComposite
+              in="SourceGraphic"
+              in2="rounded-clippath-filter"
+              operator="atop"
+            ></feComposite>
+          </filter>
+        </defs>
+        <defs>
+          <filter id="rounded-clippath-filter-small">
+            <feGaussianBlur
+              in="SourceGraphic"
+              stdDeviation="2"
+              result="blur"
+            ></feGaussianBlur>
+            <feColorMatrix
+              in="blur"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 10 -4"
+              result="rounded-clippath-filter-small"
+            ></feColorMatrix>
+            <feComposite
+              in="SourceGraphic"
+              in2="rounded-clippath-filter-small"
+              operator="atop"
+            ></feComposite>
+          </filter>
+        </defs>
+        <clipPath id="curve-left" clipPathUnits="objectBoundingBox">
+          <path
+            d="M0,0.998 v0.002 H1 V0 h-0.059 C0.832,0.008,0.596,0.068,0.48,0.414 A1,1,0,0,0,0.445,0.551 C0.376,0.899,0.166,0.986,0,0.998"
+          ></path>
+        </clipPath>
+        <clipPath id="curve-right" clipPathUnits="objectBoundingBox">
+          <path
+            d="M1,0.998 v0.002 H0 V0 H0.059 C0.168,0.008,0.404,0.068,0.519,0.414 A1,1,0,0,1,0.555,0.551 C0.624,0.899,0.834,0.986,1,0.998"
+          ></path>
+        </clipPath>
+      </svg>
 
-
-    <svg class="svg-pathes" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
-      <defs>
-        <filter id="rounded-clippath-filter">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"></feGaussianBlur>
-          <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
-            result="rounded-clippath-filter"></feColorMatrix>
-          <feComposite in="SourceGraphic" in2="rounded-clippath-filter" operator="atop"></feComposite>
-        </filter>
-      </defs>
-      <defs>
-        <filter id="rounded-clippath-filter-small">
-          <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"></feGaussianBlur>
-          <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 10 -4"
-            result="rounded-clippath-filter-small"></feColorMatrix>
-          <feComposite in="SourceGraphic" in2="rounded-clippath-filter-small" operator="atop"></feComposite>
-        </filter>
-      </defs>
-      <clipPath id="curve-left" clipPathUnits="objectBoundingBox">
-        <path
-          d="M0,0.998 v0.002 H1 V0 h-0.059 C0.832,0.008,0.596,0.068,0.48,0.414 A1,1,0,0,0,0.445,0.551 C0.376,0.899,0.166,0.986,0,0.998">
-        </path>
-      </clipPath>
-      <clipPath id="curve-right" clipPathUnits="objectBoundingBox">
-        <path
-          d="M1,0.998 v0.002 H0 V0 H0.059 C0.168,0.008,0.404,0.068,0.519,0.414 A1,1,0,0,1,0.555,0.551 C0.624,0.899,0.834,0.986,1,0.998">
-        </path>
-      </clipPath>
-    </svg>
-
-    <div class="search-popup">
-      <button type="button" class="search-popup-close">
-        <i class="fas fa-times"></i>
-      </button>
-      <form class="search-popup-form">
-        <input type="text" class="search-popup-form-input" placeholder="Type Words Then Enter" />
-        <button class="search-popup-btn"><i class="icon-search"></i></button>
-      </form>
+      <div class="search-popup">
+        <button type="button" class="search-popup-close">
+          <i class="fas fa-times"></i>
+        </button>
+        <form class="search-popup-form">
+          <input
+            type="text"
+            class="search-popup-form-input"
+            placeholder="Type Words Then Enter"
+          />
+          <button class="search-popup-btn"><i class="icon-search"></i></button>
+        </form>
+      </div>
+      <!-- /.search-popup -->
     </div>
-    <!-- /.search-popup -->
-  </div>
-  <!-- /.wrapper -->
+    <!-- /.wrapper -->
 
-  <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-  <script src="assets/js/jquery-3.5.1.min.js"></script>
-  <script src="assets/js/plugins.js"></script>
-  <script src="assets/js/main.js"></script>
-</body>
-
+    <script
+      data-cfasync="false"
+      src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="assets/js/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

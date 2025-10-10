@@ -92,7 +92,7 @@ a:hover {
 section {
   position: relative;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 0px;
 }
 
 img {
@@ -152,7 +152,7 @@ textarea {
 }
 @media (min-width: 1400px) {
   .row {
-    /* --bs-gutter-x: 40px; */
+    --bs-gutter-x: 40px;
   }
   .container {
     max-width: 1320px;
@@ -1145,7 +1145,7 @@ h6 {
 .accordion-item.opened .acc-icon::after{ opacity:0; }
 
 /* Optional: change color when opened */
-.accordion-item.opened .acc-icon{ background:#00226c; }
+.accordion-item.opened .acc-icon{ background:#1984c5; }
 .accordion-header {
   font-weight: 600;
 }
@@ -1360,7 +1360,7 @@ h6 {
   position: relative;
   z-index: 1;
   font-size: 15px;
-  font-weight: 700;
+  /*font-weight: 700;*/
   min-width: 195px;
   height: 68px;
   display: inline-flex;
@@ -2597,7 +2597,7 @@ input[type=radio] {
 }
 .navbar .dropdown-menu .nav-item > .nav-item-link {
   font-size: 14px;
-  color: var(--bs-gray);
+  color: var(--bs-primary);
   text-transform: capitalize;
   font-weight: 400;
   line-height: 42px !important;
@@ -3323,8 +3323,8 @@ input[type=radio] {
   }
   .navbar > .container-fluid,
   .header-topbar > .container-fluid {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 50px;
+    padding-right: 40px;
   }
 }
 @media (max-width: 1199px) {
@@ -3698,6 +3698,7 @@ input[type=radio] {
   }
 }/* assets/css/products.css */
 :root { --pri:#1984c5; --muted:#6c757d; }
+/*.container { max-width: 1180px; margin: 0 auto; padding: 40px 16px; }*/
 .container { max-width: 1180px; margin: 0 auto; padding: 40px 16px; }
 h1,h2,h3 { line-height: 1.25; }
 a.link { color: var(--pri); text-decoration: none; }
@@ -4082,8 +4083,9 @@ a.link { color: var(--pri); text-decoration: none; }
 }
 .footer .footer-primary {
   position: relative;
-  padding: 60px 0;
+  padding: 40px 0;
   background-color: #17377d;
+  padding-bottom: 0px;
 }
 .footer .footer-primary:after {
   content: "";
@@ -4824,6 +4826,7 @@ body {
   place-items: center;
   aspect-ratio: 1 / 1;
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+  border: 1px solid #1984c5;
 }
 
 .logo-card:hover {
@@ -4993,7 +4996,7 @@ body {
   margin-right: 30px;
   font-size: 8px;
   color: var(--color-primary);
-  background-color: var(--color-green-100);
+  background-color: #d1d2d4;
 }
 .feature-item .feature-title {
   font-size: 16px;
@@ -5395,7 +5398,7 @@ body {
 }
 
 .fancybox-layout6 .fancybox-item {
-  margin-top: -60px;
+  margin-top: -40px;
 }
 .fancybox-layout6 .fancybox-item .fancybox-icon {
   top: 25px;
@@ -7270,7 +7273,7 @@ body {
 }
 
 .about-layout5 {
-  background-color: #F6F7F8;
+  /* background-color: #F6F7F8; */
 }
 .about-layout5 .about-text,
 .about-layout5 .about-img {
