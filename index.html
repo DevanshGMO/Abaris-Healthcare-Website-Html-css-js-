@@ -1016,7 +1016,6 @@
               </a>
             </div>
           </div>
-          <!-- /.col-lg-5 -->
           <div class="col-sm-12 col-md-12 col-lg-7 d-flex flex-column justify-content-between">
             <div class="contact-panel mt-20">
               <form class="contact-panel-form" id="contactForm">
@@ -1029,36 +1028,11 @@
                 <div class="row">
                   <div class="col-sm-6 col-md-6 col-lg-6">
                     <div class="form-group">
-                      <label for="service">Select Services</label>
-                      <select id="service" class="form-control">
-                        <option value="I.V. Fluids" style="border: 1px solid #1984c5;">I.V. Fluids</option>
-                        <option value="Sterile Injections">
-                          Sterile Injections
-                        </option>
-                        <option value="Oral Liquids">Oral Liquids</option>
-                        <option value="Tablets">Tablets</option>
-                      </select>
-                    </div>
-                  </div>
-                  <!-- /.col-lg-6 -->
-                  <div class="col-sm-6 col-md-6 col-lg-6">
-                    <div class="form-group">
-                      <label for="location">Location</label>
-                      <select id="location" class="form-control">
-                        <option value="1">California</option>
-                        <option value="2">NYC</option>
-                      </select>
-                    </div>
-                  </div>
-                  <!-- /.col-lg-6 -->
-                  <div class="col-sm-6 col-md-6 col-lg-6">
-                    <div class="form-group">
                       <label for="name">Name (required)</label>
                       <input type="text" class="form-control" placeholder="Name" id="name" required
                         style="border: 1px solid #1984c5;" />
                     </div>
                   </div>
-                  <!-- /.col-lg-6 -->
                   <div class="col-sm-6 col-md-6 col-lg-6">
                     <div class="form-group">
                       <label for="email">Email</label>
@@ -1066,52 +1040,39 @@
                         style="border: 1px solid #1984c5;" />
                     </div>
                   </div>
-                  <!-- /.col-lg-6 -->
-                  <div class="col-sm-4 col-md-4 col-lg-4">
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="form-group">
+                      <label for="service">Select Services</label>
+                      <select id="service" class="form-control" style="border: 1px solid #1984c5;">
+                        <option value="I.V. Fluids">I.V. Fluids</option>
+                        <option value="Sterile Injections">Sterile Injections</option>
+                        <option value="Oral Liquids">Oral Liquids</option>
+                        <option value="Tablets">Tablets</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-sm-12 col-md-12 col-lg-12">
                     <div class="form-group">
                       <label for="phone">Phone (required)</label>
-                      <input type="text" class="form-control" placeholder="Phone" id="phone"
+                      <input type="tel" class="form-control" placeholder="Phone" id="phone" required maxlength="10"
+                        pattern="[0-9]{10}" title="Please enter a 10-digit mobile number."
                         style="border: 1px solid #1984c5;" />
                     </div>
                   </div>
-                  <!-- /.col-lg-4 -->
-                  <div class="col-sm-4 col-md-4 col-lg-4">
-                    <div class="form-group form-group-date">
-                      <label for="date">Date (required)</label>
-                      <input type="date" class="form-control" id="date" required style="border: 1px solid #1984c5;" />
-                      <div class="form-group-icon">
-                        <i class="icon-calendar"></i><span class="mx-2">Select Date</span>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- /.col-lg-4 -->
-                  <div class="col-sm-4 col-md-4 col-lg-4">
-                    <div class="form-group form-group-date">
-                      <label for="time">Time (required)</label>
-                      <input type="time" class="form-control" id="time" required style="border: 1px solid #1984c5;" />
-                      <div class="form-group-icon">
-                        <i class="icon-clock"></i><span class="mx-2">Select Time</span>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- /.col-lg-4 -->
+
                   <div class="col-12">
                     <button type="submit" class="btn btn-secondary btn-block btn-xhight">
                       <span>Book Your Visit</span>
                       <i class="icon-arrow-right"></i>
                     </button>
+                    <div class="contact-result" style="width: 100%; margin-top: 15px; text-align: center;"></div>
                   </div>
-                  <!-- /.col-lg-12 -->
                 </div>
-                <!-- /.row -->
               </form>
             </div>
           </div>
-          <!-- /.col-lg-7 -->
         </div>
-        <!-- /.row -->
       </div>
-      <!-- /.container -->
     </section>
     <section class="clients pt-50 pb-50 border-top">
       <div class="container">
@@ -1120,7 +1081,7 @@
             <div class="row align-items-center">
               <div class="col-md-12 col-lg-12 col-xl-4">
                 <p class="fw-bold mb-0">
-                  Your partner in pharmaceutical excellence.
+                  Our partner in pharmaceutical excellence.
                   <a href="our-clients.html" class="color-primary underlined-text-secondary">Our Clients</a>
                 </p>
               </div>
@@ -1477,6 +1438,24 @@
           }
         }
       );
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+      const contactForm = document.getElementById('contactForm');
+      const resultDiv = document.querySelector('.contact-result');
+
+      // Add a listener that waits for the form to be submitted
+      contactForm.addEventListener('submit', function (event) {
+        // This stops the form from submitting and reloading the page
+        event.preventDefault();
+
+        // Display the success message
+        resultDiv.innerHTML = 'Form submitted successfully!';
+        resultDiv.style.color = 'green'; // You can style the message here
+        resultDiv.style.fontWeight = 'bold';
+
+        // Optional: Clear the form fields
+        contactForm.reset();
+      });
     });
   </script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>
