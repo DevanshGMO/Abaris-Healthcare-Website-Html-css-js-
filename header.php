@@ -94,6 +94,10 @@
               <li class="nav-item">
                 <a href="contact-us.html" class="nav-item-link">Contact</a>
               </li>
+              <li class="nav-item">
+                <a href="contact-us.html" href="assets/docs/abaris-product-list.pdf" download="Abaris-Product-List.pdf"
+                  class="nav-item-link"> Download Catalogue</a>
+              </li>
               <!-- /.nav-item -->
 
               <!-- /.nav-item -->
