@@ -152,7 +152,7 @@ textarea {
 }
 @media (min-width: 1400px) {
   .row {
-    --bs-gutter-x: 40px;
+    /* --bs-gutter-x: 40px; */
   }
   .container {
     max-width: 1320px;
