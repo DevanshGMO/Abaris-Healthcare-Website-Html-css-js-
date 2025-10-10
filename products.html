@@ -53,6 +53,67 @@
       line-height: 1.2;
     }
 
+    /* ===== Grid & Card: 4-up desktop, responsive down ===== */
+    .product-grid {
+      padding: 16px;
+      background: #fff;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      /* 12 cols base */
+      gap: 16px;
+    }
+
+    /* Card spans 3 of 12 => 4-up on desktop */
+    .product-card {
+      grid-column: span 3;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      background: var(--card-bg);
+      padding: 14px;
+      transition: box-shadow 0.15s ease, transform 0.15s ease;
+    }
+
+    /* Keep 4-up until tablet widths — no change needed around 1280px */
+    /* 3-up: at <= 992px (9 cols, each card spans 3) */
+    @media (max-width: 992px) {
+      .product-grid {
+        grid-template-columns: repeat(9, 1fr);
+      }
+
+      .product-card {
+        grid-column: span 3;
+        /* 9/3 = 3 cards per row */
+      }
+    }
+
+    /* 2-up: at <= 768px (6 cols, each card spans 3) */
+    @media (max-width: 768px) {
+      .product-grid {
+        grid-template-columns: repeat(6, 1fr);
+      }
+
+      .product-card {
+        grid-column: span 3;
+        /* 6/3 = 2 cards per row */
+      }
+    }
+
+    /* 1-up: at <= 480px (2 cols, card spans all 2) */
+    @media (max-width: 480px) {
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .product-card {
+        grid-column: span 2;
+        /* full width on very small screens */
+        border: 1px solid #d1d2d4;
+      }
+    }
+
     /* Quick filters (anchor pills) */
     .product-pills {
       display: flex;
@@ -174,7 +235,6 @@
       box-shadow: 0 8px 24px rgba(2, 6, 23, 0.08);
       transform: translateY(-2px);
       border: 1px solid #1984c5;
-
     }
 
     .product-card .top {
@@ -365,8 +425,8 @@
     <!-- ========= /Header ========= -->
 
     <!-- ========= Page Title ========= -->
-    <section class="page-title-layout1 page-title-light text-center bg-overlay bg-parallax" style="padding-top: 60px !important;
-    padding-bottom: 50px;">
+    <section class="page-title-layout1 page-title-light text-center bg-overlay bg-parallax"
+      style="padding-top: 60px !important; padding-bottom: 50px">
       <div class="bg-img">
         <img src="assets/images/page-titles/1.jpg" alt="background" />
       </div>
@@ -384,161 +444,108 @@
                   Us</span></a>
               <a href="team.html" class="btn btn-white btn-outlined mb-10 mx-3"><span>About Our Journey</span></a>
             </div>
-            <nav></nav>
           </div>
-        </div>
-      </div>
-      <a class="home-nav" href="index.html"><i class="icon-home"></i></a>
-      <div class="curve-top-shape">
-        <svg class="curve-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
-          <path class="curve-path" d="M1000,4.3V0H0v4.3C0.9,23.1,126.7,99.2,500,100S1000,22.7,1000,4.3z"></path>
-        </svg>
-      </div>
-    </section>
+          <!-- /.col-lg-2 -->
 
-    <!-- ========= Card-based Products ========= -->
-    <section class="container" id="list-root">
-      <div class="page-head">
-        <div class="head-left">
-          <h1 class="tt">Abaris Products</h1>
-
-        </div>
-        <!-- <h1 class="tt">Abaris Products</h1> -->
-        <div class="head-right">
-          <div class="search-bar">
-            <input type="text" id="productSearchInput" class="form-control" placeholder="Search products..." />
-          </div>
-
-          <nav class="product-pills" aria-label="Quick filters">
-            <a href="#lvp"><i class="fas fa-syringe"></i> IV Fluids (LVP)</a>
-            <a href="#svp"><i class="fas fa-prescription-bottle"></i> Sterile Injections (SVP)</a>
-            <a href="#oral"><i class="fas fa-prescription-bottle-alt"></i> Oral Liquids</a>
-            <a href="#tablets"><i class="fas fa-tablets"></i> Tablets</a>
-          </nav>
-        </div>
-      </div>
-
-
-      <div id="sectionsMount"></div>
-      <p style="margin-top: 32px">
-        <a class="btn btn-primary" href="assets/docs/abaris-product-list.pdf" download="Abaris-Product-List.pdf">
-          Download the brochure (PDF)
-        </a>
-      </p>
-    </section>
-    <footer class="footer">
-      <div class="footer-primary">
-        <div class="container">
-          <div class="row">
-            <!-- Logo -->
-            <div class="col-12 col-lg-2">
-              <div class="footer-widget-about">
-                <a href="index.html">
-                  <img src="assets/images/logo/logo-main.png" alt="logo" />
-                </a>
-              </div>
-            </div>
-            <!-- /.col-lg-2 -->
-
-            <!-- About column -->
-            <div class="col-6 col-lg-2">
-              <div class="footer-widget-nav">
-                <h6 class="footer-widget-title">About Us</h6>
-                <nav>
-                  <ul class="list-unstyled">
-                    <li>
-                      <a href="about-us.html" style="color: white">About Us</a>
-                    </li>
-                    <li>
-                      <a href="team.html" style="color: white">Business Overview</a>
-                    </li>
-
-                    <li>
-                      <a href="csr.html" style="color: white">CSR</a>
-                    </li>
-                    <li>
-                      <a href="careers.html" style="color: white">Careers</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-            <!-- /.col-lg-2 -->
-
-            <!-- Quick Links column -->
-            <div class="col-6 col-lg-2">
-              <div class="footer-widget-nav">
-                <h6 class="footer-widget-title">Links</h6>
-                <nav>
-                  <ul class="list-unstyled">
-                    <li>
-                      <a href="products.html" style="color: white">Products</a>
-                    </li>
-                    <li>
-                      <a href="blog.html" style="color: white">Blog</a>
-                    </li>
-                    <li>
-                      <a href="our-clients.html" style="color: white">Our Clients</a>
-                    </li>
-                    <li>
-                      <a href="contact-us.html" style="color: white">Contact Us</a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-            <!-- /.col-lg-2 -->
-
-            <!-- Quick Contacts -->
-            <div class="col-6 col-lg-3">
-              <div class="footer-widget-contact">
-                <h6 class="footer-widget-title">Quick Contacts</h6>
-                <p>
-                  If you have any questions or need help, feel free to contact
-                  with our team.
-                </p>
-                <ul class="contact-list list-unstyled">
+          <!-- About column -->
+          <div class="col-6 col-lg-2">
+            <div class="footer-widget-nav">
+              <h6 class="footer-widget-title">About Us</h6>
+              <nav>
+                <ul class="list-unstyled">
                   <li>
-                    <p>Send Us Email:</p>
-                    <a href="mailto:info@abarishealthcare.com">
-                      <i class="contact-icon icon-email color-white"></i>
-                      <span class="color-white">info@abarishealthcare.com</span>
-                    </a>
+                    <a href="about-us.html" style="color: white">About Us</a>
                   </li>
                   <li>
-                    <p>Call Us Today:</p>
-                    <a href="tel:+917926440704">
-                      <i class="contact-icon icon-phone color-white"></i>
-                      <span class="color-white">+ 91 79264 40704</span>
-                    </a>
+                    <a href="team.html" style="color: white">Business Overview</a>
+                  </li>
+
+                  <li>
+                    <a href="csr.html" style="color: white">CSR</a>
+                  </li>
+                  <li>
+                    <a href="careers.html" style="color: white">Careers</a>
                   </li>
                 </ul>
-              </div>
+              </nav>
             </div>
-            <!-- /.col-lg-3 -->
+          </div>
+          <!-- /.col-lg-2 -->
 
-            <!-- Newsletter (new column on right) -->
-            <div class="col-12 col-lg-3">
-              <div class="footer-widget-newsletter">
-                <h6 class="footer-widget-title">Newsletter</h6>
-                <form action="mailto:74devanshvariya@gmail.com" method="get" enctype="text/plain">
-                  <div class="mb-2">
-                    <label for="footer-news-email" class="visually-hidden">Email address</label>
-                    <input id="footer-news-email" name="New Subscriber" type="email" class="form-control"
-                      placeholder="Your email address" required />
-                  </div>
-                  <button type="submit" class="btn btn-primary w-100">
-                    Subscribe
-                  </button>
-                </form>
-              </div>
+          <!-- Quick Links column -->
+          <div class="col-6 col-lg-2">
+            <div class="footer-widget-nav">
+              <h6 class="footer-widget-title">Links</h6>
+              <nav>
+                <ul class="list-unstyled">
+                  <li>
+                    <a href="products.html" style="color: white">Products</a>
+                  </li>
+                  <li>
+                    <a href="blog.html" style="color: white">Blog</a>
+                  </li>
+                  <li>
+                    <a href="our-clients.html" style="color: white">Our Clients</a>
+                  </li>
+                  <li>
+                    <a href="contact-us.html" style="color: white">Contact Us</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <!-- /.col-lg-2 -->
+
+          <!-- Quick Contacts -->
+          <div class="col-6 col-lg-3">
+            <div class="footer-widget-contact">
+              <h6 class="footer-widget-title">Quick Contacts</h6>
+              <p>
+                If you have any questions or need help, feel free to contact
+                with our team.
+              </p>
+              <ul class="contact-list list-unstyled">
+                <li>
+                  <p>Send Us Email:</p>
+                  <a href="mailto:info@abarishealthcare.com">
+                    <i class="contact-icon icon-email color-white"></i>
+                    <span class="color-white">info@abarishealthcare.com</span>
+                  </a>
+                </li>
+                <li>
+                  <p>Call Us Today:</p>
+                  <a href="tel:+917926440704">
+                    <i class="contact-icon icon-phone color-white"></i>
+                    <span class="color-white">+ 91 79264 40704</span>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
           <!-- /.col-lg-3 -->
+
+          <!-- Newsletter (new column on right) -->
+          <div class="col-12 col-lg-3">
+            <div class="footer-widget-newsletter">
+              <h6 class="footer-widget-title">Newsletter</h6>
+              <form action="mailto:74devanshvariya@gmail.com" method="get" enctype="text/plain">
+                <div class="mb-2">
+                  <label for="footer-news-email" class="visually-hidden">Email address</label>
+                  <input id="footer-news-email" name="New Subscriber" type="email" class="form-control"
+                    placeholder="Your email address" required />
+                </div>
+                <button type="submit" class="btn btn-primary w-100">
+                  Subscribe
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
-        <!-- /.row -->
+        <!-- /.col-lg-3 -->
       </div>
-      <!-- /.container -->
+      <!-- /.row -->
+  </div>
+  <!-- /.container -->
   </div>
   <!-- /.footer-primary -->
 
@@ -575,7 +582,7 @@
                         font-weight: 600;
                         white-space: nowrap; /* keep on one line */
                       ">
-                <!-- <span>Terms and Conditions</span> -->
+                <span>Terms and Conditions</span>
               </a>
             </li>
             <li style="min-width: 0">
@@ -589,12 +596,11 @@
                         font-weight: 600;
                         white-space: nowrap; /* keep on one line */
                       ">
-                <!-- <span>Privacy Policy</span> -->
+                <span>Privacy Policy</span>
               </a>
             </li>
             <li style="min-width: 0">
-              <a href="https://www.linkedin.com/company/abaris-healthcare-private-limited/" target="_blank"
-                rel="noopener" style="
+              <a href="https://www.linkedin.com/company/your-company" target="_blank" rel="noopener" style="
                         margin-top: 5px;
                         display: inline-flex;
                         align-items: center;
@@ -677,13 +683,13 @@
         String(s).replace(
           /[&<>"']/g,
           (m) =>
-            ({
-              "&": "&amp;",
-              "<": "&lt;",
-              ">": "&gt;",
-              '"': "&quot;",
-              "'": "&#39;",
-            })[m]
+          ({
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#39;",
+          }[m])
         );
       const clean = (s) =>
         String(s ?? "")
@@ -692,17 +698,21 @@
           .trim();
       const isNumber = (s) => /^[0-9]+$/.test(String(s).trim());
       const isExcelHeaderRow = (v1, v2) => {
-        const a = String(v1 || "").trim().toLowerCase();
-        const b = String(v2 || "").trim().toLowerCase();
+        const a = String(v1 || "")
+          .trim()
+          .toLowerCase();
+        const b = String(v2 || "")
+          .trim()
+          .toLowerCase();
         return a === "s. no." || b.startsWith("products detail");
       };
 
       const sectionIdFor = (title) => {
         const t = String(title).toLowerCase();
-        if (t.includes("large volume")) return "lvp";     // IV Fluids
-        if (t.includes("small volume")) return "svp";     // Sterile Injections
-        if (t.includes("oral")) return "oral";            // Oral Liquids
-        if (t.includes("tablet")) return "tablets";       // Tablets
+        if (t.includes("large volume")) return "lvp"; // IV Fluids
+        if (t.includes("small volume")) return "svp"; // Sterile Injections
+        if (t.includes("oral")) return "oral"; // Oral Liquids
+        if (t.includes("tablet")) return "tablets"; // Tablets
         if (t.includes("products under development")) return "dev";
         return t.replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
       };
@@ -712,10 +722,13 @@
 
         for (const s of sections) {
           out.push(`
-              <section class="product-section" id="${escapeHtml(s.id)}" aria-labelledby="${escapeHtml(s.id)}-title">
+              <section class="product-section" id="${escapeHtml(
+            s.id
+          )}" aria-labelledby="${escapeHtml(s.id)}-title">
                 <div class="section-head">
                   <h2 id="${escapeHtml(s.id)}-title">${escapeHtml(s.title)}</h2>
-                  <small>${s.items.length} item${s.items.length !== 1 ? "s" : ""}</small>
+                  <small>${s.items.length} item${s.items.length !== 1 ? "s" : ""
+            }</small>
                 </div>
                 <div class="product-grid">
                   ${s.items
@@ -724,13 +737,17 @@
                     <article class="product-card">
                       <div class="top">
                         <span class="sn">${escapeHtml(item.sr)}</span>
-                        <div class="pack" title="${escapeHtml(item.pack)}">${escapeHtml(item.pack)}</div>
+                        <div class="pack" title="${escapeHtml(
+                  item.pack
+                )}">${escapeHtml(item.pack)}</div>
                       </div>
                       <div class="title">${escapeHtml(item.product)}</div>
                       <div class="meta">
                         <span class="chip">FFS</span>
                         ${/ml|bottle|ampoule|vial|tab/i.test(item.pack)
-                    ? `<span class="chip">${escapeHtml(item.pack.split(",")[0])}</span>`
+                    ? `<span class="chip">${escapeHtml(
+                      item.pack.split(",")[0]
+                    )}</span>`
                     : ``
                   }
                       </div>
@@ -837,9 +854,11 @@
           const query = this.value.toLowerCase().trim();
           const productCards = document.querySelectorAll(".product-card");
 
-          productCards.forEach(card => {
-            const title = card.querySelector(".title")?.textContent.toLowerCase() || "";
-            const pack = card.querySelector(".pack")?.textContent.toLowerCase() || "";
+          productCards.forEach((card) => {
+            const title =
+              card.querySelector(".title")?.textContent.toLowerCase() || "";
+            const pack =
+              card.querySelector(".pack")?.textContent.toLowerCase() || "";
             const matches = title.includes(query) || pack.includes(query);
             card.style.display = matches ? "flex" : "none";
           });

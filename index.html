@@ -58,148 +58,6 @@
       height: 48px;
     }
   }
-
-  /* --- Panel & spacing --- */
-  .contact-panel {
-    width: 100%;
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 22px 24px;
-    background: #fff;
-    border-radius: 12px;
-  }
-
-  .contact-panel-form .row>[class*="col-"] {
-    margin-bottom: 14px;
-  }
-
-  /* tighten rows */
-  .form-label {
-    font-weight: 600;
-    margin-bottom: 6px;
-  }
-
-  /* --- Base control reset --- */
-  .form-control {
-    box-sizing: border-box;
-    width: 100%;
-    height: 48px;
-    /* fixed height = clean vertical alignment */
-    padding: 10px 12px;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    line-height: 1.2;
-    /* avoid tall line-height in some browsers */
-    background-color: #fff;
-  }
-
-  /* --- Selects: no weird top gap, consistent arrow spacing --- */
-  select.form-control {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding: 10px 36px 10px 12px;
-    /* room for arrow on the right */
-    background-image:
-      linear-gradient(45deg, transparent 50%, #9ca3af 50%),
-      linear-gradient(135deg, #9ca3af 50%, transparent 50%),
-      linear-gradient(to right, transparent, transparent);
-    background-position:
-      calc(100% - 18px) 18px,
-      /* arrow tip */
-      calc(100% - 12px) 18px,
-      /* arrow tail */
-      0 0;
-    background-size: 6px 6px, 6px 6px, 100% 100%;
-    background-repeat: no-repeat;
-  }
-
-  /* --- Date/Time with overlay hint perfectly centered --- */
-  .form-group-date {
-    position: relative;
-  }
-
-  .form-group-date .form-control {
-    padding-right: 110px;
-  }
-
-  /* room for hint */
-  .form-group-date .form-group-hint {
-    position: absolute;
-    top: 50%;
-    right: 12px;
-    transform: translateY(-50%);
-    /* dead-center vertically */
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.92rem;
-    line-height: 1;
-    /* removes the “droop” you saw */
-    color: #6b7280;
-    pointer-events: none;
-  }
-
-  /* --- Mobile: keep it tidy --- */
-  @media (max-width: 575.98px) {
-    .contact-panel {
-      padding: 18px;
-    }
-
-    .form-group-date .form-control {
-      padding-right: 90px;
-    }
-
-    .form-group-date .form-group-hint {
-      font-size: 0.86rem;
-    }
-  }
-
-  /*
- * CSS Fixes for the Logo Carousel
- */
-
-  /* Add padding to the clients section to give it some space */
-  .clients-section {
-    padding: 0 0 80px 0;
-  }
-
-  /* Style each logo's container as a white "card" */
-  .clients-section .client {
-    background-color: #ffffff;
-    border-radius: 8px;
-    /* Softer, rounded corners */
-    height: 120px;
-    /* Ensures all cards are the same height */
-    padding: 15px;
-    /* Space inside the card */
-    margin: 0 10px;
-    /* Space between the cards */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
-    /* Adds a subtle depth */
-
-    /* Use Flexbox to perfectly center the logo inside the card */
-    display: flex !important;
-    /* Use !important to override Slick Carousel's default styles if needed */
-    align-items: center;
-    justify-content: center;
-
-    transition: transform 0.3s ease-in-out;
-    /* Smooth hover effect */
-  }
-
-  /* Optional: Make the cards lift up slightly on hover */
-  .clients-section .client:hover {
-    transform: translateY(-5px);
-  }
-
-  /* Style the logo image itself */
-  .clients-section .client img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    /* Ensures the logo scales correctly without stretching */
-  }
 </style>
 
 <!-- this is main file -->
@@ -1136,7 +994,7 @@
         <img src="assets/images/banners/6.jpg" alt="banner" />
       </div>
       <div class="container">
-        <div class="row">
+        <div class="row" style="align-items: center">
           <div class="col-sm-12 col-md-12 col-lg-5">
             <div class="heading heading-light mb-30">
               <h2 class="heading-subtitle">
@@ -1146,11 +1004,10 @@
                 Find The Right Test For Your Health Needs!
               </h3>
               <p class="heading-desc fw-bold" style="color: white">
-                With over 20 years of experience, we provide customized
-                programs to support your occupational health, employee
-                wellness and medical surveillance programs. We are committed
-                to providing high-quality and convenient health monitoring,
-                collection and testing.
+                At Abaris Healthcare, we believe quality medicines change
+                lives. With decades of expertise and a passion for innovation,
+                we deliver safe, effective, and affordable healthcare
+                solutions to partners across the globe.
               </p>
             </div>
             <div class="d-flex flex-wrap">
@@ -1160,49 +1017,93 @@
             </div>
           </div>
           <!-- /.col-lg-5 -->
-          <!-- PANEL -->
-          <div class="col-sm-12 col-md-12 col-lg-7">
-            <div class="contact-panel shadow-sm rounded-3">
-              <form class="contact-panel-form" id="contactForm" method="POST">
-                <input type="hidden" name="access_key" value="2f7932e2-8b0c-4248-960c-9adb5b6da604">
-                <input type="hidden" name="subject" value="New Contact Form Submission from Website">
-                <input type="hidden" name="from_name" value="Abaris Website">
-
-                <h4 class="text-center fw-bold mb-2">Connect Abaris</h4>
-                <p class="text-center mb-4 px-2">
-                  We're here to help and answer any questions you might have. Fill out the form below, and we'll get in
-                  touch with you shortly.
+          <div class="col-sm-12 col-md-12 col-lg-7 d-flex flex-column justify-content-between">
+            <div class="contact-panel mt-20">
+              <form class="contact-panel-form" id="contactForm">
+                <h4 class="contact-panel-title">
+                  Connect With Abaris
+                </h4>
+                <p class="contact-panel-desc">
+                  Tell us your requirements we’ll respond with the right solution.
                 </p>
-                <div class="row g-3">
-                  <div class="col-sm-6">
-                    <label for="name" class="form-label">Name (required)</label>
-                    <input type="text" class="form-control" id="name" name="name" required />
+                <div class="row">
+                  <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                      <label for="service">Select Services</label>
+                      <select id="service" class="form-control">
+                        <option value="I.V. Fluids" style="border: 1px solid #1984c5;">I.V. Fluids</option>
+                        <option value="Sterile Injections">
+                          Sterile Injections
+                        </option>
+                        <option value="Oral Liquids">Oral Liquids</option>
+                        <option value="Tablets">Tablets</option>
+                      </select>
+                    </div>
                   </div>
-                  <div class="col-sm-6">
-                    <label for="email" class="form-label">Email (required)</label>
-                    <input type="email" class="form-control" id="email" name="email" required />
+                  <!-- /.col-lg-6 -->
+                  <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                      <label for="location">Location</label>
+                      <select id="location" class="form-control">
+                        <option value="1">California</option>
+                        <option value="2">NYC</option>
+                      </select>
+                    </div>
                   </div>
-                  <div class="col-sm-6">
-                    <label for="phone" class="form-label">Phone (required)</label>
-                    <input type="text" class="form-control" id="phone" name="phone" required />
+                  <!-- /.col-lg-6 -->
+                  <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                      <label for="name">Name (required)</label>
+                      <input type="text" class="form-control" placeholder="Name" id="name" required
+                        style="border: 1px solid #1984c5;" />
+                    </div>
                   </div>
-                  <div class="col-sm-6">
-                    <label for="service" class="form-label">Services</label>
-                    <select id="service" name="service" class="form-control">
-                      <option value="I.V.FLUIDS">I.V.FLUIDS</option>
-                      <option value="Sterile Injections">Sterile Injections</option>
-                      <option value="Oral Liquids">Oral Liquids</option>
-                      <option value="Tablets">Tablets</option>
-                    </select>
+                  <!-- /.col-lg-6 -->
+                  <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" class="form-control" placeholder="Email" id="email"
+                        style="border: 1px solid #1984c5;" />
+                    </div>
                   </div>
+                  <!-- /.col-lg-6 -->
+                  <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="form-group">
+                      <label for="phone">Phone (required)</label>
+                      <input type="text" class="form-control" placeholder="Phone" id="phone"
+                        style="border: 1px solid #1984c5;" />
+                    </div>
+                  </div>
+                  <!-- /.col-lg-4 -->
+                  <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="form-group form-group-date">
+                      <label for="date">Date (required)</label>
+                      <input type="date" class="form-control" id="date" required style="border: 1px solid #1984c5;" />
+                      <div class="form-group-icon">
+                        <i class="icon-calendar"></i><span class="mx-2">Select Date</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.col-lg-4 -->
+                  <div class="col-sm-4 col-md-4 col-lg-4">
+                    <div class="form-group form-group-date">
+                      <label for="time">Time (required)</label>
+                      <input type="time" class="form-control" id="time" required style="border: 1px solid #1984c5;" />
+                      <div class="form-group-icon">
+                        <i class="icon-clock"></i><span class="mx-2">Select Time</span>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.col-lg-4 -->
                   <div class="col-12">
-                    <button type="submit" class="btn w-100 fw-bold mt-3"
-                      style="background-color: #1984c5; color: white;">
-                      Submit
+                    <button type="submit" class="btn btn-secondary btn-block btn-xhight">
+                      <span>Book Your Visit</span>
+                      <i class="icon-arrow-right"></i>
                     </button>
                   </div>
+                  <!-- /.col-lg-12 -->
                 </div>
-                <p class="text-center mt-3" id="result"></p>
+                <!-- /.row -->
               </form>
             </div>
           </div>
@@ -1219,7 +1120,7 @@
             <div class="row align-items-center">
               <div class="col-md-12 col-lg-12 col-xl-4">
                 <p class="fw-bold mb-0">
-                  Our partner in pharmaceutical excellence.
+                  Your partner in pharmaceutical excellence.
                   <a href="our-clients.html" class="color-primary underlined-text-secondary">Our Clients</a>
                 </p>
               </div>
