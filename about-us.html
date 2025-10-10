@@ -1,880 +1,740 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="Abaris Healthcare" />
-    <link href="assets/images/logo/logo-main.png" rel="icon" />
-    <title>Abaris | About Us</title>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&amp;family=Roboto:wght@400;700&amp;display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-    />
-    <link rel="stylesheet" href="assets/css/libraries.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
-  <style>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Abaris Healthcare" />
+  <link href="assets/images/logo/logo-main.png" rel="icon" />
+  <title>Abaris | About Us</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&amp;family=Roboto:wght@400;700&amp;display=swap" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" />
+  <link rel="stylesheet" href="assets/css/libraries.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<style>
+  .back-to-top {
+    position: fixed;
+    right: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border: none;
+    border-radius: 999px;
+    background: #1984c5;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    z-index: 1040;
+  }
+
+  .back-to-top:hover {
+    filter: brightness(0.95);
+  }
+
+  .back-to-top:focus {
+    outline: 2px solid #bfe0f3;
+    outline-offset: 2px;
+  }
+
+  .back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  @media (max-width: 480px) {
     .back-to-top {
-      position: fixed;
-      right: 16px;
-      bottom: calc(16px + env(safe-area-inset-bottom));
-      width: 44px;
-      height: 44px;
-      display: grid;
-      place-items: center;
-      border: none;
-      border-radius: 999px;
-      background: #1984c5;
-      color: #fff;
-      cursor: pointer;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(12px);
-      transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
-      z-index: 1040;
+      right: 12px;
+      width: 48px;
+      height: 48px;
     }
-    .back-to-top:hover {
-      filter: brightness(0.95);
-    }
-    .back-to-top:focus {
-      outline: 2px solid #bfe0f3;
-      outline-offset: 2px;
-    }
-    .back-to-top.show {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-    @media (max-width: 480px) {
-      .back-to-top {
-        right: 12px;
-        width: 48px;
-        height: 48px;
-      }
-    }
-  </style>
-  <button id="backToTop" class="back-to-top" aria-label="Back to top">
-    <i class="fas fa-arrow-up" aria-hidden="true"></i>
-  </button>
-  <body>
-    <div class="wrapper">
-      <div class="preloader">
-        <div class="loading">
-          <span></span><span></span><span></span><span></span>
-        </div>
+  }
+</style>
+<button id="backToTop" class="back-to-top" aria-label="Back to top">
+  <i class="fas fa-arrow-up" aria-hidden="true"></i>
+</button>
+
+<body>
+  <div class="wrapper">
+    <div class="preloader">
+      <div class="loading">
+        <span></span><span></span><span></span><span></span>
       </div>
-      <!-- /.preloader -->
+    </div>
+    <!-- /.preloader -->
 
-      <header class="header header-layout1">
-        <nav class="navbar navbar-expand-lg sticky-navbar">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-              <img
-                src="assets/images/logo/logo-main.png"
-                class="logo-dark"
-                alt="logo"
-              />
-            </a>
-            <button class="navbar-toggler" type="button">
-              <span class="menu-lines"><span></span></span>
+    <header class="header header-layout1">
+      <nav class="navbar navbar-expand-lg sticky-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/images/logo/logo-main.png" class="logo-dark" alt="logo" />
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="menu-lines"><span></span></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="mainNavigation">
+            <ul class="navbar-nav">
+              <li class="nav-item has-dropdown">
+                <a href="index.html" class="nav-item-link">Home</a>
+              </li>
+              <!-- /.nav-item -->
+              <li class="nav-item has-dropdown">
+                <a href="about-us.html" class="nav-item-link active">About Us</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a href="about-us.html" class="nav-item-link">About Us</a>
+                  </li>
+                  <!-- /.nav-item -->
+                  <li class="nav-item">
+                    <a href="team.html" class="nav-item-link">Business Overview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="csr.html" class="nav-item-link">CSR</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="compliance.html" class="nav-item-link">Compliance</a>
+                  </li>
+                  <!-- /.nav-item -->
+                </ul>
+                <!-- /.dropdown-menu -->
+              </li>
+              <li class="nav-item has-dropdown">
+                <a href="products.html" class="nav-item-link">Products</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"></li>
+                  <li class="nav-item">
+                    <a href="products.html#lvp" class="nav-item-link">IV Fluids</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="products.html#svp" class="nav-item-link">Sterile Injections</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="products.html#oral" class="nav-item-link">Oral Liquids</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="products.html#tablets" class="nav-item-link">Tablets</a>
+                  </li>
+                  <!-- /.nav-item -->
+                </ul>
+                <!-- /.dropdown-menu -->
+              </li>
+              <!-- /.nav-item -->
+
+              <!-- /.nav-item -->
+              <li class="nav-item has-dropdown dropdown">
+                <a href="blog.html" class="nav-item-link">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a href="careers.html" class="nav-item-link">Careers</a>
+              </li>
+              <li class="nav-item">
+                <a href="our-clients.html" class="nav-item-link">Our Clients</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact-us.html" class="nav-item-link">Contact</a>
+              </li>
+              <!-- /.nav-item -->
+
+              <!-- /.nav-item -->
+            </ul>
+            <!-- /.navbar-nav -->
+            <ul class="header-actions d-flex align-items-center position-relative list-unstyled mb-0">
+              <li></li>
+            </ul>
+            <button class="close-mobile-menu d-block d-lg-none">
+              <i class="fas fa-times"></i>
             </button>
-            <div
-              class="collapse navbar-collapse justify-content-center"
-              id="mainNavigation"
-            >
-              <ul class="navbar-nav">
-                <li class="nav-item has-dropdown">
-                  <a href="index.html" class="nav-item-link">Home</a>
-                </li>
-                <!-- /.nav-item -->
-                <li class="nav-item has-dropdown">
-                  <a href="about-us.html" class="nav-item-link active"
-                    >About Us</a
-                  >
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a href="about-us.html" class="nav-item-link">About Us</a>
-                    </li>
-                    <!-- /.nav-item -->
-                    <li class="nav-item">
-                      <a href="team.html" class="nav-item-link"
-                        >Business Overview</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="csr.html" class="nav-item-link">CSR</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="compliance.html" class="nav-item-link"
-                        >Compliance</a
-                      >
-                    </li>
-                    <!-- /.nav-item -->
-                  </ul>
-                  <!-- /.dropdown-menu -->
-                </li>
-                <li class="nav-item has-dropdown">
-                  <a href="products.html" class="nav-item-link">Products</a>
-                  <ul class="dropdown-menu">
-                    <li class="nav-item"></li>
-                    <li class="nav-item">
-                      <a href="products.html#lvp" class="nav-item-link"
-                        >IV Fluids</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="products.html#svp" class="nav-item-link"
-                        >Sterile Injections</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="products.html#oral" class="nav-item-link"
-                        >Oral Liquids</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="products.html#tablets" class="nav-item-link"
-                        >Tablets</a
-                      >
-                    </li>
-                    <!-- /.nav-item -->
-                  </ul>
-                  <!-- /.dropdown-menu -->
-                </li>
-                <!-- /.nav-item -->
+          </div>
+          <!-- /.navbar-collapse -->
+          <div class="d-none d-xl-flex align-items-center position-relative ml-30">
+            <a href="assets/docs/abaris-product-list.pdf" class="btn btn-primary btn-contact"
+              href="assets/docs/abaris-product-list.pdf" download="Abaris-Product-List.pdf">
+              Download Catalogue
+            </a>
+          </div>
+        </div>
+        <!-- /.container -->
+      </nav>
+      <!-- /.navabr -->
+    </header>
 
-                <!-- /.nav-item -->
-                <li class="nav-item has-dropdown dropdown">
-                  <a href="blog.html" class="nav-item-link">Blog</a>
-                </li>
-                <li class="nav-item">
-                  <a href="careers.html" class="nav-item-link">Careers</a>
-                </li>
-                <li class="nav-item">
-                  <a href="our-clients.html" class="nav-item-link"
-                    >Our Clients</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a href="contact-us.html" class="nav-item-link">Contact</a>
-                </li>
-                <!-- /.nav-item -->
-
-                <!-- /.nav-item -->
-              </ul>
-              <!-- /.navbar-nav -->
-              <ul
-                class="header-actions d-flex align-items-center position-relative list-unstyled mb-0"
-              >
-                <li></li>
-              </ul>
-              <button class="close-mobile-menu d-block d-lg-none">
-                <i class="fas fa-times"></i>
-              </button>
+    <section class="page-title-layout1 page-title-light text-center bg-overlay bg-parallax"
+      style="padding-top: 60px !important; padding-bottom: 50px">
+      <div class="bg-img">
+        <img src="assets/images/page-titles/1.jpg" alt="background" />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-xl-6 offset-xl-3">
+            <h1 class="pagetitle-heading">About Us</h1>
+            <p class="pagetitle-desc">
+              With decades of expertise and unwavering commitment to quality,
+              Abaris Healthcare delivers reliable medicines and innovative
+              solutions that transform healthcare.
+            </p>
+            <div class="d-flex flex-wrap align-items-center justify-content-center">
+              <a href="contact-us.html" class="btn btn-white mb-10 mx-3">
+                <i class="icon-arrow-right"></i>
+                <span>Contact Us</span>
+              </a>
+              <a href="team.html" class="btn btn-white btn-outlined mb-10 mx-3">
+                <span>About Our Journey</span>
+              </a>
             </div>
-            <!-- /.navbar-collapse -->
-            <div
-              class="d-none d-xl-flex align-items-center position-relative ml-30"
-            >
-              <a
-                href="assets/docs/abaris-product-list.pdf"
-                class="btn btn-primary btn-contact"
-                href="assets/docs/abaris-product-list.pdf"
-                download="Abaris-Product-List.pdf"
-              >
-                Download Catalogue
+            <nav></nav>
+          </div>
+          <!-- /.col-xl-6 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+      <a class="home-nav" href="index.html">
+        <i class="icon-home"></i>
+      </a>
+      <div class="curve-top-shape">
+        <svg class="curve-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+          <path class="curve-path" d="M1000,4.3V0H0v4.3C0.9,23.1,126.7,99.2,500,100S1000,22.7,1000,4.3z"></path>
+        </svg>
+      </div>
+      <!-- /.curve -->
+    </section>
+    <!-- /.page-title -->
+
+    <!-- ========================
+      About Layout 1
+    =========================== -->
+    <section class="about-layout1 pt-60 pb-30">
+      <div class="container">
+        <div class="row d-flex items-center">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8 offset-xl-2">
+            <div class="heading-layout2 text-center px-xl-5">
+              <h2 class="heading-subtitle color-primary">
+                Our Partner in Reliable Manufacturing.
+              </h2>
+              <h3 class="heading-title mb-50">
+                Our Clean, Certified Manufacturing Process.
+              </h3>
+              <p class="color-black mt-32 mb-30">
+                Benefit from our WHO-GMP certified facilities, flexible
+                production capacities, and regulatory expertise for seamless
+                contract manufacturing that accelerates your time-to-market.
+              </p>
+            </div>
+            <!-- /heading -->
+          </div>
+          <!-- /.col-xl-8 -->
+        </div>
+        <!-- /.row -->
+        <div class="row align-items-center">
+          <div class="col-sm-12 col-md-10 col-lg-10 col-xl-7">
+            <div class="about-img mb-20">
+              <img src="assets/images/about/1.png" alt="about" class="w-100" />
+              <div class="about-banner">
+                <div class="about-icon"><i class="icon-mortar"></i></div>
+                <p class="banner-text color-white mb-0">
+                  Commitment to Our Partners
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- /.col-12 -->
+          <div class="col-sm-12 col-md-10 col-lg-10 col-xl-5" style="margin-top: 20px">
+            <div class="about-text">
+              <ul class="features-list-layout1 list-unstyled mb-40">
+                <li class="feature-item d-flex align-items-center">
+                  <div class="feature-icon"><i class="icon-check"></i></div>
+                  <div class="feature-body">
+                    <h4 class="feature-title">Raw Material Testing</h4>
+                    <p class="feature-desc mb-0">
+                      Every raw ingredient undergoes strict identity, purity,
+                      and potency tests before approval, ensuring only the
+                      finest materials enter our production lines.
+                    </p>
+                  </div>
+                </li>
+                <li class="feature-item">
+                  <div class="feature-icon"><i class="icon-check"></i></div>
+                  <div class="feature-body">
+                    <h4 class="feature-title">
+                      In-Process Quality Control (IPQC)
+                    </h4>
+                    <p class="feature-desc mb-0">
+                      Real-time monitoring during formulation, mixing,
+                      filling, and packaging ensures each batch meets precise
+                      specifications continuously, preventing defects early.
+                    </p>
+                  </div>
+                </li>
+                <li class="feature-item">
+                  <div class="feature-icon"><i class="icon-check"></i></div>
+                  <div class="feature-body">
+                    <h4 class="feature-title">Finished Product Testing</h4>
+                    <p class="feature-desc mb-0">
+                      Comprehensive lab analyses confirm that every medicine
+                      meets our standards for strength, stability, sterility,
+                      and safety before release.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+              <a href="contact-us.html" class="btn btn-secondary btn-xl">
+                <span>Request a Quote</span>
+                <i class="icon-arrow-right"></i>
               </a>
             </div>
           </div>
-          <!-- /.container -->
-        </nav>
-        <!-- /.navabr -->
-      </header>
-
-      <section
-        class="page-title-layout1 page-title-light text-center bg-overlay bg-parallax"
-        style="padding-top: 60px !important; padding-bottom: 50px"
-      >
-        <div class="bg-img">
-          <img src="assets/images/page-titles/1.jpg" alt="background" />
+          <!-- /.col-lg-6 -->
         </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-xl-6 offset-xl-3">
-              <h1 class="pagetitle-heading">About Us</h1>
-              <p class="pagetitle-desc">
-                With decades of expertise and unwavering commitment to quality,
-                Abaris Healthcare delivers reliable medicines and innovative
-                solutions that transform healthcare.
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <!-- /.About Layout 1 -->
+
+    <section class="banner-layout1 bg-overlay bg-overlay-secondary-gradient bg-parallax pt-40 pb-0">
+      <div class="bg-img">
+        <img src="assets/images/backgrounds/1.jpg" alt="backgrounds" />
+      </div>
+      <div class="container">
+        <div class="col-12 col-xl-12" style="text-align: center">
+          <div class="heading-layout2 heading-light mb-60">
+            <h3 class="heading-subtitle color-white">
+              Trusted Quality That Cares
+            </h3>
+            <h3 class="heading-title">Our Legacy of Trust</h3>
+          </div>
+          <!-- /.heading-layout2 -->
+        </div>
+        <div class="row">
+          <!-- /.col-xl-6 -->
+        </div>
+        <!-- /.row -->
+        <div class="row" style="align-items: center">
+          <div class="col-sm-10 col-lg-7 col-lg-6 col-xl-6">
+            <div class="banner-img">
+              <img src="assets/images/banners/1.jpg" alt="banner" class="rounded-4 w-100" />
+              <div class="promo-text">
+                <span class="inner-text">20+ Years Of Experience</span>
+              </div>
+              <div class="banner-shape">
+                <span class="hexagon-clippath"></span><span class="hexagon-clippath2"></span>
+              </div>
+            </div>
+          </div>
+          <!-- /.col-xl-6 -->
+          <div class="col-sm-12 col-lg-8 col-xl-5 offset-xl-1">
+            <div class="banner-text">
+              <p class="color-white fw-bold">
+                Appointments may be booked to help reduce your wait time. If
+                you are unable to book an appointment, we do our best to
+                minimize your wait, but the length of your visit will depend
+                on the number of patients in the Patient Service Centre.
+                Typically, wait times are a little longer in the morning as
+                patients tend to fast for tests overnight
               </p>
-              <div
-                class="d-flex flex-wrap align-items-center justify-content-center"
-              >
-                <a href="contact-us.html" class="btn btn-white mb-10 mx-3">
-                  <i class="icon-arrow-right"></i>
-                  <span>Contact Us</span>
-                </a>
-                <a
-                  href="team.html"
-                  class="btn btn-white btn-outlined mb-10 mx-3"
-                >
-                  <span>About Our Journey</span>
-                </a>
-              </div>
-              <nav></nav>
             </div>
-            <!-- /.col-xl-6 -->
-          </div>
-          <!-- /.row -->
-        </div>
-        <!-- /.container -->
-        <a class="home-nav" href="index.html">
-          <i class="icon-home"></i>
-        </a>
-        <div class="curve-top-shape">
-          <svg
-            class="curve-svg"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1000 100"
-            preserveAspectRatio="none"
-          >
-            <path
-              class="curve-path"
-              d="M1000,4.3V0H0v4.3C0.9,23.1,126.7,99.2,500,100S1000,22.7,1000,4.3z"
-            ></path>
-          </svg>
-        </div>
-        <!-- /.curve -->
-      </section>
-      <!-- /.page-title -->
-
-      <!-- ========================
-      About Layout 1
-    =========================== -->
-      <section class="about-layout1 pt-60 pb-30">
-        <div class="container">
-          <div class="row d-flex items-center">
-            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8 offset-xl-2">
-              <div class="heading-layout2 text-center px-xl-5">
-                <h2 class="heading-subtitle color-primary">
-                  Your Partner in Reliable Manufacturing.
-                </h2>
-                <h3 class="heading-title mb-50">
-                  Our Clean, Certified Manufacturing Process.
-                </h3>
-                <p class="color-black mt-32 mb-30">
-                  Benefit from our WHO-GMP certified facilities, flexible
-                  production capacities, and regulatory expertise for seamless
-                  contract manufacturing that accelerates your time-to-market.
-                </p>
-              </div>
-              <!-- /heading -->
-            </div>
-            <!-- /.col-xl-8 -->
-          </div>
-          <!-- /.row -->
-          <div class="row align-items-center">
-            <div class="col-sm-12 col-md-10 col-lg-10 col-xl-7">
-              <div class="about-img mb-20">
-                <img
-                  src="assets/images/about/1.png"
-                  alt="about"
-                  class="w-100"
-                />
-                <div class="about-banner">
-                  <div class="about-icon"><i class="icon-mortar"></i></div>
-                  <p class="banner-text color-white mb-0">
-                    Commitment to Our Partners
+            <div class="fancybox-layout2 fancybox-light">
+              <div class="fancybox-item">
+                <div class="fancybox-icon">
+                  <i class="icon-flask"></i>
+                </div>
+                <!-- /.fancybox-icon -->
+                <div class="fancybox-body">
+                  <h4 class="fancybox-title">Innovation for Better Health</h4>
+                  <p class="fancybox-desc">
+                    At Abaris, innovation means creating medicines that not
+                    only treat but improve lives. Our dedicated R&D team
+                    tirelessly explores new formulations and technologies to
+                    enhance drug efficacy and patient comfort.
                   </p>
                 </div>
+                <!-- /.fancybox-body -->
               </div>
-            </div>
-            <!-- /.col-12 -->
-            <div
-              class="col-sm-12 col-md-10 col-lg-10 col-xl-5"
-              style="margin-top: 20px"
-            >
-              <div class="about-text">
-                <ul class="features-list-layout1 list-unstyled mb-40">
-                  <li class="feature-item d-flex align-items-center">
-                    <div class="feature-icon"><i class="icon-check"></i></div>
-                    <div class="feature-body">
-                      <h4 class="feature-title">Raw Material Testing</h4>
-                      <p class="feature-desc mb-0">
-                        Every raw ingredient undergoes strict identity, purity,
-                        and potency tests before approval, ensuring only the
-                        finest materials enter our production lines.
-                      </p>
-                    </div>
-                  </li>
-                  <li class="feature-item">
-                    <div class="feature-icon"><i class="icon-check"></i></div>
-                    <div class="feature-body">
-                      <h4 class="feature-title">
-                        In-Process Quality Control (IPQC)
-                      </h4>
-                      <p class="feature-desc mb-0">
-                        Real-time monitoring during formulation, mixing,
-                        filling, and packaging ensures each batch meets precise
-                        specifications continuously, preventing defects early.
-                      </p>
-                    </div>
-                  </li>
-                  <li class="feature-item">
-                    <div class="feature-icon"><i class="icon-check"></i></div>
-                    <div class="feature-body">
-                      <h4 class="feature-title">Finished Product Testing</h4>
-                      <p class="feature-desc mb-0">
-                        Comprehensive lab analyses confirm that every medicine
-                        meets our standards for strength, stability, sterility,
-                        and safety before release.
-                      </p>
-                    </div>
-                  </li>
-                </ul>
-                <a href="contact-us.html" class="btn btn-secondary btn-xl">
-                  <span>Request a Quote</span>
-                  <i class="icon-arrow-right"></i>
-                </a>
+              <!-- /.fancybox-item -->
+              <div class="fancybox-item">
+                <div class="fancybox-icon">
+                  <i class="icon-medicine"></i>
+                </div>
+                <!-- /.fancybox-icon -->
+                <div class="fancybox-body">
+                  <h4 class="fancybox-title">Commitment to Our Partners</h4>
+                  <p class="fancybox-desc">
+                    Your success is our success. We value every partnership
+                    and believe in transparent communication, timely delivery,
+                    and responsive support. Whether you are a distributor.
+                  </p>
+                </div>
+                <!-- /.fancybox-body -->
               </div>
+              <!-- /.fancybox-item -->
             </div>
-            <!-- /.col-lg-6 -->
+            <!-- /.fancybox-layout2 -->
           </div>
-          <!-- /.row -->
+          <!-- /.col-xl-6 -->
         </div>
-        <!-- /.container -->
-      </section>
-      <!-- /.About Layout 1 -->
-
-      <section
-        class="banner-layout1 bg-overlay bg-overlay-secondary-gradient bg-parallax pt-40 pb-0"
-      >
-        <div class="bg-img">
-          <img src="assets/images/backgrounds/1.jpg" alt="backgrounds" />
-        </div>
-        <div class="container">
-          <div class="col-12 col-xl-12" style="text-align: center">
-            <div class="heading-layout2 heading-light mb-60">
-              <h3 class="heading-subtitle color-white">
-                Trusted Quality That Cares
+        <!-- /.row -->
+      </div>
+    </section>
+    <!-- /.Banner Layout 1 -->
+    <section class="about-layout5 pt-130">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
+            <div class="text-center px-xl-2">
+              <h3 class="heading-title mb-50">
+                We Bring Diagnostic Testing And Drug Development
               </h3>
-              <h3 class="heading-title">Our Legacy of Trust</h3>
             </div>
-            <!-- /.heading-layout2 -->
+            <!-- /heading -->
           </div>
-          <div class="row">
-            <!-- /.col-xl-6 -->
-          </div>
-          <!-- /.row -->
-          <div class="row" style="align-items: center">
-            <div class="col-sm-10 col-lg-7 col-lg-6 col-xl-6">
-              <div class="banner-img">
-                <img
-                  src="assets/images/banners/1.jpg"
-                  alt="banner"
-                  class="rounded-4 w-100"
-                />
-                <div class="promo-text">
-                  <span class="inner-text">20+ Years Of Experience</span>
+          <!-- /.col-xl-6 -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+          <div class="col-12">
+            <div class="about-tabs bg-white">
+              <nav class="nav nav-tabs">
+                <a class="nav-link active" data-bs-toggle="tab" href="#history">Our Story</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#evolution">Our Values</a>
+                <a class="nav-link" data-bs-toggle="tab" href="#philiosophy">Our Mission</a>
+              </nav>
+              <div class="tab-content">
+                <div class="tab-pane fade show active" id="history">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                      <div class="about-text">
+                        <h4 class="text-title">
+                          To manufacture affordable, high-quality
+                          pharmaceutical products that improve patient
+                          outcomes while adhering to global safety standards
+                        </h4>
+                        <p class="text-desc">
+                          Founded with a vision to enhance healthcare
+                          accessibility, Abaris Healthcare has evolved over
+                          two decades into a global pharmaceutical leader. Our
+                          state-of-the-art manufacturing units and stringent
+                          quality processes embody excellence and reliability.
+                        </p>
+                        <a href="contact-us.html" class="btn btn-secondary btn-outlined btn-xl">
+                          <i class="icon-arrow-right"></i>
+                          <span>Discover More Info</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /.col-xl-6 -->
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                      <div class="about-img">
+                        <img src="assets/images/about/2.jpg" alt="about" class="w-100" />
+                      </div>
+                    </div>
+                    <!-- /.col-xl-6 -->
+                  </div>
+                  <!-- /.row -->
                 </div>
-                <div class="banner-shape">
-                  <span class="hexagon-clippath"></span
-                  ><span class="hexagon-clippath2"></span>
+                <div class="tab-pane fade" id="evolution">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                      <div class="about-text">
+                        <h4 class="text-title mb-20">Our Values</h4>
+                        <p class="text-desc">
+                          <strong>Integrity</strong> <br />
+                          <strong>Innovation</strong> <br />
+                          <strong>Quality</strong> <br />
+                          <strong>Customer Centricity</strong>
+                        </p>
+                        <a href="contact-us.html" class="btn btn-secondary btn-outlined btn-xl">
+                          <i class="icon-arrow-right"></i>
+                          <span>Discover More Info</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /.col-xl-6 -->
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                      <div class="about-img">
+                        <img src="assets/images/about/3.jpg" alt="about" class="w-100" />
+                      </div>
+                    </div>
+                    <!-- /.col-xl-6 -->
+                  </div>
+                  <!-- /.row -->
+                </div>
+                <div class="tab-pane fade" id="philiosophy">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                      <div class="about-text">
+                        <h4 class="text-title">
+                          To deliver safe, affordable, and high-quality
+                          medicines on time and at scale through relentless
+                          innovations.
+                        </h4>
+                        <p class="text-desc">
+                          We exist to manufacture affordable, high-quality
+                          pharmaceutical products that improve patient
+                          outcomes worldwide. We pursue science-driven
+                          innovation, uphold WHO-GMP and global regulatory
+                          standards, and partner closely with healthcare
+                          providers and distributors to ensure reliable,
+                          on-time supply—without compromising on safety,
+                          ethics, or sustainability.
+                        </p>
+                        <a href="contact-us.html" class="btn btn-secondary btn-outlined btn-xl">
+                          <i class="icon-arrow-right"></i>
+                          <span>Discover More Info</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /.col-xl-6 -->
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                      <div class="about-img">
+                        <img src="assets/images/about/4.jpg" alt="about" class="w-100" />
+                      </div>
+                    </div>
+                    <!-- /.col-xl-6 -->
+                  </div>
+                  <!-- /.row -->
+                </div>
+                <div class="tab-pane fade" id="commitment">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                      <div class="about-text">
+                        <h4 class="text-title">
+                          We have grown organically and through targeted
+                          acquisitions that have added to its geographic and
+                          technological.
+                        </h4>
+                        <p class="text-desc">
+                          As an industry leader, we are relentless in our
+                          pursuit of advancing the science of wellness and
+                          working with our parent company and our laboratory
+                          partner allowing us to uphold high standards of
+                          accuracy and reliability so we can continue to earn
+                          the trust of healthcare providers and patients
+                          across the country.
+                        </p>
+                        <a href="tests-book-visit.html" class="btn btn-secondary btn-outlined btn-xl">
+                          <i class="icon-arrow-right"></i>
+                          <span>Discover More Info</span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- /.col-lg-6 -->
+                    <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                      <div class="about-img">
+                        <img src="assets/images/about/5.jpg" alt="about" class="w-100" />
+                      </div>
+                    </div>
+                    <!-- /.col-xl-6 -->
+                  </div>
+                  <!-- /.row -->
                 </div>
               </div>
             </div>
-            <!-- /.col-xl-6 -->
-            <div class="col-sm-12 col-lg-8 col-xl-5 offset-xl-1">
-              <div class="banner-text">
-                <p class="color-white fw-bold">
-                  Appointments may be booked to help reduce your wait time. If
-                  you are unable to book an appointment, we do our best to
-                  minimize your wait, but the length of your visit will depend
-                  on the number of patients in the Patient Service Centre.
-                  Typically, wait times are a little longer in the morning as
-                  patients tend to fast for tests overnight
+            <!-- /.tabs -->
+          </div>
+          <!-- /.col-12 -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3 px-xl-5 text-center"></div>
+          <!-- /.col-12 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <section class="clients pt-50 pb-50">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 col-lg-12 col-xl-10 offset-xl-1 px-xl-5">
+            <div class="row align-items-center">
+              <div class="col-md-12 col-lg-12 col-xl-4">
+                <p class="fw-bold mb-0">
+                  Our partner in pharmaceutical excellence.
+                  <a href="our-clients.html" class="color-primary underlined-text-secondary">Our Clients</a>
                 </p>
               </div>
-              <div class="fancybox-layout2 fancybox-light">
-                <div class="fancybox-item">
-                  <div class="fancybox-icon">
-                    <i class="icon-flask"></i>
+              <!-- /.col-xl-4 -->
+              <div class="col-md-12 col-lg-12 col-xl-8">
+                <div class="slick-carousel"
+                  data-slick='{"slidesToShow": 3, "arrows": false, "dots": false, "autoplay": true,"autoplaySpeed": 2000, "infinite": true, "responsive": [ {"breakpoint": 992, "settings": {"slidesToShow": 2}}, {"breakpoint": 767, "settings": {"slidesToShow": 2}}, {"breakpoint": 480, "settings": {"slidesToShow": 2}}]}'>
+                  <div class="client">
+                    <img src="assets/images/clients/1.png" alt="client" />
                   </div>
-                  <!-- /.fancybox-icon -->
-                  <div class="fancybox-body">
-                    <h4 class="fancybox-title">Innovation for Better Health</h4>
-                    <p class="fancybox-desc">
-                      At Abaris, innovation means creating medicines that not
-                      only treat but improve lives. Our dedicated R&D team
-                      tirelessly explores new formulations and technologies to
-                      enhance drug efficacy and patient comfort.
-                    </p>
+                  <!-- /.client -->
+                  <div class="client">
+                    <img src="assets/images/clients/2.png" alt="client" />
                   </div>
-                  <!-- /.fancybox-body -->
-                </div>
-                <!-- /.fancybox-item -->
-                <div class="fancybox-item">
-                  <div class="fancybox-icon">
-                    <i class="icon-medicine"></i>
+                  <!-- /.client -->
+                  <div class="client">
+                    <img src="assets/images/clients/3.png" alt="client" />
                   </div>
-                  <!-- /.fancybox-icon -->
-                  <div class="fancybox-body">
-                    <h4 class="fancybox-title">Commitment to Our Partners</h4>
-                    <p class="fancybox-desc">
-                      Your success is our success. We value every partnership
-                      and believe in transparent communication, timely delivery,
-                      and responsive support. Whether you are a distributor.
-                    </p>
+                  <!-- /.client -->
+                  <div class="client">
+                    <img src="assets/images/clients/4.png" alt="client" />
                   </div>
-                  <!-- /.fancybox-body -->
-                </div>
-                <!-- /.fancybox-item -->
-              </div>
-              <!-- /.fancybox-layout2 -->
-            </div>
-            <!-- /.col-xl-6 -->
-          </div>
-          <!-- /.row -->
-        </div>
-      </section>
-      <!-- /.Banner Layout 1 -->
-      <section class="about-layout5 pt-130">
-        <div class="container">
-          <div class="row">
-            <div
-              class="col-sm-12 col-md-12 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3"
-            >
-              <div class="text-center px-xl-2">
-                <h3 class="heading-title mb-50">
-                  We Bring Diagnostic Testing And Drug Development
-                </h3>
-              </div>
-              <!-- /heading -->
-            </div>
-            <!-- /.col-xl-6 -->
-          </div>
-          <!-- /.row -->
-          <div class="row">
-            <div class="col-12">
-              <div class="about-tabs bg-white">
-                <nav class="nav nav-tabs">
-                  <a
-                    class="nav-link active"
-                    data-bs-toggle="tab"
-                    href="#history"
-                    >Our Story</a
-                  >
-                  <a class="nav-link" data-bs-toggle="tab" href="#evolution"
-                    >Our Values</a
-                  >
-                  <a class="nav-link" data-bs-toggle="tab" href="#philiosophy"
-                    >Our Mission</a
-                  >
-                </nav>
-                <div class="tab-content">
-                  <div class="tab-pane fade show active" id="history">
-                    <div class="row">
-                      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                        <div class="about-text">
-                          <h4 class="text-title">
-                            To manufacture affordable, high-quality
-                            pharmaceutical products that improve patient
-                            outcomes while adhering to global safety standards
-                          </h4>
-                          <p class="text-desc">
-                            Founded with a vision to enhance healthcare
-                            accessibility, Abaris Healthcare has evolved over
-                            two decades into a global pharmaceutical leader. Our
-                            state-of-the-art manufacturing units and stringent
-                            quality processes embody excellence and reliability.
-                          </p>
-                          <a
-                            href="contact-us.html"
-                            class="btn btn-secondary btn-outlined btn-xl"
-                          >
-                            <i class="icon-arrow-right"></i>
-                            <span>Discover More Info</span>
-                          </a>
-                        </div>
-                      </div>
-                      <!-- /.col-xl-6 -->
-                      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                        <div class="about-img">
-                          <img
-                            src="assets/images/about/2.jpg"
-                            alt="about"
-                            class="w-100"
-                          />
-                        </div>
-                      </div>
-                      <!-- /.col-xl-6 -->
-                    </div>
-                    <!-- /.row -->
+                  <!-- /.client -->
+                  <div class="client">
+                    <img src="assets/images/clients/5.png" alt="client" />
                   </div>
-                  <div class="tab-pane fade" id="evolution">
-                    <div class="row">
-                      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                        <div class="about-text">
-                          <h4 class="text-title mb-20">Our Values</h4>
-                          <p class="text-desc">
-                            <strong>Integrity</strong> <br />
-                            <strong>Innovation</strong> <br />
-                            <strong>Quality</strong> <br />
-                            <strong>Customer Centricity</strong>
-                          </p>
-                          <a
-                            href="contact-us.html"
-                            class="btn btn-secondary btn-outlined btn-xl"
-                          >
-                            <i class="icon-arrow-right"></i>
-                            <span>Discover More Info</span>
-                          </a>
-                        </div>
-                      </div>
-                      <!-- /.col-xl-6 -->
-                      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                        <div class="about-img">
-                          <img
-                            src="assets/images/about/3.jpg"
-                            alt="about"
-                            class="w-100"
-                          />
-                        </div>
-                      </div>
-                      <!-- /.col-xl-6 -->
-                    </div>
-                    <!-- /.row -->
+                  <!-- /.client -->
+                  <div class="client">
+                    <img src="assets/images/clients/6.png" alt="client" />
                   </div>
-                  <div class="tab-pane fade" id="philiosophy">
-                    <div class="row">
-                      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                        <div class="about-text">
-                          <h4 class="text-title">
-                            To deliver safe, affordable, and high-quality
-                            medicines on time and at scale through relentless
-                            innovations.
-                          </h4>
-                          <p class="text-desc">
-                            We exist to manufacture affordable, high-quality
-                            pharmaceutical products that improve patient
-                            outcomes worldwide. We pursue science-driven
-                            innovation, uphold WHO-GMP and global regulatory
-                            standards, and partner closely with healthcare
-                            providers and distributors to ensure reliable,
-                            on-time supply—without compromising on safety,
-                            ethics, or sustainability.
-                          </p>
-                          <a
-                            href="contact-us.html"
-                            class="btn btn-secondary btn-outlined btn-xl"
-                          >
-                            <i class="icon-arrow-right"></i>
-                            <span>Discover More Info</span>
-                          </a>
-                        </div>
-                      </div>
-                      <!-- /.col-xl-6 -->
-                      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                        <div class="about-img">
-                          <img
-                            src="assets/images/about/4.jpg"
-                            alt="about"
-                            class="w-100"
-                          />
-                        </div>
-                      </div>
-                      <!-- /.col-xl-6 -->
-                    </div>
-                    <!-- /.row -->
+                  <!-- /.client -->
+                  <div class="client">
+                    <img src="assets/images/clients/4.png" alt="client" />
                   </div>
-                  <div class="tab-pane fade" id="commitment">
-                    <div class="row">
-                      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                        <div class="about-text">
-                          <h4 class="text-title">
-                            We have grown organically and through targeted
-                            acquisitions that have added to its geographic and
-                            technological.
-                          </h4>
-                          <p class="text-desc">
-                            As an industry leader, we are relentless in our
-                            pursuit of advancing the science of wellness and
-                            working with our parent company and our laboratory
-                            partner allowing us to uphold high standards of
-                            accuracy and reliability so we can continue to earn
-                            the trust of healthcare providers and patients
-                            across the country.
-                          </p>
-                          <a
-                            href="tests-book-visit.html"
-                            class="btn btn-secondary btn-outlined btn-xl"
-                          >
-                            <i class="icon-arrow-right"></i>
-                            <span>Discover More Info</span>
-                          </a>
-                        </div>
-                      </div>
-                      <!-- /.col-lg-6 -->
-                      <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                        <div class="about-img">
-                          <img
-                            src="assets/images/about/5.jpg"
-                            alt="about"
-                            class="w-100"
-                          />
-                        </div>
-                      </div>
-                      <!-- /.col-xl-6 -->
-                    </div>
-                    <!-- /.row -->
-                  </div>
+                  <!-- /.client -->
                 </div>
+                <!-- /.carousel -->
               </div>
-              <!-- /.tabs -->
-            </div>
-            <!-- /.col-12 -->
-          </div>
-          <!-- /.row -->
-          <div class="row">
-            <div
-              class="col-sm-12 col-md-12 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3 px-xl-5 text-center"
-            ></div>
-            <!-- /.col-12 -->
-          </div>
-          <!-- /.row -->
-        </div>
-        <!-- /.container -->
-      </section>
-      <section class="clients pt-50 pb-50">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12 col-lg-12 col-xl-10 offset-xl-1 px-xl-5">
-              <div class="row align-items-center">
-                <div class="col-md-12 col-lg-12 col-xl-4">
-                  <p class="fw-bold mb-0">
-                    Your partner in pharmaceutical excellence.
-                    <a
-                      href="our-clients.html"
-                      class="color-primary underlined-text-secondary"
-                      >Our Clients</a
-                    >
-                  </p>
-                </div>
-                <!-- /.col-xl-4 -->
-                <div class="col-md-12 col-lg-12 col-xl-8">
-                  <div
-                    class="slick-carousel"
-                    data-slick='{"slidesToShow": 3, "arrows": false, "dots": false, "autoplay": true,"autoplaySpeed": 2000, "infinite": true, "responsive": [ {"breakpoint": 992, "settings": {"slidesToShow": 2}}, {"breakpoint": 767, "settings": {"slidesToShow": 2}}, {"breakpoint": 480, "settings": {"slidesToShow": 2}}]}'
-                  >
-                    <div class="client">
-                      <img src="assets/images/clients/1.png" alt="client" />
-                    </div>
-                    <!-- /.client -->
-                    <div class="client">
-                      <img src="assets/images/clients/2.png" alt="client" />
-                    </div>
-                    <!-- /.client -->
-                    <div class="client">
-                      <img src="assets/images/clients/3.png" alt="client" />
-                    </div>
-                    <!-- /.client -->
-                    <div class="client">
-                      <img src="assets/images/clients/4.png" alt="client" />
-                    </div>
-                    <!-- /.client -->
-                    <div class="client">
-                      <img src="assets/images/clients/5.png" alt="client" />
-                    </div>
-                    <!-- /.client -->
-                    <div class="client">
-                      <img src="assets/images/clients/6.png" alt="client" />
-                    </div>
-                    <!-- /.client -->
-                    <div class="client">
-                      <img src="assets/images/clients/4.png" alt="client" />
-                    </div>
-                    <!-- /.client -->
-                  </div>
-                  <!-- /.carousel -->
-                </div>
-                <!-- /.col-xl-8 -->
-              </div>
-              <!-- /.row -->
-            </div>
-            <!-- /.col-12 -->
-          </div>
-          <!-- /.row -->
-        </div>
-        <!-- /.container -->
-      </section>
-      <footer class="footer">
-        <div class="footer-primary">
-          <div class="container">
-            <div class="row">
-              <!-- Logo -->
-              <div class="col-12 col-lg-2">
-                <div class="footer-widget-about">
-                  <a href="index.html">
-                    <img src="assets/images/logo/logo-main.png" alt="logo" />
-                  </a>
-                </div>
-              </div>
-              <!-- /.col-lg-2 -->
-
-              <!-- About column -->
-              <div class="col-6 col-lg-2">
-                <div class="footer-widget-nav">
-                  <h6 class="footer-widget-title">About Us</h6>
-                  <nav>
-                    <ul class="list-unstyled">
-                      <li>
-                        <a href="about-us.html" style="color: white"
-                          >About Us</a
-                        >
-                      </li>
-                      <li>
-                        <a href="team.html" style="color: white"
-                          >Business Overview</a
-                        >
-                      </li>
-
-                      <li>
-                        <a href="csr.html" style="color: white">CSR</a>
-                      </li>
-                      <li>
-                        <a href="careers.html" style="color: white">Careers</a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-              <!-- /.col-lg-2 -->
-
-              <!-- Quick Links column -->
-              <div class="col-6 col-lg-2">
-                <div class="footer-widget-nav">
-                  <h6 class="footer-widget-title">Links</h6>
-                  <nav>
-                    <ul class="list-unstyled">
-                      <li>
-                        <a href="products.html" style="color: white"
-                          >Products</a
-                        >
-                      </li>
-                      <li>
-                        <a href="blog.html" style="color: white"
-                          >Blog &amp; Insights</a
-                        >
-                      </li>
-                      <li>
-                        <a href="our-clients.html" style="color: white"
-                          >Our Clients</a
-                        >
-                      </li>
-                      <li>
-                        <a href="contact-us.html" style="color: white"
-                          >Contact Us</a
-                        >
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-              <!-- /.col-lg-2 -->
-
-              <!-- Quick Contacts -->
-              <div class="col-6 col-lg-3">
-                <div class="footer-widget-contact">
-                  <h6 class="footer-widget-title">Quick Contacts</h6>
-                  <p>
-                    If you have any questions or need help, feel free to contact
-                    with our team.
-                  </p>
-                  <ul class="contact-list list-unstyled">
-                    <li>
-                      <p>Send Us Email:</p>
-                      <a href="mailto:info@abarishealthcare.com">
-                        <i class="contact-icon icon-email color-white"></i>
-                        <span class="color-white"
-                          >info@abarishealthcare.com</span
-                        >
-                      </a>
-                    </li>
-                    <li>
-                      <p>Call Us Today:</p>
-                      <a href="tel:+917926440704">
-                        <i class="contact-icon icon-phone color-white"></i>
-                        <span class="color-white">+ 91 79264 40704</span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- /.col-lg-3 -->
-
-              <!-- Newsletter (new column on right) -->
-              <div class="col-12 col-lg-3">
-                <div class="footer-widget-newsletter">
-                  <h6 class="footer-widget-title">Newsletter</h6>
-                  <form
-                    class="newsletter-form"
-                    action="/subscribe"
-                    method="post"
-                    novalidate
-                  >
-                    <div class="mb-2">
-                      <label for="footer-news-email" class="visually-hidden"
-                        >Email address</label
-                      >
-                      <input
-                        id="footer-news-email"
-                        name="email"
-                        type="email"
-                        class="form-control"
-                        placeholder="Your email address"
-                        required
-                      />
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100">
-                      Subscribe
-                    </button>
-                  </form>
-                </div>
-              </div>
-              <!-- /.col-lg-3 -->
+              <!-- /.col-xl-8 -->
             </div>
             <!-- /.row -->
           </div>
-          <!-- /.container -->
+          <!-- /.col-12 -->
         </div>
-        <!-- /.footer-primary -->
-
-        <div class="footer-secondary">
-          <div
-            class="container"
-            style="padding-top: 10px; padding-bottom: 10px"
-          >
-            <div class="row align-items-center">
-              <div class="col-sm-12 col-md-12 col-lg-7">
-                <nav></nav>
-                <div class="mt-1">
-                  <span
-                    >&copy; 2025 Abaris Healthcare, All Rights Reserved.</span
-                  >
-                </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </section>
+    <footer class="footer">
+      <div class="footer-primary">
+        <div class="container">
+          <div class="row">
+            <!-- Logo -->
+            <div class="col-12 col-lg-2">
+              <div class="footer-widget-about">
+                <a href="index.html">
+                  <img src="assets/images/logo/logo-main.png" alt="logo" />
+                </a>
               </div>
-              <!-- /.col-lg-7 -->
-              <div
-                class="col-sm-12 col-md-12 col-lg-5 d-flex flex-wrap justify-content-between"
-              >
-                <ul
-                  style="
+            </div>
+            <!-- /.col-lg-2 -->
+
+            <!-- About column -->
+            <div class="col-6 col-lg-2">
+              <div class="footer-widget-nav">
+                <h6 class="footer-widget-title">About Us</h6>
+                <nav>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="about-us.html" style="color: white">About Us</a>
+                    </li>
+                    <li>
+                      <a href="team.html" style="color: white">Business Overview</a>
+                    </li>
+
+                    <li>
+                      <a href="csr.html" style="color: white">CSR</a>
+                    </li>
+                    <li>
+                      <a href="careers.html" style="color: white">Careers</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <!-- /.col-lg-2 -->
+
+            <!-- Quick Links column -->
+            <div class="col-6 col-lg-2">
+              <div class="footer-widget-nav">
+                <h6 class="footer-widget-title">Links</h6>
+                <nav>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="products.html" style="color: white">Products</a>
+                    </li>
+                    <li>
+                      <a href="blog.html" style="color: white">Blog</a>
+                    </li>
+                    <li>
+                      <a href="our-clients.html" style="color: white">Our Clients</a>
+                    </li>
+                    <li>
+                      <a href="contact-us.html" style="color: white">Contact Us</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <!-- /.col-lg-2 -->
+
+            <!-- Quick Contacts -->
+            <div class="col-6 col-lg-3">
+              <div class="footer-widget-contact">
+                <h6 class="footer-widget-title">Quick Contacts</h6>
+                <p>
+                  If you have any questions or need help, feel free to contact
+                  with our team.
+                </p>
+                <ul class="contact-list list-unstyled">
+                  <li>
+                    <p>Send Us Email:</p>
+                    <a href="mailto:info@abarishealthcare.com">
+                      <i class="contact-icon icon-email color-white"></i>
+                      <span class="color-white">info@abarishealthcare.com</span>
+                    </a>
+                  </li>
+                  <li>
+                    <p>Call Us Today:</p>
+                    <a href="tel:+917926440704">
+                      <i class="contact-icon icon-phone color-white"></i>
+                      <span class="color-white">+ 91 79264 40704</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- /.col-lg-3 -->
+
+            <!-- Newsletter (new column on right) -->
+            <div class="col-12 col-lg-3">
+              <div class="footer-widget-newsletter">
+                <h6 class="footer-widget-title">Newsletter</h6>
+                <form action="mailto:74devanshvariya@gmail.com" method="get" enctype="text/plain">
+                  <div class="mb-2">
+                    <label for="footer-news-email" class="visually-hidden">Email address</label>
+                    <input id="footer-news-email" name="New Subscriber" type="email" class="form-control"
+                      placeholder="Your email address" required />
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- /.col-lg-3 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+  </div>
+  <!-- /.footer-primary -->
+
+  <div class="footer-secondary">
+    <div class="container" style="padding-top: 10px; padding-bottom: 10px">
+      <div class="row align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-7">
+          <nav></nav>
+          <div class="mt-1">
+            <span>&copy; 2025 Abaris Healthcare, All Rights Reserved.</span>
+          </div>
+        </div>
+        <!-- /.col-lg-7 -->
+        <div class="col-sm-12 col-md-12 col-lg-5 d-flex flex-wrap justify-content-between">
+          <ul style="
                     display: flex;
                     margin-top: 5px;
                     align-items: center;
@@ -884,12 +744,9 @@
                     padding: 0;
                     list-style: none;
                     color: #000;
-                  "
-                >
-                  <li style="min-width: 0">
-                    <a
-                      href="terms.html"
-                      style="
+                  ">
+            <li style="min-width: 0">
+              <a href="terms.html" style="
                         margin-top: 5px;
                         display: inline-flex;
                         align-items: center;
@@ -898,15 +755,12 @@
                         color: #000;
                         font-weight: 600;
                         white-space: nowrap; /* keep on one line */
-                      "
-                    >
-                      <span>Terms and Conditions</span>
-                    </a>
-                  </li>
-                  <li style="min-width: 0">
-                    <a
-                      href="privacy.html"
-                      style="
+                      ">
+                <!-- <span>Terms and Conditions</span> -->
+              </a>
+            </li>
+            <li style="min-width: 0">
+              <a href="privacy.html" style="
                         margin-top: 5px;
                         display: inline-flex;
                         align-items: center;
@@ -915,17 +769,13 @@
                         color: #000;
                         font-weight: 600;
                         white-space: nowrap; /* keep on one line */
-                      "
-                    >
-                      <span>Privacy Policy</span>
-                    </a>
-                  </li>
-                  <li style="min-width: 0">
-                    <a
-                      href="https://www.linkedin.com/company/your-company"
-                      target="_blank"
-                      rel="noopener"
-                      style="
+                      ">
+                <!-- <span>Privacy Policy</span> -->
+              </a>
+            </li>
+            <li style="min-width: 0">
+              <a href="https://www.linkedin.com/company/abaris-healthcare-private-limited/" target="_blank"
+                rel="noopener" style="
                         margin-top: 5px;
                         display: inline-flex;
                         align-items: center;
@@ -933,241 +783,200 @@
                         text-decoration: none;
                         color: #000;
                         white-space: nowrap;
-                      "
-                    >
-                      <i
-                        class="fab fa-linkedin-in"
-                        aria-hidden="true"
-                        style="width: 20px; text-align: center"
-                      ></i>
-                      <span>LinkedIn</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- /.row -->
-          </div>
-          <!-- /.container -->
+                      ">
+                <i class="fab fa-linkedin-in" aria-hidden="true" style="width: 20px; text-align: center"></i>
+                <span>LinkedIn</span>
+              </a>
+            </li>
+          </ul>
         </div>
-        <!-- /.footer-secondary -->
-      </footer>
-
-      <svg
-        class="svg-pathes"
-        width="0"
-        height="0"
-        xmlns="http://www.w3.org/2000/svg"
-        version="1.1"
-      >
-        <defs>
-          <filter id="rounded-clippath-filter">
-            <feGaussianBlur
-              in="SourceGraphic"
-              stdDeviation="8"
-              result="blur"
-            ></feGaussianBlur>
-            <feColorMatrix
-              in="blur"
-              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
-              result="rounded-clippath-filter"
-            ></feColorMatrix>
-            <feComposite
-              in="SourceGraphic"
-              in2="rounded-clippath-filter"
-              operator="atop"
-            ></feComposite>
-          </filter>
-        </defs>
-        <defs>
-          <filter id="rounded-clippath-filter-small">
-            <feGaussianBlur
-              in="SourceGraphic"
-              stdDeviation="2"
-              result="blur"
-            ></feGaussianBlur>
-            <feColorMatrix
-              in="blur"
-              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 10 -4"
-              result="rounded-clippath-filter-small"
-            ></feColorMatrix>
-            <feComposite
-              in="SourceGraphic"
-              in2="rounded-clippath-filter-small"
-              operator="atop"
-            ></feComposite>
-          </filter>
-        </defs>
-        <clipPath id="curve-left" clipPathUnits="objectBoundingBox">
-          <path
-            d="M0,0.998 v0.002 H1 V0 h-0.059 C0.832,0.008,0.596,0.068,0.48,0.414 A1,1,0,0,0,0.445,0.551 C0.376,0.899,0.166,0.986,0,0.998"
-          ></path>
-        </clipPath>
-        <clipPath id="curve-right" clipPathUnits="objectBoundingBox">
-          <path
-            d="M1,0.998 v0.002 H0 V0 H0.059 C0.168,0.008,0.404,0.068,0.519,0.414 A1,1,0,0,1,0.555,0.551 C0.624,0.899,0.834,0.986,1,0.998"
-          ></path>
-        </clipPath>
-        <clipPath id="curve-shape" clipPathUnits="objectBoundingBox">
-          <path
-            d="M1600,3277.99c-152.02-27.95-453.41-46.99-800.382-46.99-346.4,0-647.36,19.12-799.618,47Z"
-            transform="translate(0 -3231)"
-          ></path>
-        </clipPath>
-      </svg>
-
-      <div class="search-popup">
-        <button type="button" class="search-popup-close">
-          <i class="fas fa-times"></i>
-        </button>
-        <form class="search-popup-form">
-          <input
-            type="text"
-            class="search-popup-form-input"
-            placeholder="Type Words Then Enter"
-          />
-          <button class="search-popup-btn"><i class="icon-search"></i></button>
-        </form>
       </div>
-      <!-- /.search-popup -->
+      <!-- /.row -->
     </div>
-    <!-- /.wrapper -->
-    <script>
-      (function () {
-        const btn = document.getElementById("backToTop");
-        if (!btn) return;
+    <!-- /.container -->
+  </div>
+  <!-- /.footer-secondary -->
+  </footer>
 
-        const prefersReduced = window.matchMedia(
-          "(prefers-reduced-motion: reduce)"
-        ).matches;
+  <svg class="svg-pathes" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+      <filter id="rounded-clippath-filter">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"></feGaussianBlur>
+        <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="rounded-clippath-filter">
+        </feColorMatrix>
+        <feComposite in="SourceGraphic" in2="rounded-clippath-filter" operator="atop"></feComposite>
+      </filter>
+    </defs>
+    <defs>
+      <filter id="rounded-clippath-filter-small">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"></feGaussianBlur>
+        <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 10 -4"
+          result="rounded-clippath-filter-small"></feColorMatrix>
+        <feComposite in="SourceGraphic" in2="rounded-clippath-filter-small" operator="atop"></feComposite>
+      </filter>
+    </defs>
+    <clipPath id="curve-left" clipPathUnits="objectBoundingBox">
+      <path
+        d="M0,0.998 v0.002 H1 V0 h-0.059 C0.832,0.008,0.596,0.068,0.48,0.414 A1,1,0,0,0,0.445,0.551 C0.376,0.899,0.166,0.986,0,0.998">
+      </path>
+    </clipPath>
+    <clipPath id="curve-right" clipPathUnits="objectBoundingBox">
+      <path
+        d="M1,0.998 v0.002 H0 V0 H0.059 C0.168,0.008,0.404,0.068,0.519,0.414 A1,1,0,0,1,0.555,0.551 C0.624,0.899,0.834,0.986,1,0.998">
+      </path>
+    </clipPath>
+    <clipPath id="curve-shape" clipPathUnits="objectBoundingBox">
+      <path d="M1600,3277.99c-152.02-27.95-453.41-46.99-800.382-46.99-346.4,0-647.36,19.12-799.618,47Z"
+        transform="translate(0 -3231)"></path>
+    </clipPath>
+  </svg>
 
-        function toggleBtn() {
-          if (window.scrollY > 300) {
-            btn.classList.add("show");
-          } else {
-            btn.classList.remove("show");
-          }
+  <div class="search-popup">
+    <button type="button" class="search-popup-close">
+      <i class="fas fa-times"></i>
+    </button>
+    <form class="search-popup-form">
+      <input type="text" class="search-popup-form-input" placeholder="Type Words Then Enter" />
+      <button class="search-popup-btn"><i class="icon-search"></i></button>
+    </form>
+  </div>
+  <!-- /.search-popup -->
+  </div>
+  <!-- /.wrapper -->
+  <script>
+    (function () {
+      const btn = document.getElementById("backToTop");
+      if (!btn) return;
+
+      const prefersReduced = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      function toggleBtn() {
+        if (window.scrollY > 300) {
+          btn.classList.add("show");
+        } else {
+          btn.classList.remove("show");
         }
-        window.addEventListener("scroll", toggleBtn, { passive: true });
-        toggleBtn();
+      }
+      window.addEventListener("scroll", toggleBtn, { passive: true });
+      toggleBtn();
 
-        btn.addEventListener("click", function () {
-          if (prefersReduced) {
-            window.scrollTo(0, 0);
-          } else {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }
+      btn.addEventListener("click", function () {
+        if (prefersReduced) {
+          window.scrollTo(0, 0);
+        } else {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      });
+    })();
+
+    (function () {
+      const tabWrap = document.querySelector(".about-tabs");
+      if (!tabWrap) return;
+
+      const links = Array.from(
+        tabWrap.querySelectorAll(".nav-tabs .nav-link")
+      );
+      const panes = Array.from(
+        tabWrap.querySelectorAll(".tab-content .tab-pane")
+      );
+
+      // ---- helper: activate by pane id ----
+      function activateTab(targetId, pushHash = true) {
+        // links
+        links.forEach((a) => a.classList.remove("active"));
+        const activeLink = links.find(
+          (a) => a.getAttribute("href") === "#" + targetId
+        );
+        if (activeLink) activeLink.classList.add("active");
+
+        // panes
+        panes.forEach((p) => p.classList.remove("show", "active", "fade"));
+        const activePane = panes.find((p) => p.id === targetId);
+        if (activePane) {
+          // optional "fade" feel like Bootstrap's tabs
+          activePane.classList.add("active");
+          requestAnimationFrame(() => activePane.classList.add("show"));
+        }
+
+        // move indicator
+        moveIndicator();
+
+        // update hash for deep-linking
+        if (pushHash && activePane)
+          history.replaceState(null, "", "#" + targetId);
+      }
+
+      // ---- click handling ----
+      links.forEach((a) => {
+        a.addEventListener("click", (e) => {
+          e.preventDefault();
+          const id = a.getAttribute("href").replace("#", "");
+          activateTab(id);
         });
-      })();
 
-      (function () {
-        const tabWrap = document.querySelector(".about-tabs");
-        if (!tabWrap) return;
-
-        const links = Array.from(
-          tabWrap.querySelectorAll(".nav-tabs .nav-link")
-        );
-        const panes = Array.from(
-          tabWrap.querySelectorAll(".tab-content .tab-pane")
-        );
-
-        // ---- helper: activate by pane id ----
-        function activateTab(targetId, pushHash = true) {
-          // links
-          links.forEach((a) => a.classList.remove("active"));
-          const activeLink = links.find(
-            (a) => a.getAttribute("href") === "#" + targetId
-          );
-          if (activeLink) activeLink.classList.add("active");
-
-          // panes
-          panes.forEach((p) => p.classList.remove("show", "active", "fade"));
-          const activePane = panes.find((p) => p.id === targetId);
-          if (activePane) {
-            // optional "fade" feel like Bootstrap's tabs
-            activePane.classList.add("active");
-            requestAnimationFrame(() => activePane.classList.add("show"));
-          }
-
-          // move indicator
-          moveIndicator();
-
-          // update hash for deep-linking
-          if (pushHash && activePane)
-            history.replaceState(null, "", "#" + targetId);
-        }
-
-        // ---- click handling ----
-        links.forEach((a) => {
-          a.addEventListener("click", (e) => {
+        // a11y: allow Enter/Space on focus
+        a.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
             e.preventDefault();
-            const id = a.getAttribute("href").replace("#", "");
-            activateTab(id);
-          });
-
-          // a11y: allow Enter/Space on focus
-          a.addEventListener("keydown", (e) => {
-            if (e.key === "Enter" || e.key === " ") {
-              e.preventDefault();
-              a.click();
-            }
-          });
+            a.click();
+          }
         });
+      });
 
-        // ---- keyboard left/right to navigate tabs ----
-        tabWrap.addEventListener("keydown", (e) => {
-          if (!["ArrowLeft", "ArrowRight"].includes(e.key)) return;
-          const idx = links.findIndex((l) => l.classList.contains("active"));
-          let next = idx + (e.key === "ArrowRight" ? 1 : -1);
-          if (next < 0) next = links.length - 1;
-          if (next >= links.length) next = 0;
-          links[next].focus();
-          links[next].click();
-        });
+      // ---- keyboard left/right to navigate tabs ----
+      tabWrap.addEventListener("keydown", (e) => {
+        if (!["ArrowLeft", "ArrowRight"].includes(e.key)) return;
+        const idx = links.findIndex((l) => l.classList.contains("active"));
+        let next = idx + (e.key === "ArrowRight" ? 1 : -1);
+        if (next < 0) next = links.length - 1;
+        if (next >= links.length) next = 0;
+        links[next].focus();
+        links[next].click();
+      });
 
-        // ---- underline indicator (nice-to-have) ----
-        let indicator = document.createElement("span");
-        indicator.className = "tab-indicator";
-        Object.assign(indicator.style, {
-          position: "absolute",
-          bottom: "0",
-          height: "2px",
-          background: "#1984c5",
-          transition: "transform 200ms ease, width 200ms ease",
-          willChange: "transform,width",
-          left: "0",
-          width: "0",
-        });
-        const nav = tabWrap.querySelector(".nav-tabs");
-        nav.style.position = "relative";
-        nav.appendChild(indicator);
+      // ---- underline indicator (nice-to-have) ----
+      let indicator = document.createElement("span");
+      indicator.className = "tab-indicator";
+      Object.assign(indicator.style, {
+        position: "absolute",
+        bottom: "0",
+        height: "2px",
+        background: "#1984c5",
+        transition: "transform 200ms ease, width 200ms ease",
+        willChange: "transform,width",
+        left: "0",
+        width: "0",
+      });
+      const nav = tabWrap.querySelector(".nav-tabs");
+      nav.style.position = "relative";
+      nav.appendChild(indicator);
 
-        function moveIndicator() {
-          const active = nav.querySelector(".nav-link.active");
-          if (!active) return;
-          const navRect = nav.getBoundingClientRect();
-          const rect = active.getBoundingClientRect();
-          const left = rect.left - navRect.left + nav.scrollLeft; // safe with overflow
-          indicator.style.width = rect.width + "px";
-          indicator.style.transform = `translateX(${left}px)`;
-        }
-        window.addEventListener("resize", () =>
-          requestAnimationFrame(moveIndicator)
-        );
+      function moveIndicator() {
+        const active = nav.querySelector(".nav-link.active");
+        if (!active) return;
+        const navRect = nav.getBoundingClientRect();
+        const rect = active.getBoundingClientRect();
+        const left = rect.left - navRect.left + nav.scrollLeft; // safe with overflow
+        indicator.style.width = rect.width + "px";
+        indicator.style.transform = `translateX(${left}px)`;
+      }
+      window.addEventListener("resize", () =>
+        requestAnimationFrame(moveIndicator)
+      );
 
-        // ---- init: from hash or first active ----
-        const initialId =
-          (location.hash || "").replace("#", "") ||
-          (links[0] && links[0].getAttribute("href").replace("#", ""));
-        if (initialId) activateTab(initialId, false);
-      })();
-    </script>
-    <script
-      data-cfasync="false"
-      src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-    ></script>
-    <script src="assets/js/jquery-3.5.1.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+      // ---- init: from hash or first active ----
+      const initialId =
+        (location.hash || "").replace("#", "") ||
+        (links[0] && links[0].getAttribute("href").replace("#", ""));
+      if (initialId) activateTab(initialId, false);
+    })();
+  </script>
+  <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="assets/js/jquery-3.5.1.min.js"></script>
+  <script src="assets/js/plugins.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
 </html>

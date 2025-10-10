@@ -152,7 +152,7 @@ textarea {
 }
 @media (min-width: 1400px) {
   .row {
-    --bs-gutter-x: 40px;
+    /* --bs-gutter-x: 40px; */
   }
   .container {
     max-width: 1320px;
@@ -5897,7 +5897,7 @@ body {
 
 .clients-light .client img {
   opacity: 0.8;
-  filter: brightness(100);
+  /*filter: brightness(100);*/
 }
 
 .certificates-container {

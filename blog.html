@@ -1,360 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <meta name="description" content="" />
-    <link href="assets/images/logo/logo-main.png" rel="icon" />
-    <title>Abaris | Blogs</title>
 
-    <!-- Fonts / Icons / Site CSS -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&amp;family=Roboto:wght@400;700&amp;display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-    />
-    <link rel="stylesheet" href="assets/css/libraries.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="" />
+  <link href="assets/images/logo/logo-main.png" rel="icon" />
+  <title>Abaris | Blogs</title>
 
-    <!-- Page-specific fixes (load AFTER style.css) -->
-    <style>
-      /* --- Fix the "+ Read More" icon --- */
-      .btn.btn-link {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 0;
-        font-weight: 600;
-        text-decoration: none;
-      }
+  <!-- Fonts / Icons / Site CSS -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;700&amp;family=Roboto:wght@400;700&amp;display=swap" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" />
+  <link rel="stylesheet" href="assets/css/libraries.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 
-      .btn.btn-link .plus-icon {
-        /* stop <i> from being italic */
-        font-style: normal;
+  <!-- Page-specific fixes (load AFTER style.css) -->
+  <style>
+    /* --- Fix the "+ Read More" icon --- */
+    .btn.btn-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0;
+      font-weight: 600;
+      text-decoration: none;
+    }
 
-        /* make it a centered circle */
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 26px;
-        height: 26px;
-        border-radius: 50%;
+    .btn.btn-link .plus-icon {
+      /* stop <i> from being italic */
+      font-style: normal;
 
-        /* colors (tune to brand) */
-        background: #1e88e5;
-        color: #fff;
-        line-height: 1;
-        font-size: 16px;
+      /* make it a centered circle */
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
 
-        /* subtle inner ring */
-        box-shadow: 0 0 0 2px rgba(30, 136, 229, 0.15) inset;
+      /* colors (tune to brand) */
+      background: #1e88e5;
+      color: #fff;
+      line-height: 1;
+      font-size: 16px;
 
-        /* crisp rendering */
-        transform: translateZ(0);
-      }
+      /* subtle inner ring */
+      box-shadow: 0 0 0 2px rgba(30, 136, 229, 0.15) inset;
 
-      .btn.btn-link:hover .plus-icon {
-        transform: scale(1.06);
-      }
+      /* crisp rendering */
+      transform: translateZ(0);
+    }
 
-      /* Keep buttons aligned across cards */
-      .post-body {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-      }
+    .btn.btn-link:hover .plus-icon {
+      transform: scale(1.06);
+    }
 
-      .post-body .post-desc {
-        margin-bottom: 16px;
-      }
+    /* Keep buttons aligned across cards */
+    .post-body {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
 
-      .post-body .btn.btn-link {
-        margin-top: auto;
-      }
-    </style>
-  </head>
+    .post-body .post-desc {
+      margin-bottom: 16px;
+    }
 
-  <body>
-    <div class="wrapper">
-      <div class="preloader">
-        <div class="loading">
-          <span></span><span></span><span></span><span></span>
+    .post-body .btn.btn-link {
+      margin-top: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="preloader">
+      <div class="loading">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+    <!-- /.preloader -->
+
+    <header class="header header-layout1">
+      <nav class="navbar navbar-expand-lg sticky-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/images/logo/logo-main.png" class="logo-dark" alt="logo" />
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="menu-lines"><span></span></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="mainNavigation">
+            <ul class="navbar-nav">
+              <li class="nav-item has-dropdown">
+                <a href="index.html" class="nav-item-link">Home</a>
+              </li>
+              <li class="nav-item has-dropdown">
+                <a href="about-us.html" class="nav-item-link">About Us</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a href="about-us.html" class="nav-item-link">About Us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="team.html" class="nav-item-link">Business Overview</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="csr.html" class="nav-item-link">CSR</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="compliance.html" class="nav-item-link">Compliance</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item has-dropdown">
+                <a href="products.html" class="nav-item-link">Products</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item">
+                    <a href="products.html#lvp" class="nav-item-link">IV Fluids</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="products.html#svp" class="nav-item-link">Sterile Injections</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="products.html#oral" class="nav-item-link">Oral Liquids</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="products.html#tablets" class="nav-item-link">Tablets</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item has-dropdown dropdown">
+                <a href="blog.html" class="nav-item-link active">Blog</a>
+              </li>
+              <li class="nav-item">
+                <a href="careers.html" class="nav-item-link">Careers</a>
+              </li>
+              <li class="nav-item">
+                <a href="our-clients.html" class="nav-item-link">Our Clients</a>
+              </li>
+              <li class="nav-item">
+                <a href="contact-us.html" class="nav-item-link">Contact</a>
+              </li>
+            </ul>
+
+            <ul class="header-actions d-flex align-items-center position-relative list-unstyled mb-0">
+              <li></li>
+              <li>
+
+              </li>
+            </ul>
+
+            <button class="close-mobile-menu d-block d-lg-none">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+
+          <div class="d-none d-xl-flex align-items-center position-relative ml-30">
+            <a href="assets/docs/abaris-product-list.pdf" class="btn btn-primary btn-contact"
+              href="assets/docs/abaris-product-list.pdf" download="Abaris-Product-List.pdf">
+              Download Catalogue
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section class="page-title-layout1 page-title-light text-center bg-overlay bg-parallax"
+      style="padding-top: 60px !important; padding-bottom: 50px">
+      <div class="bg-img">
+        <img src="assets/images/page-titles/1.jpg" alt="background" />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-xl-6 offset-xl-3">
+            <h1 class="pagetitle-heading">Blogs</h1>
+            <p class="pagetitle-desc">
+              At Abaris Healthcare, we offer a wide range of trusted and
+              effective pharmaceutical products designed to improve patient
+              outcomes and enhance overall well-being.
+            </p>
+            <div class="d-flex flex-wrap align-items-center justify-content-center">
+              <a href="contact-us.html" class="btn btn-white mb-10 mx-3"><i class="icon-arrow-right"></i><span>Contact
+                  Us</span></a>
+              <a href="team.html" class="btn btn-white btn-outlined mb-10 mx-3"><span>About Our Journey</span></a>
+            </div>
+            <nav></nav>
+          </div>
         </div>
       </div>
-      <!-- /.preloader -->
-
-      <header class="header header-layout1">
-        <nav class="navbar navbar-expand-lg sticky-navbar">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-              <img
-                src="assets/images/logo/logo-main.png"
-                class="logo-dark"
-                alt="logo"
-              />
-            </a>
-            <button class="navbar-toggler" type="button">
-              <span class="menu-lines"><span></span></span>
-            </button>
-            <div
-              class="collapse navbar-collapse justify-content-center"
-              id="mainNavigation"
-            >
-              <ul class="navbar-nav">
-                <li class="nav-item has-dropdown">
-                  <a href="index.html" class="nav-item-link">Home</a>
-                </li>
-                <li class="nav-item has-dropdown">
-                  <a href="about-us.html" class="nav-item-link">About Us</a>
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a href="about-us.html" class="nav-item-link">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="team.html" class="nav-item-link"
-                        >Business Overview</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="csr.html" class="nav-item-link">CSR</a>
-                    </li>
-                    <li class="nav-item">
-                      <a href="compliance.html" class="nav-item-link"
-                        >Compliance</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="nav-item has-dropdown">
-                  <a href="products.html" class="nav-item-link">Products</a>
-                  <ul class="dropdown-menu">
-                    <li class="nav-item">
-                      <a href="products.html#lvp" class="nav-item-link"
-                        >IV Fluids</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="products.html#svp" class="nav-item-link"
-                        >Sterile Injections</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="products.html#oral" class="nav-item-link"
-                        >Oral Liquids</a
-                      >
-                    </li>
-                    <li class="nav-item">
-                      <a href="products.html#tablets" class="nav-item-link"
-                        >Tablets</a
-                      >
-                    </li>
-                  </ul>
-                </li>
-
-                <li class="nav-item has-dropdown dropdown">
-                  <a href="blog.html" class="nav-item-link active">Blog</a>
-                </li>
-                <li class="nav-item">
-                  <a href="careers.html" class="nav-item-link">Careers</a>
-                </li>
-                <li class="nav-item">
-                  <a href="our-clients.html" class="nav-item-link"
-                    >Our Clients</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a href="contact-us.html" class="nav-item-link">Contact</a>
-                </li>
-              </ul>
-
-              <ul
-                class="header-actions d-flex align-items-center position-relative list-unstyled mb-0"
-              >
-                <li></li>
-                <li>
-
-                </li>
-              </ul>
-
-              <button class="close-mobile-menu d-block d-lg-none">
-                <i class="fas fa-times"></i>
-              </button>
-            </div>
-
-            <div
-              class="d-none d-xl-flex align-items-center position-relative ml-30"
-            >
-              <a
-                href="assets/docs/abaris-product-list.pdf"
-                class="btn btn-primary btn-contact"
-                href="assets/docs/abaris-product-list.pdf"
-                download="Abaris-Product-List.pdf"
-              >
-                Download Catalogue
-              </a>
+      <a class="home-nav" href="index.html"><i class="icon-home"></i></a>
+      <div class="curve-top-shape">
+        <svg class="curve-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+          <path class="curve-path" d="M1000,4.3V0H0v4.3C0.9,23.1,126.7,99.2,500,100S1000,22.7,1000,4.3z"></path>
+        </svg>
+      </div>
+    </section>
+    <section class="blog-layout1">
+      <div class="container">
+        <div class="row">
+          <!-- Post Item #1 -->
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="post-item">
+              <div class="post-img">
+                <div class="post-meta-cat"></div>
+                <a href="">
+                  <img src="assets/images/blog/grid/blog1.png" alt="post image" loading="lazy" />
+                </a>
+              </div>
+              <div class="post-body">
+                <h4 class="post-title">
+                  <a href="Affordable Healthcare Solutions for Every Market.html" target="_blank">Affordable Healthcare
+                    Solutions for Every Market</a>
+                </h4>
+                <div class="post-meta d-flex align-items-center">
+                  <span class="post-meta-date">07 Oct 2025</span>
+                  <a class="post-meta-author" href="#">Abaris Team</a>
+                </div>
+                <p class="post-desc">
+                  In the pharmaceutical world, the difference between a thriving distributor and an average one often
+                  comes down to the strength of their business alliances.Imagine working with a healthcare manufacturer
+                  who doesn’t just focus on products—but maintains an unwavering commitment to affordability without
+                  ever cutting corners.
+                </p>
+                <a href="Affordable Healthcare Solutions for Every Market.html" class="btn btn-secondary btn-outlined"
+                  target="_blank">
+                  <i class="icon-arrow-right"></i>
+                  <span>Read More</span>
+                </a>
+              </div>
             </div>
           </div>
-        </nav>
-      </header>
-      <section
-        class="page-title-layout1 page-title-light text-center bg-overlay bg-parallax"
-        style="padding-top: 60px !important; padding-bottom: 50px"
-      >
-        <div class="bg-img">
-          <img src="assets/images/page-titles/1.jpg" alt="background" />
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-12 col-xl-6 offset-xl-3">
-              <h1 class="pagetitle-heading">Blogs</h1>
-              <p class="pagetitle-desc">
-                At Abaris Healthcare, we offer a wide range of trusted and
-                effective pharmaceutical products designed to improve patient
-                outcomes and enhance overall well-being.
-              </p>
-              <div
-                class="d-flex flex-wrap align-items-center justify-content-center"
-              >
-                <a href="contact-us.html" class="btn btn-white mb-10 mx-3"
-                  ><i class="icon-arrow-right"></i><span>Contact Us</span></a
-                >
-                <a
-                  href="team.html"
-                  class="btn btn-white btn-outlined mb-10 mx-3"
-                  ><span>About Our Journey</span></a
-                >
+
+          <!-- Post Item #2 -->
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="post-item">
+              <div class="post-img">
+                <div class="post-meta-cat"></div>
+                <a href="">
+                  <img src="assets/images/blog/grid/blog2.png" alt="post image" loading="lazy" />
+                </a>
               </div>
-              <nav></nav>
+              <div class="post-body">
+                <h4 class="post-title">
+                  <a href="From  India to the World Our Global Pharma Journey.html" target="_blank">From India to the
+                    World: Our Global Pharma Journey</a>
+                </h4>
+                <div class="post-meta d-flex align-items-center">
+                  <span class="post-meta-date">08 Oct 2025</span>
+                  <a class="post-meta-author" href="#">Abaris Team</a>
+                </div>
+                <p class="post-desc">
+                  Every reputable distributor and business partner knows that global reach is more than just a
+                  metric—it’s a testament to trust and consistency. Abaris Healthcare didn’t become a leading pharma
+                  exporter overnight; the journey began with a simple belief: genuine care for the masses, doctors, and
+                  business partners alike.
+                </p>
+                <a href="From  India to the World Our Global Pharma Journey.html" class="btn btn-secondary btn-outlined"
+                  target="_blank">
+                  <i class="icon-arrow-right"></i>
+                  <span>Read More</span>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <a class="home-nav" href="index.html"><i class="icon-home"></i></a>
-        <div class="curve-top-shape">
-          <svg
-            class="curve-svg"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1000 100"
-            preserveAspectRatio="none"
-          >
-            <path
-              class="curve-path"
-              d="M1000,4.3V0H0v4.3C0.9,23.1,126.7,99.2,500,100S1000,22.7,1000,4.3z"
-            ></path>
-          </svg>
-        </div>
-      </section>
-      <section class="blog-layout1">
-        <div class="container">
-          <div class="row">
-            <!-- Post Item #1 -->
-            <div class="col-sm-12 col-md-6 col-lg-4">
-              <div class="post-item">
-                <div class="post-img">
-                  <div class="post-meta-cat"></div>
-                  <a href="blog-single-post.html">
-                    <img
-                      src="assets/images/blog/grid/1.jpg"
-                      alt="post image"
-                      loading="lazy"
-                    />
-                  </a>
+
+          <!-- Post Item #3 -->
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="post-item">
+              <div class="post-img">
+                <div class="post-meta-cat"></div>
+                <a href="">
+                  <img src="assets/images/blog/grid/blog3.png" alt="post image" loading="lazy" />
+                </a>
+              </div>
+              <div class="post-body">
+                <h4 class="post-title">
+                  <a href="Safety First Building Trust in Every Dose.html" target="_blank">Safety First: Building Trust
+                    in Every Dose</a>
+                </h4>
+                <div class="post-meta d-flex align-items-center">
+                  <span class="post-meta-date">09 Oct 2025</span>
+                  <a class="post-meta-author" href="#">Abaris Team</a>
                 </div>
-                <div class="post-body">
-                  <h4 class="post-title">
-                    <a href="#"
-                      >Partnership to Increase COVID19 Testing Capacity and
-                      Track All COVID-19 Variants</a
-                    >
-                  </h4>
-                  <div class="post-meta d-flex align-items-center">
-                    <span class="post-meta-date">27 Jan 2023</span>
-                    <a class="post-meta-author" href="#">Martin King</a>
-                  </div>
-                  <p class="post-desc">
-                    With 200 access points across the country a comprehensive
-                    logistics network, we have proven to be an important partner
-                    in the response to COVID-19, having governmen
-                  </p>
-                </div>
+                <p class="post-desc">
+                  In healthcare, every distributor knows trust is earned, dose by dose and delivery by delivery. For
+                  Abaris Healthcare, patient safety is more than a compliance checklist—it is the heartbeat of our
+                  entire operation, from formulation to final packaging.
+                </p>
+                <a href="Safety First Building Trust in Every Dose.html" target="_blank"
+                  class="btn btn-secondary btn-outlined">
+                  <i class="icon-arrow-right"></i>
+                  <span>Read More</span>
+                </a>
               </div>
             </div>
-
-            <!-- Post Item #2 -->
-            <div class="col-sm-12 col-md-6 col-lg-4">
-              <div class="post-item">
-                <div class="post-img">
-                  <div class="post-meta-cat"></div>
-                  <a href="blog-single-post.html">
-                    <img
-                      src="assets/images/blog/grid/2.jpg"
-                      alt="post image"
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
-                <div class="post-body">
-                  <h4 class="post-title">
-                    <a href="#"
-                      >Preventing Pathogen Passage by Taking Precautions Against
-                      the Century Pandemic</a
-                    >
-                  </h4>
-                  <div class="post-meta d-flex align-items-center">
-                    <span class="post-meta-date">25 Jan 2023</span>
-                    <a class="post-meta-author" href="#">Martin King</a>
-                  </div>
-                  <p class="post-desc">
-                    The governments with the most successful outcomes followed
-                    rules given by the WHO. Additionally, they worked with their
-                    citizens to make sure that as many people
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Post Item #3 -->
-            <div class="col-sm-12 col-md-6 col-lg-4">
-              <div class="post-item">
-                <div class="post-img">
-                  <div class="post-meta-cat"></div>
-                  <a href="blog-single-post.html">
-                    <img
-                      src="assets/images/blog/grid/3.jpg"
-                      alt="post image"
-                      loading="lazy"
-                    />
-                  </a>
-                </div>
-                <div class="post-body">
-                  <h4 class="post-title">
-                    <a href="#"
-                      >Driving that Gene, Mutations Seen Spreading Trait through
-                      a New Viral Population</a
-                    >
-                  </h4>
-                  <div class="post-meta d-flex align-items-center">
-                    <span class="post-meta-date">21 Jan 2023</span>
-                    <a class="post-meta-author" href="#">John Walker</a>
-                  </div>
-                  <p class="post-desc">
-                    With 200 access points across the country a comprehensive
-                    logistics network, we have proven to be an important partner
-                    in the response to COVID-19, having governmen
-                  </p>
-                </div>
-              </div>
-            </div>
-
-          
           </div>
 
-          <!-- Pagination -->
-          <!-- <div class="row">
+
+        </div>
+
+        <!-- Pagination -->
+        <!-- <div class="row">
             <div class="col-12 text-center">
               <nav class="pagination-area">
                 <ul class="pagination justify-content-center mb-0">
@@ -367,171 +316,137 @@
               </nav>
             </div>
           </div> -->
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <footer class="footer">
-        <div class="footer-primary">
-          <div class="container">
-            <div class="row">
-              <!-- Logo -->
-              <div class="col-12 col-lg-2">
-                <div class="footer-widget-about">
-                  <a href="index.html">
-                    <img src="assets/images/logo/logo-main.png" alt="logo" />
-                  </a>
-                </div>
+    <footer class="footer">
+      <div class="footer-primary">
+        <div class="container">
+          <div class="row">
+            <!-- Logo -->
+            <div class="col-12 col-lg-2">
+              <div class="footer-widget-about">
+                <a href="index.html">
+                  <img src="assets/images/logo/logo-main.png" alt="logo" />
+                </a>
               </div>
-              <!-- /.col-lg-2 -->
+            </div>
+            <!-- /.col-lg-2 -->
 
-              <!-- About column -->
-              <div class="col-6 col-lg-2">
-                <div class="footer-widget-nav">
-                  <h6 class="footer-widget-title">About Us</h6>
-                  <nav>
-                    <ul class="list-unstyled">
-                      <li>
-                        <a href="about-us.html" style="color: white"
-                          >About Us</a
-                        >
-                      </li>
-                      <li>
-                        <a href="team.html" style="color: white"
-                          >Business Overview</a
-                        >
-                      </li>
-
-                      <li>
-                        <a href="csr.html" style="color: white">CSR</a>
-                      </li>
-                      <li>
-                        <a href="careers.html" style="color: white">Careers</a>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-              <!-- /.col-lg-2 -->
-
-              <!-- Quick Links column -->
-              <div class="col-6 col-lg-2">
-                <div class="footer-widget-nav">
-                  <h6 class="footer-widget-title">Links</h6>
-                  <nav>
-                    <ul class="list-unstyled">
-                      <li>
-                        <a href="products.html" style="color: white"
-                          >Products</a
-                        >
-                      </li>
-                      <li>
-                        <a href="blog.html" style="color: white"
-                          >Blog &amp; Insights</a
-                        >
-                      </li>
-                      <li>
-                        <a href="our-clients.html" style="color: white"
-                          >Our Clients</a
-                        >
-                      </li>
-                      <li>
-                        <a href="contact-us.html" style="color: white"
-                          >Contact Us</a
-                        >
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-              </div>
-              <!-- /.col-lg-2 -->
-
-              <!-- Quick Contacts -->
-              <div class="col-6 col-lg-3">
-                <div class="footer-widget-contact">
-                  <h6 class="footer-widget-title">Quick Contacts</h6>
-                  <p>
-                    If you have any questions or need help, feel free to contact
-                    with our team.
-                  </p>
-                  <ul class="contact-list list-unstyled">
+            <!-- About column -->
+            <div class="col-6 col-lg-2">
+              <div class="footer-widget-nav">
+                <h6 class="footer-widget-title">About Us</h6>
+                <nav>
+                  <ul class="list-unstyled">
                     <li>
-                      <p>Send Us Email:</p>
-                      <a href="mailto:info@abarishealthcare.com">
-                        <i class="contact-icon icon-email color-white"></i>
-                        <span class="color-white"
-                          >info@abarishealthcare.com</span
-                        >
-                      </a>
+                      <a href="about-us.html" style="color: white">About Us</a>
                     </li>
                     <li>
-                      <p>Call Us Today:</p>
-                      <a href="tel:+917926440704">
-                        <i class="contact-icon icon-phone color-white"></i>
-                        <span class="color-white">+ 91 79264 40704</span>
-                      </a>
+                      <a href="team.html" style="color: white">Business Overview</a>
+                    </li>
+
+                    <li>
+                      <a href="csr.html" style="color: white">CSR</a>
+                    </li>
+                    <li>
+                      <a href="careers.html" style="color: white">Careers</a>
                     </li>
                   </ul>
-                </div>
+                </nav>
               </div>
-              <!-- /.col-lg-3 -->
-
-              <!-- Newsletter (new column on right) -->
-              <div class="col-12 col-lg-3">
-                <div class="footer-widget-newsletter">
-                  <h6 class="footer-widget-title">Newsletter</h6>
-                  <form
-                    class="newsletter-form"
-                    action="/subscribe"
-                    method="post"
-                    novalidate
-                  >
-                    <div class="mb-2">
-                      <label for="footer-news-email" class="visually-hidden"
-                        >Email address</label
-                      >
-                      <input
-                        id="footer-news-email"
-                        name="email"
-                        type="email"
-                        class="form-control"
-                        placeholder="Your email address"
-                        required
-                      />
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100">
-                      Subscribe
-                    </button>
-                  </form>
-                </div>
-              </div>
-              <!-- /.col-lg-3 -->
             </div>
-            <!-- /.row -->
-          </div>
-          <!-- /.container -->
-        </div>
-        <!-- /.footer-primary -->
+            <!-- /.col-lg-2 -->
 
-        <div class="footer-secondary">
-          <div
-            class="container"
-            style="padding-top: 10px; padding-bottom: 10px"
-          >
-            <div class="row align-items-center">
-              <div class="col-sm-12 col-md-12 col-lg-7">
-                <nav></nav>
-                <div class="mt-1">
-                  <span
-                    >&copy; 2025 Abaris Healthcare, All Rights Reserved.</span
-                  >
-                </div>
+            <!-- Quick Links column -->
+            <div class="col-6 col-lg-2">
+              <div class="footer-widget-nav">
+                <h6 class="footer-widget-title">Links</h6>
+                <nav>
+                  <ul class="list-unstyled">
+                    <li>
+                      <a href="products.html" style="color: white">Products</a>
+                    </li>
+                    <li>
+                      <a href="blog.html" style="color: white">Blog</a>
+                    </li>
+                    <li>
+                      <a href="our-clients.html" style="color: white">Our Clients</a>
+                    </li>
+                    <li>
+                      <a href="contact-us.html" style="color: white">Contact Us</a>
+                    </li>
+                  </ul>
+                </nav>
               </div>
-              <!-- /.col-lg-7 -->
-              <div
-                class="col-sm-12 col-md-12 col-lg-5 d-flex flex-wrap justify-content-between"
-              >
-                <ul
-                  style="
+            </div>
+            <!-- /.col-lg-2 -->
+
+            <!-- Quick Contacts -->
+            <div class="col-6 col-lg-3">
+              <div class="footer-widget-contact">
+                <h6 class="footer-widget-title">Quick Contacts</h6>
+                <p>
+                  If you have any questions or need help, feel free to contact
+                  with our team.
+                </p>
+                <ul class="contact-list list-unstyled">
+                  <li>
+                    <p>Send Us Email:</p>
+                    <a href="mailto:info@abarishealthcare.com">
+                      <i class="contact-icon icon-email color-white"></i>
+                      <span class="color-white">info@abarishealthcare.com</span>
+                    </a>
+                  </li>
+                  <li>
+                    <p>Call Us Today:</p>
+                    <a href="tel:+917926440704">
+                      <i class="contact-icon icon-phone color-white"></i>
+                      <span class="color-white">+ 91 79264 40704</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- /.col-lg-3 -->
+
+            <!-- Newsletter (new column on right) -->
+            <div class="col-12 col-lg-3">
+              <div class="footer-widget-newsletter">
+                <h6 class="footer-widget-title">Newsletter</h6>
+                <form action="mailto:74devanshvariya@gmail.com" method="get" enctype="text/plain">
+                  <div class="mb-2">
+                    <label for="footer-news-email" class="visually-hidden">Email address</label>
+                    <input id="footer-news-email" name="New Subscriber" type="email" class="form-control"
+                      placeholder="Your email address" required />
+                  </div>
+                  <button type="submit" class="btn btn-primary w-100">
+                    Subscribe
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- /.col-lg-3 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+  </div>
+  <!-- /.footer-primary -->
+
+  <div class="footer-secondary">
+    <div class="container" style="padding-top: 10px; padding-bottom: 10px">
+      <div class="row align-items-center">
+        <div class="col-sm-12 col-md-12 col-lg-7">
+          <nav></nav>
+          <div class="mt-1">
+            <span>&copy; 2025 Abaris Healthcare, All Rights Reserved.</span>
+          </div>
+        </div>
+        <!-- /.col-lg-7 -->
+        <div class="col-sm-12 col-md-12 col-lg-5 d-flex flex-wrap justify-content-between">
+          <ul style="
                     display: flex;
                     margin-top: 5px;
                     align-items: center;
@@ -541,12 +456,9 @@
                     padding: 0;
                     list-style: none;
                     color: #000;
-                  "
-                >
-                  <li style="min-width: 0">
-                    <a
-                      href="terms.html"
-                      style="
+                  ">
+            <li style="min-width: 0">
+              <a href="terms.html" style="
                         margin-top: 5px;
                         display: inline-flex;
                         align-items: center;
@@ -555,15 +467,12 @@
                         color: #000;
                         font-weight: 600;
                         white-space: nowrap; /* keep on one line */
-                      "
-                    >
-                      <span>Terms and Conditions</span>
-                    </a>
-                  </li>
-                  <li style="min-width: 0">
-                    <a
-                      href="privacy.html"
-                      style="
+                      ">
+                <!-- <span>Terms and Conditions</span> -->
+              </a>
+            </li>
+            <li style="min-width: 0">
+              <a href="privacy.html" style="
                         margin-top: 5px;
                         display: inline-flex;
                         align-items: center;
@@ -572,17 +481,13 @@
                         color: #000;
                         font-weight: 600;
                         white-space: nowrap; /* keep on one line */
-                      "
-                    >
-                      <span>Privacy Policy</span>
-                    </a>
-                  </li>
-                  <li style="min-width: 0">
-                    <a
-                      href="https://www.linkedin.com/company/your-company"
-                      target="_blank"
-                      rel="noopener"
-                      style="
+                      ">
+                <!-- <span>Privacy Policy</span> -->
+              </a>
+            </li>
+            <li style="min-width: 0">
+              <a href="https://www.linkedin.com/company/abaris-healthcare-private-limited/" target="_blank"
+                rel="noopener" style="
                         margin-top: 5px;
                         display: inline-flex;
                         align-items: center;
@@ -590,107 +495,68 @@
                         text-decoration: none;
                         color: #000;
                         white-space: nowrap;
-                      "
-                    >
-                      <i
-                        class="fab fa-linkedin-in"
-                        aria-hidden="true"
-                        style="width: 20px; text-align: center"
-                      ></i>
-                      <span>LinkedIn</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <!-- /.row -->
-          </div>
-          <!-- /.container -->
+                      ">
+                <i class="fab fa-linkedin-in" aria-hidden="true" style="width: 20px; text-align: center"></i>
+                <span>LinkedIn</span>
+              </a>
+            </li>
+          </ul>
         </div>
-        <!-- /.footer-secondary -->
-      </footer>
-
-      <!-- SVG filters used by theme -->
-      <svg
-        class="svg-pathes"
-        width="0"
-        height="0"
-        xmlns="http://www.w3.org/2000/svg"
-        version="1.1"
-      >
-        <defs>
-          <filter id="rounded-clippath-filter">
-            <feGaussianBlur
-              in="SourceGraphic"
-              stdDeviation="8"
-              result="blur"
-            ></feGaussianBlur>
-            <feColorMatrix
-              in="blur"
-              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
-              result="rounded-clippath-filter"
-            ></feColorMatrix>
-            <feComposite
-              in="SourceGraphic"
-              in2="rounded-clippath-filter"
-              operator="atop"
-            ></feComposite>
-          </filter>
-        </defs>
-        <defs>
-          <filter id="rounded-clippath-filter-small">
-            <feGaussianBlur
-              in="SourceGraphic"
-              stdDeviation="2"
-              result="blur"
-            ></feGaussianBlur>
-            <feColorMatrix
-              in="blur"
-              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 10 -4"
-              result="rounded-clippath-filter-small"
-            ></feColorMatrix>
-            <feComposite
-              in="SourceGraphic"
-              in2="rounded-clippath-filter-small"
-              operator="atop"
-            ></feComposite>
-          </filter>
-        </defs>
-        <clipPath id="curve-left" clipPathUnits="objectBoundingBox">
-          <path
-            d="M0,0.998 v0.002 H1 V0 h-0.059 C0.832,0.008,0.596,0.068,0.48,0.414 A1,1,0,0,0,0.445,0.551 C0.376,0.899,0.166,0.986,0,0.998"
-          ></path>
-        </clipPath>
-        <clipPath id="curve-right" clipPathUnits="objectBoundingBox">
-          <path
-            d="M1,0.998 v0.002 H0 V0 H0.059 C0.168,0.008,0.404,0.068,0.519,0.414 A1,1,0,0,1,0.555,0.551 C0.624,0.899,0.834,0.986,1,0.998"
-          ></path>
-        </clipPath>
-      </svg>
-
-      <div class="search-popup">
-        <button type="button" class="search-popup-close">
-          <i class="fas fa-times"></i>
-        </button>
-        <form class="search-popup-form">
-          <input
-            type="text"
-            class="search-popup-form-input"
-            placeholder="Type Words Then Enter"
-          />
-          <button class="search-popup-btn"><i class="icon-search"></i></button>
-        </form>
       </div>
-      <!-- /.search-popup -->
+      <!-- /.row -->
     </div>
-    <!-- /.wrapper -->
+    <!-- /.container -->
+  </div>
+  <!-- /.footer-secondary -->
+  </footer>
 
-    <script
-      data-cfasync="false"
-      src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-    ></script>
-    <script src="assets/js/jquery-3.5.1.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+  <!-- SVG filters used by theme -->
+  <svg class="svg-pathes" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+      <filter id="rounded-clippath-filter">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"></feGaussianBlur>
+        <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="rounded-clippath-filter">
+        </feColorMatrix>
+        <feComposite in="SourceGraphic" in2="rounded-clippath-filter" operator="atop"></feComposite>
+      </filter>
+    </defs>
+    <defs>
+      <filter id="rounded-clippath-filter-small">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"></feGaussianBlur>
+        <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 10 -4"
+          result="rounded-clippath-filter-small"></feColorMatrix>
+        <feComposite in="SourceGraphic" in2="rounded-clippath-filter-small" operator="atop"></feComposite>
+      </filter>
+    </defs>
+    <clipPath id="curve-left" clipPathUnits="objectBoundingBox">
+      <path
+        d="M0,0.998 v0.002 H1 V0 h-0.059 C0.832,0.008,0.596,0.068,0.48,0.414 A1,1,0,0,0,0.445,0.551 C0.376,0.899,0.166,0.986,0,0.998">
+      </path>
+    </clipPath>
+    <clipPath id="curve-right" clipPathUnits="objectBoundingBox">
+      <path
+        d="M1,0.998 v0.002 H0 V0 H0.059 C0.168,0.008,0.404,0.068,0.519,0.414 A1,1,0,0,1,0.555,0.551 C0.624,0.899,0.834,0.986,1,0.998">
+      </path>
+    </clipPath>
+  </svg>
+
+  <div class="search-popup">
+    <button type="button" class="search-popup-close">
+      <i class="fas fa-times"></i>
+    </button>
+    <form class="search-popup-form">
+      <input type="text" class="search-popup-form-input" placeholder="Type Words Then Enter" />
+      <button class="search-popup-btn"><i class="icon-search"></i></button>
+    </form>
+  </div>
+  <!-- /.search-popup -->
+  </div>
+  <!-- /.wrapper -->
+
+  <script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  <script src="assets/js/jquery-3.5.1.min.js"></script>
+  <script src="assets/js/plugins.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
 </html>
