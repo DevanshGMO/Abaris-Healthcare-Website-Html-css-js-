@@ -225,7 +225,8 @@
                     <a href="contact-us.html" class="btn btn-white btn-xl">
                       <i class="icon-arrow-right"></i><span>Contact Us</span>
                     </a>
-                    <a class="btn btn-white btn-outlined">
+                    <a class="btn btn-white btn-outlined" href="assets/docs/abaris-product-list.pdf"
+                      download="Abaris-Product-List.pdf">
                       <span>Download Catalog</span>
                     </a>
                   </div>
@@ -256,7 +257,8 @@
                     <a href="contact-us.html" class="btn btn-white btn-xl">
                       <i class="icon-arrow-right"></i><span>Connect Us</span>
                     </a>
-                    <a class="btn btn-white btn-outlined">
+                    <a class="btn btn-white btn-outlined" href="assets/docs/abaris-product-list.pdf"
+                      download="Abaris-Product-List.pdf">
                       <span>Download Catalog</span>
                     </a>
                   </div>
@@ -288,7 +290,8 @@
                       <img class="sr-only" alt="" />
                       <i class="icon-arrow-right"></i><span>Contact Us</span>
                     </a>
-                    <a class="btn btn-white btn-outlined">
+                    <a class="btn btn-white btn-outlined" href="assets/docs/abaris-product-list.pdf"
+                      download="Abaris-Product-List.pdf">
                       <span>Download Catalog</span>
                     </a>
                   </div>
@@ -320,7 +323,8 @@
                     <a href="contact-us.html" class="btn btn-white btn-xl">
                       <i class="icon-arrow-right"></i><span>Contact Us</span>
                     </a>
-                    <a class="btn btn-white btn-outlined">
+                    <a class="btn btn-white btn-outlined" href="assets/docs/abaris-product-list.pdf"
+                      download="Abaris-Product-List.pdf">
                       <span>Download Catalog</span>
                     </a>
                   </div>
@@ -373,7 +377,7 @@
         </div>
       </section>
 
-      <section class="clients clients-section overflow-hidden">
+      <section class="clients clients-section overflow-hidden" style="padding-top: 0px; padding-bottom: 0px;">
         <div class="container">
           <div class="row">
             <div class="col-12">
@@ -532,7 +536,7 @@
     <!-- ========================
         Services Layout 3
     =========================== -->
-    <section class="services-layout3 services-carousel bg-gray-gradient pt-130 pb-90">
+    <section class="services-layout3 services-carousel bg-gray-gradient pt-50 pb-90">
       <div class="container">
         <div class="row">
           <div class="col-12 col-xl-6 offset-xl-3">
@@ -1458,6 +1462,13 @@
         // Optional: Clear the form fields
         contactForm.reset();
       });
+    });
+    const phoneInput = document.getElementById('phone');
+
+    // Add an event listener that runs every time the user types in the field
+    phoneInput.addEventListener('input', function (e) {
+      // Replace any character that is not a digit (0-9) with an empty string
+      e.target.value = e.target.value.replace(/[^0-9]/g, '');
     });
   </script>
   <script src="https://smtpjs.com/v3/smtp.js"></script>

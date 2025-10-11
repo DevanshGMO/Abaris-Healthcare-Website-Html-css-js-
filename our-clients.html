@@ -339,7 +339,7 @@
                       <a href="products.html" style="color: white">Products</a>
                     </li>
                     <li>
-                      <a href="blog.html" style="color: white">Blog</a>
+                      <a href="blog.html" style="color: white">Blog &amp; Insights</a>
                     </li>
                     <li>
                       <a href="our-clients.html" style="color: white">Our Clients</a>
@@ -385,10 +385,10 @@
             <div class="col-12 col-lg-3">
               <div class="footer-widget-newsletter">
                 <h6 class="footer-widget-title">Newsletter</h6>
-                <form action="mailto:74devanshvariya@gmail.com" method="get" enctype="text/plain">
+                <form class="newsletter-form" action="/subscribe" method="post" novalidate>
                   <div class="mb-2">
                     <label for="footer-news-email" class="visually-hidden">Email address</label>
-                    <input id="footer-news-email" name="New Subscriber" type="email" class="form-control"
+                    <input id="footer-news-email" name="email" type="email" class="form-control"
                       placeholder="Your email address" required />
                   </div>
                   <button type="submit" class="btn btn-primary w-100">
@@ -397,27 +397,26 @@
                 </form>
               </div>
             </div>
+            <!-- /.col-lg-3 -->
           </div>
-          <!-- /.col-lg-3 -->
+          <!-- /.row -->
         </div>
-        <!-- /.row -->
+        <!-- /.container -->
       </div>
-      <!-- /.container -->
-  </div>
-  <!-- /.footer-primary -->
+      <!-- /.footer-primary -->
 
-  <div class="footer-secondary">
-    <div class="container" style="padding-top: 10px; padding-bottom: 10px">
-      <div class="row align-items-center">
-        <div class="col-sm-12 col-md-12 col-lg-7">
-          <nav></nav>
-          <div class="mt-1">
-            <span>&copy; 2025 Abaris Healthcare, All Rights Reserved.</span>
-          </div>
-        </div>
-        <!-- /.col-lg-7 -->
-        <div class="col-sm-12 col-md-12 col-lg-5 d-flex flex-wrap justify-content-between">
-          <ul style="
+      <div class="footer-secondary">
+        <div class="container" style="padding-top: 10px; padding-bottom: 10px">
+          <div class="row align-items-center">
+            <div class="col-sm-12 col-md-12 col-lg-7">
+              <nav></nav>
+              <div class="mt-1">
+                <span>&copy; 2025 Abaris Healthcare, All Rights Reserved.</span>
+              </div>
+            </div>
+            <!-- /.col-lg-7 -->
+            <div class="col-sm-12 col-md-12 col-lg-5 d-flex flex-wrap justify-content-between">
+              <ul style="
                     display: flex;
                     margin-top: 5px;
                     align-items: center;
@@ -428,8 +427,8 @@
                     list-style: none;
                     color: #000;
                   ">
-            <li style="min-width: 0">
-              <a href="terms.html" style="
+                <li style="min-width: 0">
+                  <a href="terms.html" style="
                         margin-top: 5px;
                         display: inline-flex;
                         align-items: center;
@@ -439,11 +438,11 @@
                         font-weight: 600;
                         white-space: nowrap; /* keep on one line */
                       ">
-                <!-- <span>Terms and Conditions</span> -->
-              </a>
-            </li>
-            <li style="min-width: 0">
-              <a href="privacy.html" style="
+                    <span>Terms and Conditions</span>
+                  </a>
+                </li>
+                <li style="min-width: 0">
+                  <a href="privacy.html" style="
                         margin-top: 5px;
                         display: inline-flex;
                         align-items: center;
@@ -453,12 +452,11 @@
                         font-weight: 600;
                         white-space: nowrap; /* keep on one line */
                       ">
-                <!-- <span>Privacy Policy</span> -->
-              </a>
-            </li>
-            <li style="min-width: 0">
-              <a href="https://www.linkedin.com/company/abaris-healthcare-private-limited/" target="_blank"
-                rel="noopener" style="
+                    <span>Privacy Policy</span>
+                  </a>
+                </li>
+                <li style="min-width: 0">
+                  <a href="https://www.linkedin.com/company/your-company" target="_blank" rel="noopener" style="
                         margin-top: 5px;
                         display: inline-flex;
                         align-items: center;
@@ -467,59 +465,60 @@
                         color: #000;
                         white-space: nowrap;
                       ">
-                <i class="fab fa-linkedin-in" aria-hidden="true" style="width: 20px; text-align: center"></i>
-                <span>LinkedIn</span>
-              </a>
-            </li>
-          </ul>
+                    <i class="fab fa-linkedin-in" aria-hidden="true" style="width: 20px; text-align: center"></i>
+                    <span>LinkedIn</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /.row -->
         </div>
+        <!-- /.container -->
       </div>
-      <!-- /.row -->
+      <!-- /.footer-secondary -->
+    </footer>
+
+    <svg class="svg-pathes" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <defs>
+        <filter id="rounded-clippath-filter">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"></feGaussianBlur>
+          <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9"
+            result="rounded-clippath-filter">
+          </feColorMatrix>
+          <feComposite in="SourceGraphic" in2="rounded-clippath-filter" operator="atop"></feComposite>
+        </filter>
+      </defs>
+      <defs>
+        <filter id="rounded-clippath-filter-small">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"></feGaussianBlur>
+          <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 10 -4"
+            result="rounded-clippath-filter-small"></feColorMatrix>
+          <feComposite in="SourceGraphic" in2="rounded-clippath-filter-small" operator="atop"></feComposite>
+        </filter>
+      </defs>
+      <clipPath id="curve-left" clipPathUnits="objectBoundingBox">
+        <path
+          d="M0,0.998 v0.002 H1 V0 h-0.059 C0.832,0.008,0.596,0.068,0.48,0.414 A1,1,0,0,0,0.445,0.551 C0.376,0.899,0.166,0.986,0,0.998">
+        </path>
+      </clipPath>
+      <clipPath id="curve-right" clipPathUnits="objectBoundingBox">
+        <path
+          d="M1,0.998 v0.002 H0 V0 H0.059 C0.168,0.008,0.404,0.068,0.519,0.414 A1,1,0,0,1,0.555,0.551 C0.624,0.899,0.834,0.986,1,0.998">
+        </path>
+      </clipPath>
+    </svg>
+
+    <div class="search-popup">
+      <button type="button" class="search-popup-close">
+        <i class="fas fa-times"></i>
+      </button>
+      <form class="search-popup-form">
+        <input type="text" class="search-popup-form-input" placeholder="Type Words Then Enter" />
+        <button class="search-popup-btn"><i class="icon-search"></i></button>
+      </form>
     </div>
-    <!-- /.container -->
-  </div>
-  <!-- /.footer-secondary -->
-  </footer>
-
-  <svg class="svg-pathes" width="0" height="0" xmlns="http://www.w3.org/2000/svg" version="1.1">
-    <defs>
-      <filter id="rounded-clippath-filter">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"></feGaussianBlur>
-        <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="rounded-clippath-filter">
-        </feColorMatrix>
-        <feComposite in="SourceGraphic" in2="rounded-clippath-filter" operator="atop"></feComposite>
-      </filter>
-    </defs>
-    <defs>
-      <filter id="rounded-clippath-filter-small">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="2" result="blur"></feGaussianBlur>
-        <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 10 -4"
-          result="rounded-clippath-filter-small"></feColorMatrix>
-        <feComposite in="SourceGraphic" in2="rounded-clippath-filter-small" operator="atop"></feComposite>
-      </filter>
-    </defs>
-    <clipPath id="curve-left" clipPathUnits="objectBoundingBox">
-      <path
-        d="M0,0.998 v0.002 H1 V0 h-0.059 C0.832,0.008,0.596,0.068,0.48,0.414 A1,1,0,0,0,0.445,0.551 C0.376,0.899,0.166,0.986,0,0.998">
-      </path>
-    </clipPath>
-    <clipPath id="curve-right" clipPathUnits="objectBoundingBox">
-      <path
-        d="M1,0.998 v0.002 H0 V0 H0.059 C0.168,0.008,0.404,0.068,0.519,0.414 A1,1,0,0,1,0.555,0.551 C0.624,0.899,0.834,0.986,1,0.998">
-      </path>
-    </clipPath>
-  </svg>
-
-  <div class="search-popup">
-    <button type="button" class="search-popup-close">
-      <i class="fas fa-times"></i>
-    </button>
-    <form class="search-popup-form">
-      <input type="text" class="search-popup-form-input" placeholder="Type Words Then Enter" />
-      <button class="search-popup-btn"><i class="icon-search"></i></button>
-    </form>
-  </div>
-  <!-- /.search-popup -->
+    <!-- /.search-popup -->
   </div>
   <!-- /.wrapper -->
 
